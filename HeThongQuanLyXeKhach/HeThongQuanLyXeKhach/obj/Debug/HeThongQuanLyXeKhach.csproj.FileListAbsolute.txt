@@ -1,0 +1,12 @@
+D:\DoAn\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\bin\Debug\HeThongQuanLyXeKhach.exe.config
+D:\DoAn\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\bin\Debug\HeThongQuanLyXeKhach.exe
+D:\DoAn\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\bin\Debug\HeThongQuanLyXeKhach.pdb
+D:\DoAn\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.csproj.AssemblyReference.cache
+D:\DoAn\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.Properties.Resources.resources
+D:\DoAn\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.csproj.GenerateResource.cache
+D:\DoAn\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.csproj.CoreCompileInputs.cache
+D:\DoAn\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.exe
+D:\DoAn\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.pdb
+D:\DoAn\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.frmSystem.resources
+D:\DoAn\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.frmMain.resources
+D:\DoAn\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.frmEmployeeManager.resources
