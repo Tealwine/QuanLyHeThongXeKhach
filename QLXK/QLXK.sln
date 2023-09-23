@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34018.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLXK", "QLXK\QLXK.csproj", "{44697037-4B5F-47D4-95EC-33294777CDAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44697037-4B5F-47D4-95EC-33294777CDAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44697037-4B5F-47D4-95EC-33294777CDAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44697037-4B5F-47D4-95EC-33294777CDAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44697037-4B5F-47D4-95EC-33294777CDAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B437C77D-4063-4186-A3CC-2BE55201FD69}
+	EndGlobalSection
+EndGlobal

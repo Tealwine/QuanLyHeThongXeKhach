@@ -1,0 +1,11 @@
+C:\Users\HP VICTUS\source\repos\QLXK\QLXK\bin\Debug\QLXK.exe.config
+C:\Users\HP VICTUS\source\repos\QLXK\QLXK\bin\Debug\QLXK.exe
+C:\Users\HP VICTUS\source\repos\QLXK\QLXK\bin\Debug\QLXK.pdb
+C:\Users\HP VICTUS\source\repos\QLXK\QLXK\obj\Debug\QLXK.csproj.AssemblyReference.cache
+C:\Users\HP VICTUS\source\repos\QLXK\QLXK\obj\Debug\QLXK.Properties.Resources.resources
+C:\Users\HP VICTUS\source\repos\QLXK\QLXK\obj\Debug\QLXK.csproj.GenerateResource.cache
+C:\Users\HP VICTUS\source\repos\QLXK\QLXK\obj\Debug\QLXK.csproj.CoreCompileInputs.cache
+C:\Users\HP VICTUS\source\repos\QLXK\QLXK\obj\Debug\QLXK.exe
+C:\Users\HP VICTUS\source\repos\QLXK\QLXK\obj\Debug\QLXK.pdb
+C:\Users\HP VICTUS\source\repos\QLXK\QLXK\obj\Debug\QLXK.frm_datve.resources
+C:\Users\HP VICTUS\source\repos\QLXK\QLXK\obj\Debug\QLXK.frm_chonGhe.resources
