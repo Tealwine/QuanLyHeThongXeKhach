@@ -10,3 +10,17 @@ D:\DoAn\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach
 D:\DoAn\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.frmSystem.resources
 D:\DoAn\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.frmMain.resources
 D:\DoAn\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.frmEmployeeManager.resources
+C:\Users\Ngomu\Downloads\QuanLyHeThongXeKhach-main\QuanLyHeThongXeKhach-main\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\bin\Debug\HeThongQuanLyXeKhach.exe.config
+C:\Users\Ngomu\Downloads\QuanLyHeThongXeKhach-main\QuanLyHeThongXeKhach-main\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\bin\Debug\HeThongQuanLyXeKhach.exe
+C:\Users\Ngomu\Downloads\QuanLyHeThongXeKhach-main\QuanLyHeThongXeKhach-main\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\bin\Debug\HeThongQuanLyXeKhach.pdb
+C:\Users\Ngomu\Downloads\QuanLyHeThongXeKhach-main\QuanLyHeThongXeKhach-main\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.csproj.AssemblyReference.cache
+C:\Users\Ngomu\Downloads\QuanLyHeThongXeKhach-main\QuanLyHeThongXeKhach-main\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.frmChonGhe.resources
+C:\Users\Ngomu\Downloads\QuanLyHeThongXeKhach-main\QuanLyHeThongXeKhach-main\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.frmDatVe.resources
+C:\Users\Ngomu\Downloads\QuanLyHeThongXeKhach-main\QuanLyHeThongXeKhach-main\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.frmMain.resources
+C:\Users\Ngomu\Downloads\QuanLyHeThongXeKhach-main\QuanLyHeThongXeKhach-main\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.frmEmployeeManager.resources
+C:\Users\Ngomu\Downloads\QuanLyHeThongXeKhach-main\QuanLyHeThongXeKhach-main\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.frmSystem.resources
+C:\Users\Ngomu\Downloads\QuanLyHeThongXeKhach-main\QuanLyHeThongXeKhach-main\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.Properties.Resources.resources
+C:\Users\Ngomu\Downloads\QuanLyHeThongXeKhach-main\QuanLyHeThongXeKhach-main\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.csproj.GenerateResource.cache
+C:\Users\Ngomu\Downloads\QuanLyHeThongXeKhach-main\QuanLyHeThongXeKhach-main\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.csproj.CoreCompileInputs.cache
+C:\Users\Ngomu\Downloads\QuanLyHeThongXeKhach-main\QuanLyHeThongXeKhach-main\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.exe
+C:\Users\Ngomu\Downloads\QuanLyHeThongXeKhach-main\QuanLyHeThongXeKhach-main\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.pdb
