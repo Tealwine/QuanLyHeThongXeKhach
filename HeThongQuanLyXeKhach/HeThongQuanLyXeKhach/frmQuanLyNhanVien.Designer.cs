@@ -34,7 +34,6 @@
             this.panelManageView = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAddImage = new System.Windows.Forms.Button();
-            this.pcbEmployeeImage = new System.Windows.Forms.PictureBox();
             this.btnEmployeeAdd = new System.Windows.Forms.Button();
             this.txtEmployeeDelete = new System.Windows.Forms.Button();
             this.btnEmployeeRefresh = new System.Windows.Forms.Button();
@@ -58,7 +57,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tpLuong = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvTinhLuong = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -79,29 +77,31 @@
             this.label16 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnImPort = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnExPort = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnPrint = new System.Windows.Forms.ToolStripButton();
             this.pnMainManage = new System.Windows.Forms.Panel();
+            this.pcbEmployeeImage = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.btnImPort = new System.Windows.Forms.ToolStripButton();
+            this.btnExPort = new System.Windows.Forms.ToolStripButton();
+            this.btnPrint = new System.Windows.Forms.ToolStripButton();
             this.ctlEmploeeManager.SuspendLayout();
             this.tpManagerEmployee.SuspendLayout();
             this.panelManageView.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbEmployeeImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tpLuong.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTinhLuong)).BeginInit();
             this.panel3.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.pnMainManage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbEmployeeImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ctlEmploeeManager
@@ -140,7 +140,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel2.Controls.Add(this.btnAddImage);
             this.panel2.Controls.Add(this.pcbEmployeeImage);
             this.panel2.Controls.Add(this.btnEmployeeAdd);
@@ -179,15 +179,6 @@
             this.btnAddImage.TabIndex = 29;
             this.btnAddImage.Text = "Thêm";
             this.btnAddImage.UseVisualStyleBackColor = false;
-            // 
-            // pcbEmployeeImage
-            // 
-            this.pcbEmployeeImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pcbEmployeeImage.Location = new System.Drawing.Point(996, 18);
-            this.pcbEmployeeImage.Name = "pcbEmployeeImage";
-            this.pcbEmployeeImage.Size = new System.Drawing.Size(165, 202);
-            this.pcbEmployeeImage.TabIndex = 25;
-            this.pcbEmployeeImage.TabStop = false;
             // 
             // btnEmployeeAdd
             // 
@@ -456,17 +447,6 @@
             this.panel1.Size = new System.Drawing.Size(1239, 609);
             this.panel1.TabIndex = 20;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(14, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
-            // 
             // dgvTinhLuong
             // 
             this.dgvTinhLuong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -684,14 +664,6 @@
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(106, 34);
-            this.toolStripButton1.Text = "Tìm Kiếm";
-            // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
@@ -708,43 +680,15 @@
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 37);
             // 
-            // btnImPort
-            // 
-            this.btnImPort.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnImPort.Image = ((System.Drawing.Image)(resources.GetObject("btnImPort.Image")));
-            this.btnImPort.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnImPort.Name = "btnImPort";
-            this.btnImPort.Size = new System.Drawing.Size(34, 34);
-            this.btnImPort.Text = "toolStripButton1";
-            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 37);
             // 
-            // btnExPort
-            // 
-            this.btnExPort.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnExPort.Image = ((System.Drawing.Image)(resources.GetObject("btnExPort.Image")));
-            this.btnExPort.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnExPort.Name = "btnExPort";
-            this.btnExPort.Size = new System.Drawing.Size(34, 34);
-            this.btnExPort.Text = "toolStripButton2";
-            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 37);
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(34, 34);
-            this.btnPrint.Text = "toolStripButton3";
             // 
             // pnMainManage
             // 
@@ -755,6 +699,62 @@
             this.pnMainManage.Name = "pnMainManage";
             this.pnMainManage.Size = new System.Drawing.Size(1272, 685);
             this.pnMainManage.TabIndex = 9;
+            // 
+            // pcbEmployeeImage
+            // 
+            this.pcbEmployeeImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pcbEmployeeImage.Location = new System.Drawing.Point(996, 18);
+            this.pcbEmployeeImage.Name = "pcbEmployeeImage";
+            this.pcbEmployeeImage.Size = new System.Drawing.Size(165, 202);
+            this.pcbEmployeeImage.TabIndex = 25;
+            this.pcbEmployeeImage.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(14, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(106, 34);
+            this.toolStripButton1.Text = "Tìm Kiếm";
+            // 
+            // btnImPort
+            // 
+            this.btnImPort.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnImPort.Image = ((System.Drawing.Image)(resources.GetObject("btnImPort.Image")));
+            this.btnImPort.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnImPort.Name = "btnImPort";
+            this.btnImPort.Size = new System.Drawing.Size(34, 34);
+            this.btnImPort.Text = "toolStripButton1";
+            // 
+            // btnExPort
+            // 
+            this.btnExPort.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnExPort.Image = ((System.Drawing.Image)(resources.GetObject("btnExPort.Image")));
+            this.btnExPort.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnExPort.Name = "btnExPort";
+            this.btnExPort.Size = new System.Drawing.Size(34, 34);
+            this.btnExPort.Text = "toolStripButton2";
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
+            this.btnPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(34, 34);
+            this.btnPrint.Text = "toolStripButton3";
             // 
             // frmEmployeeManager
             // 
@@ -768,18 +768,18 @@
             this.panelManageView.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbEmployeeImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tpLuong.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTinhLuong)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.pnMainManage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pcbEmployeeImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
