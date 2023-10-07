@@ -16,5 +16,11 @@ namespace HeThongQuanLyXeKhach
         {
             InitializeComponent();
         }
+
+        private void btnFind1_Click(object sender, EventArgs e)
+        {
+            frmInfoChuyen frmInfoChuyen = new frmInfoChuyen();
+            frmInfoChuyen.ShowDialog();
+        }
     }
 }

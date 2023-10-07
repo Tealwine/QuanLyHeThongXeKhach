@@ -16,5 +16,11 @@ namespace HeThongQuanLyXeKhach
         {
             InitializeComponent();
         }
+
+        private void btnSignIn_Click(object sender, EventArgs e)
+        {
+            frmMain main = new frmMain();   
+            main.Show();
+        }
     }
 }

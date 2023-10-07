@@ -52,6 +52,12 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStart.Designer.cs">
+      <DependentUpon>frmStart.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQuanLyDatVe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,8 +112,20 @@
     <Compile Include="frmInfoChuyen.Designer.cs">
       <DependentUpon>frmInfoChuyen.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMyTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMyTicket.Designer.cs">
+      <DependentUpon>frmMyTicket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStart.resx">
+      <DependentUpon>frmStart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLyDatVe.resx">
       <DependentUpon>frmQuanLyDatVe.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmInfoChuyen.resx">
       <DependentUpon>frmInfoChuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMyTicket.resx">
+      <DependentUpon>frmMyTicket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -163,6 +184,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\hình_ảnh_2023-09-18_141129707-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taxi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

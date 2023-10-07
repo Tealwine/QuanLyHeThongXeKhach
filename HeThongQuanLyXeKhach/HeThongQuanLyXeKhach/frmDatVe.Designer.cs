@@ -29,53 +29,43 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDatVe));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.cmbStartLocation1 = new System.Windows.Forms.ComboBox();
-            this.cmbEndLocation1 = new System.Windows.Forms.ComboBox();
-            this.btnSwap1 = new System.Windows.Forms.Button();
-            this.dtpStartDate1 = new System.Windows.Forms.DateTimePicker();
-            this.cmbNumberTicket1 = new System.Windows.Forms.ComboBox();
-            this.btnFind1 = new System.Windows.Forms.Button();
             this.tcl1c = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.cmbStartLocation2 = new System.Windows.Forms.ComboBox();
-            this.cmbNumberTicket2 = new System.Windows.Forms.ComboBox();
-            this.cmbEndLocation2 = new System.Windows.Forms.ComboBox();
-            this.dtpStartDate2 = new System.Windows.Forms.DateTimePicker();
-            this.btnSwap2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnFind1 = new System.Windows.Forms.Button();
+            this.cmbStartLocation1 = new System.Windows.Forms.ComboBox();
+            this.cmbNumberTicket1 = new System.Windows.Forms.ComboBox();
+            this.cmbEndLocation1 = new System.Windows.Forms.ComboBox();
+            this.dtpStartDate1 = new System.Windows.Forms.DateTimePicker();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.button3 = new System.Windows.Forms.Button();
+            this.cmbStartLocation2 = new System.Windows.Forms.ComboBox();
+            this.cmbNumberTicket2 = new System.Windows.Forms.ComboBox();
+            this.cmbEndLocation2 = new System.Windows.Forms.ComboBox();
+            this.dtpStartDate2 = new System.Windows.Forms.DateTimePicker();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSwap1 = new System.Windows.Forms.Button();
+            this.btnSwap2 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tcl1c.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1207, 302);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
@@ -87,14 +77,6 @@
             this.panel1.Size = new System.Drawing.Size(1243, 637);
             this.panel1.TabIndex = 1;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(15, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1213, 305);
-            this.panel2.TabIndex = 1;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
@@ -103,66 +85,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1209, 309);
             this.panel3.TabIndex = 2;
-            // 
-            // cmbStartLocation1
-            // 
-            this.cmbStartLocation1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbStartLocation1.FormattingEnabled = true;
-            this.cmbStartLocation1.Location = new System.Drawing.Point(7, 46);
-            this.cmbStartLocation1.Name = "cmbStartLocation1";
-            this.cmbStartLocation1.Size = new System.Drawing.Size(288, 37);
-            this.cmbStartLocation1.TabIndex = 0;
-            // 
-            // cmbEndLocation1
-            // 
-            this.cmbEndLocation1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbEndLocation1.FormattingEnabled = true;
-            this.cmbEndLocation1.Location = new System.Drawing.Point(385, 46);
-            this.cmbEndLocation1.Name = "cmbEndLocation1";
-            this.cmbEndLocation1.Size = new System.Drawing.Size(288, 37);
-            this.cmbEndLocation1.TabIndex = 1;
-            // 
-            // btnSwap1
-            // 
-            this.btnSwap1.AutoSize = true;
-            this.btnSwap1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSwap1.BackgroundImage")));
-            this.btnSwap1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSwap1.Location = new System.Drawing.Point(316, 46);
-            this.btnSwap1.Name = "btnSwap1";
-            this.btnSwap1.Size = new System.Drawing.Size(46, 37);
-            this.btnSwap1.TabIndex = 2;
-            this.btnSwap1.UseVisualStyleBackColor = true;
-            // 
-            // dtpStartDate1
-            // 
-            this.dtpStartDate1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpStartDate1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpStartDate1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpStartDate1.Location = new System.Drawing.Point(690, 46);
-            this.dtpStartDate1.Name = "dtpStartDate1";
-            this.dtpStartDate1.Size = new System.Drawing.Size(319, 30);
-            this.dtpStartDate1.TabIndex = 3;
-            // 
-            // cmbNumberTicket1
-            // 
-            this.cmbNumberTicket1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbNumberTicket1.FormattingEnabled = true;
-            this.cmbNumberTicket1.Location = new System.Drawing.Point(1037, 46);
-            this.cmbNumberTicket1.Name = "cmbNumberTicket1";
-            this.cmbNumberTicket1.Size = new System.Drawing.Size(132, 37);
-            this.cmbNumberTicket1.TabIndex = 4;
-            // 
-            // btnFind1
-            // 
-            this.btnFind1.BackColor = System.Drawing.Color.Orange;
-            this.btnFind1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFind1.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnFind1.Location = new System.Drawing.Point(438, 221);
-            this.btnFind1.Name = "btnFind1";
-            this.btnFind1.Size = new System.Drawing.Size(359, 47);
-            this.btnFind1.TabIndex = 5;
-            this.btnFind1.Text = "Tìm chuyến xe";
-            this.btnFind1.UseVisualStyleBackColor = false;
             // 
             // tcl1c
             // 
@@ -196,6 +118,96 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Một chiều";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label4.Location = new System.Drawing.Point(1033, 19);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(63, 24);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Số vé";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label3.Location = new System.Drawing.Point(686, 19);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 24);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Ngày đi";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label2.Location = new System.Drawing.Point(381, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 24);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Điểm đến";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label1.Location = new System.Drawing.Point(6, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 24);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Điểm đi";
+            // 
+            // btnFind1
+            // 
+            this.btnFind1.BackColor = System.Drawing.Color.Orange;
+            this.btnFind1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFind1.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnFind1.Location = new System.Drawing.Point(438, 221);
+            this.btnFind1.Name = "btnFind1";
+            this.btnFind1.Size = new System.Drawing.Size(359, 47);
+            this.btnFind1.TabIndex = 5;
+            this.btnFind1.Text = "Tìm chuyến xe";
+            this.btnFind1.UseVisualStyleBackColor = false;
+            this.btnFind1.Click += new System.EventHandler(this.btnFind1_Click);
+            // 
+            // cmbStartLocation1
+            // 
+            this.cmbStartLocation1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbStartLocation1.FormattingEnabled = true;
+            this.cmbStartLocation1.Location = new System.Drawing.Point(7, 46);
+            this.cmbStartLocation1.Name = "cmbStartLocation1";
+            this.cmbStartLocation1.Size = new System.Drawing.Size(288, 37);
+            this.cmbStartLocation1.TabIndex = 0;
+            // 
+            // cmbNumberTicket1
+            // 
+            this.cmbNumberTicket1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbNumberTicket1.FormattingEnabled = true;
+            this.cmbNumberTicket1.Location = new System.Drawing.Point(1037, 46);
+            this.cmbNumberTicket1.Name = "cmbNumberTicket1";
+            this.cmbNumberTicket1.Size = new System.Drawing.Size(132, 37);
+            this.cmbNumberTicket1.TabIndex = 4;
+            // 
+            // cmbEndLocation1
+            // 
+            this.cmbEndLocation1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEndLocation1.FormattingEnabled = true;
+            this.cmbEndLocation1.Location = new System.Drawing.Point(385, 46);
+            this.cmbEndLocation1.Name = "cmbEndLocation1";
+            this.cmbEndLocation1.Size = new System.Drawing.Size(288, 37);
+            this.cmbEndLocation1.TabIndex = 1;
+            // 
+            // dtpStartDate1
+            // 
+            this.dtpStartDate1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpStartDate1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpStartDate1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpStartDate1.Location = new System.Drawing.Point(690, 46);
+            this.dtpStartDate1.Name = "dtpStartDate1";
+            this.dtpStartDate1.Size = new System.Drawing.Size(319, 30);
+            this.dtpStartDate1.TabIndex = 3;
+            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.PapayaWhip;
@@ -219,105 +231,25 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Khứ hồi";
             // 
-            // cmbStartLocation2
+            // label9
             // 
-            this.cmbStartLocation2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbStartLocation2.FormattingEnabled = true;
-            this.cmbStartLocation2.Location = new System.Drawing.Point(16, 85);
-            this.cmbStartLocation2.Name = "cmbStartLocation2";
-            this.cmbStartLocation2.Size = new System.Drawing.Size(288, 37);
-            this.cmbStartLocation2.TabIndex = 6;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label9.Location = new System.Drawing.Point(703, 113);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(143, 24);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Thêm ngày về";
             // 
-            // cmbNumberTicket2
+            // dateTimePicker1
             // 
-            this.cmbNumberTicket2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbNumberTicket2.FormattingEnabled = true;
-            this.cmbNumberTicket2.Location = new System.Drawing.Point(973, 85);
-            this.cmbNumberTicket2.Name = "cmbNumberTicket2";
-            this.cmbNumberTicket2.Size = new System.Drawing.Size(205, 37);
-            this.cmbNumberTicket2.TabIndex = 10;
-            // 
-            // cmbEndLocation2
-            // 
-            this.cmbEndLocation2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbEndLocation2.FormattingEnabled = true;
-            this.cmbEndLocation2.Location = new System.Drawing.Point(394, 85);
-            this.cmbEndLocation2.Name = "cmbEndLocation2";
-            this.cmbEndLocation2.Size = new System.Drawing.Size(288, 37);
-            this.cmbEndLocation2.TabIndex = 7;
-            // 
-            // dtpStartDate2
-            // 
-            this.dtpStartDate2.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpStartDate2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpStartDate2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpStartDate2.Location = new System.Drawing.Point(710, 50);
-            this.dtpStartDate2.Name = "dtpStartDate2";
-            this.dtpStartDate2.Size = new System.Drawing.Size(245, 30);
-            this.dtpStartDate2.TabIndex = 9;
-            // 
-            // btnSwap2
-            // 
-            this.btnSwap2.AutoSize = true;
-            this.btnSwap2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSwap2.BackgroundImage")));
-            this.btnSwap2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSwap2.Location = new System.Drawing.Point(325, 85);
-            this.btnSwap2.Name = "btnSwap2";
-            this.btnSwap2.Size = new System.Drawing.Size(46, 37);
-            this.btnSwap2.TabIndex = 8;
-            this.btnSwap2.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(6, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 24);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Điểm đi";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(381, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 24);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Điểm đến";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label3.Location = new System.Drawing.Point(686, 19);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 24);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Ngày đi";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label4.Location = new System.Drawing.Point(1033, 19);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 24);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Số vé";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Orange;
-            this.button3.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(436, 224);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(359, 47);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Tìm chuyến xe";
-            this.button3.UseVisualStyleBackColor = false;
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(710, 140);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(245, 30);
+            this.dateTimePicker1.TabIndex = 17;
             // 
             // label5
             // 
@@ -359,25 +291,94 @@
             this.label8.TabIndex = 13;
             this.label8.Text = "Điểm đi";
             // 
-            // label9
+            // button3
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label9.Location = new System.Drawing.Point(703, 113);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(143, 24);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Thêm ngày về";
+            this.button3.BackColor = System.Drawing.Color.Orange;
+            this.button3.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.Control;
+            this.button3.Location = new System.Drawing.Point(436, 224);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(359, 47);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "Tìm chuyến xe";
+            this.button3.UseVisualStyleBackColor = false;
             // 
-            // dateTimePicker1
+            // cmbStartLocation2
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(710, 140);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(245, 30);
-            this.dateTimePicker1.TabIndex = 17;
+            this.cmbStartLocation2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbStartLocation2.FormattingEnabled = true;
+            this.cmbStartLocation2.Location = new System.Drawing.Point(16, 85);
+            this.cmbStartLocation2.Name = "cmbStartLocation2";
+            this.cmbStartLocation2.Size = new System.Drawing.Size(288, 37);
+            this.cmbStartLocation2.TabIndex = 6;
+            // 
+            // cmbNumberTicket2
+            // 
+            this.cmbNumberTicket2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbNumberTicket2.FormattingEnabled = true;
+            this.cmbNumberTicket2.Location = new System.Drawing.Point(973, 85);
+            this.cmbNumberTicket2.Name = "cmbNumberTicket2";
+            this.cmbNumberTicket2.Size = new System.Drawing.Size(205, 37);
+            this.cmbNumberTicket2.TabIndex = 10;
+            // 
+            // cmbEndLocation2
+            // 
+            this.cmbEndLocation2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEndLocation2.FormattingEnabled = true;
+            this.cmbEndLocation2.Location = new System.Drawing.Point(394, 85);
+            this.cmbEndLocation2.Name = "cmbEndLocation2";
+            this.cmbEndLocation2.Size = new System.Drawing.Size(288, 37);
+            this.cmbEndLocation2.TabIndex = 7;
+            // 
+            // dtpStartDate2
+            // 
+            this.dtpStartDate2.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpStartDate2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpStartDate2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpStartDate2.Location = new System.Drawing.Point(710, 50);
+            this.dtpStartDate2.Name = "dtpStartDate2";
+            this.dtpStartDate2.Size = new System.Drawing.Size(245, 30);
+            this.dtpStartDate2.TabIndex = 9;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Location = new System.Drawing.Point(15, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1213, 305);
+            this.panel2.TabIndex = 1;
+            // 
+            // btnSwap1
+            // 
+            this.btnSwap1.AutoSize = true;
+            this.btnSwap1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSwap1.BackgroundImage")));
+            this.btnSwap1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSwap1.Location = new System.Drawing.Point(316, 46);
+            this.btnSwap1.Name = "btnSwap1";
+            this.btnSwap1.Size = new System.Drawing.Size(46, 37);
+            this.btnSwap1.TabIndex = 2;
+            this.btnSwap1.UseVisualStyleBackColor = true;
+            // 
+            // btnSwap2
+            // 
+            this.btnSwap2.AutoSize = true;
+            this.btnSwap2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSwap2.BackgroundImage")));
+            this.btnSwap2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSwap2.Location = new System.Drawing.Point(325, 85);
+            this.btnSwap2.Name = "btnSwap2";
+            this.btnSwap2.Size = new System.Drawing.Size(46, 37);
+            this.btnSwap2.TabIndex = 8;
+            this.btnSwap2.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1207, 302);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // frmDatVe
             // 
@@ -387,15 +388,15 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmDatVe";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.tcl1c.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

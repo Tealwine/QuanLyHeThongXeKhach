@@ -32,12 +32,15 @@ namespace HeThongQuanLyXeKhach
         {
             panel1.Height = btnTicketManage.Height;
             panel1.Top = btnTicketManage.Top;
+        
+          
         }
 
         private void btnEmployeeManager_Click(object sender, EventArgs e)
         {
             panel1.Height = btnEmployeeManager.Height;
             panel1.Top = btnEmployeeManager.Top;
+           
         }
 
         private void btnCash_Click(object sender, EventArgs e)
@@ -50,6 +53,7 @@ namespace HeThongQuanLyXeKhach
         {
             panel1.Height = btnCarManage.Height;
             panel1.Top = btnCarManage.Top;
+           
         }
     }
 }

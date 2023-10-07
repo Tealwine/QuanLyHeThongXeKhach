@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace HeThongQuanLyXeKhach
 {
-    public partial class frmInfoChuyen : Form
+    public partial class frmMyTicket : Form
     {
-        public frmInfoChuyen()
+        public frmMyTicket()
         {
             InitializeComponent();
-        }
-
-        private void btnFindInfoTrip_Click(object sender, EventArgs e)
-        {
-            frmChonGhe frmChonGhe = new frmChonGhe();
-            frmChonGhe.Show();
         }
     }
 }
