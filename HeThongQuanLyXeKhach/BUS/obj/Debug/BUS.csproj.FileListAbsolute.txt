@@ -1,0 +1,15 @@
+D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\BUS\bin\Debug\BUS.dll.config
+D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\BUS\bin\Debug\BUS.dll
+D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\BUS\bin\Debug\BUS.pdb
+D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\BUS\bin\Debug\DAL.dll
+D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\BUS\bin\Debug\EntityFramework.dll
+D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\BUS\bin\Debug\EntityFramework.SqlServer.dll
+D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\BUS\bin\Debug\DAL.pdb
+D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\BUS\bin\Debug\DAL.dll.config
+D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\BUS\bin\Debug\EntityFramework.xml
+D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\BUS\bin\Debug\EntityFramework.SqlServer.xml
+D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\BUS\obj\Debug\BUS.dll
+D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\BUS\obj\Debug\BUS.pdb

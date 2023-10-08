@@ -40,7 +40,12 @@ namespace HeThongQuanLyXeKhach
         {
             panel1.Height = btnEmployeeManager.Height;
             panel1.Top = btnEmployeeManager.Top;
-           
+
+            frmEmployeeManager frmEmployeeManager = new frmEmployeeManager();
+            if (ExistForm(frmEmployeeManager))
+                return;
+            ViewForm(frmEmployeeManager);
+
         }
 
         private void btnCash_Click(object sender, EventArgs e)
@@ -53,7 +58,35 @@ namespace HeThongQuanLyXeKhach
         {
             panel1.Height = btnCarManage.Height;
             panel1.Top = btnCarManage.Top;
-           
+            frmQuanLyXeKhach frmQuanLyXeKhach = new frmQuanLyXeKhach();
+            if (ExistForm(frmQuanLyXeKhach))
+                return;
+            ViewForm(frmQuanLyXeKhach);
+
+        }
+
+
+        private void ViewForm(Form form)
+        {
+            form.MdiParent = this;
+            form.StartPosition = FormStartPosition.Manual;
+            form.Location = new Point(159, 71);
+            form.Size = new Size(1350, 715);
+            form.Show();
+        }
+
+
+        private bool ExistForm(Form form)
+        {
+            foreach (var child in MdiChildren)
+            {
+                if (child.Name == form.Name)
+                {
+                    child.Activate();
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
