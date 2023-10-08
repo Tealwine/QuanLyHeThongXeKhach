@@ -19,6 +19,7 @@ namespace DAL.Models
 
         public int CustomerId { get; set; }
 
+        [Required]
         [StringLength(10)]
         public string Seat { get; set; }
 

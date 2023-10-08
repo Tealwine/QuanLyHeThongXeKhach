@@ -16,9 +16,9 @@ namespace DAL.Models
         [StringLength(10)]
         public string EmployeeId { get; set; }
 
-        public DateTime? InvoiceDate { get; set; }
+        public DateTime InvoiceDate { get; set; }
 
-        public int? Number { get; set; }
+        public int Number { get; set; }
 
         public int? Total { get; set; }
 
