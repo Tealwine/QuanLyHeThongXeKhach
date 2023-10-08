@@ -70,8 +70,8 @@ namespace HeThongQuanLyXeKhach
         {
             form.MdiParent = this;
             form.StartPosition = FormStartPosition.Manual;
-            form.Location = new Point(159, 63);
-            form.Size = new Size(1367, 715);
+            form.Location = new Point(159, 59);
+            form.Size = new Size(1370, 699);
             form.Show();
         }
 

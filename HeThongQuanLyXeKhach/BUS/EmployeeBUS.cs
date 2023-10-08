@@ -25,5 +25,9 @@ namespace BUS
             context.Employees.Remove(employee);
             context.SaveChanges();
         }
+        public Employee FindById(string employeeid)
+        {
+            return context.Employees.FirstOrDefault(emp=>emp.EmployeeId == employeeid);
+        }
     }
 }

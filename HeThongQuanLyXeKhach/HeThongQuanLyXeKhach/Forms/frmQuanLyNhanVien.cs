@@ -1,4 +1,4 @@
-﻿using BUS;
+﻿ using BUS;
 using DAL.Models;
 using System;
 using System.Collections.Generic;
@@ -17,15 +17,17 @@ namespace HeThongQuanLyXeKhach
     public partial class frmEmployeeManager : Form
     {
         private readonly EmployeeBUS employeeBUS = new EmployeeBUS();
+        private readonly PositionBUS positionBUS = new PositionBUS();
         public frmEmployeeManager()
         {
             InitializeComponent();
         }
 
-        public void FillComboboxJobTitle(List<Employee> list)
+        public void FillComboboxJobTitle(List<Position> list)
         {
             this.cmbcmbEmployeeRole.DataSource = list;
             this.cmbcmbEmployeeRole.DisplayMember = "JobTitle";
+            this.cmbcmbEmployeeRole.ValueMember = "PositionId";
         }
 
         public void BindGrid(List<Employee> list)
@@ -36,12 +38,11 @@ namespace HeThongQuanLyXeKhach
                 int index = dgvNhanVien.Rows.Add();
                 dgvNhanVien.Rows[index].Cells[0].Value = emp.EmployeeId;
                 dgvNhanVien.Rows[index].Cells[1].Value = emp.EmployeeName;
-                dgvNhanVien.Rows[index].Cells[2].Value = emp.JobTitle;
+                dgvNhanVien.Rows[index].Cells[2].Value = emp.Position.JobTitle;
                 dgvNhanVien.Rows[index].Cells[3].Value = emp.Gender;
                 dgvNhanVien.Rows[index].Cells[4].Value = emp.Birth.ToShortDateString();
                 dgvNhanVien.Rows[index].Cells[5].Value = emp.EmpAddress;
                 dgvNhanVien.Rows[index].Cells[6].Value = emp.Phone;
-                dgvNhanVien.Rows[index].Cells[7].Value = emp.Salary;
                 ShowAvatar(emp.Avatar);
                 
             }
@@ -79,7 +80,11 @@ namespace HeThongQuanLyXeKhach
             try
             {
                 var listEmployee = employeeBUS.GetAll();
+                var listPos = positionBUS.GetAll();
                 BindGrid(listEmployee);
+                BindGridSalary(listEmployee);
+                FillComboboxJobTitle(listPos);
+                
             }
             catch (Exception ex)
             {
@@ -93,37 +98,38 @@ namespace HeThongQuanLyXeKhach
             try
             {
                 var listEmp = employeeBUS.GetAll();
+                var listPos = positionBUS.GetAll();
                 string gioiTinh;
-
                 if (chkMale.Checked) gioiTinh = "Nam";
                 else
                 {
                     gioiTinh = "Nữ";
                 }
 
+                var chucVu = listPos.FirstOrDefault(p=>p.JobTitle == cmbcmbEmployeeRole.Text);
+
                 string maNV = txtEmployeeId.Text.ToString();
                 string tenNV = txtEmployeeName.Text.ToString();
-                string chucVu = cmbcmbEmployeeRole.Text.ToString();
                 string diaChi = txtEmployeeLocation.Text.ToString();
                 DateTime ngaySinh = dtpEmployeeBirthDay.Value;
                 string sdt = txtEmployeePhoneNumber.Text.ToString();
-                string luong = txtSalary.Text.ToString();
 
-                
-                    var emp = new Employee
-                    {
-                        EmployeeId = maNV,
-                        EmployeeName = tenNV,
-                        JobTitle = chucVu,
-                        Gender = gioiTinh,
-                        EmpAddress = diaChi,
-                        Birth = ngaySinh,//Convert.ToDateTime( ngaySinh),
-                        Phone = sdt,
-                        Avatar = tenAnh
-                    };
+                var emp = new Employee
+                {
+                    EmployeeId = maNV,
+                    EmployeeName = tenNV,
+                    PositionId = chucVu.PositionId,
+                    Gender = gioiTinh,
+                    EmpAddress = diaChi,
+                    Birth = ngaySinh,//Convert.ToDateTime( ngaySinh),
+                    Phone = sdt,
+                    Avatar = tenAnh
+                };
 
-                    employeeBUS.InsertUpdate(emp);
-                    BindGrid(employeeBUS.GetAll());
+                employeeBUS.InsertUpdate(emp);
+                BindGrid(employeeBUS.GetAll());
+
+
                 MessageBox.Show("Cập nhật thành công");
                 
 
@@ -154,7 +160,7 @@ namespace HeThongQuanLyXeKhach
             dtpEmployeeBirthDay.Value = DateTime.Parse(row.Cells[4].Value.ToString());
             txtEmployeeLocation.Text = row.Cells[5].Value.ToString();
             txtEmployeePhoneNumber.Text = row.Cells[6].Value.ToString();
-            txtSalary.Text = row.Cells[7].Value.ToString();
+           
 
             var listEmp = employeeBUS.GetAll();
             var duLieuAnh = listEmp.Where(emp => emp.EmployeeId.ToString() == txtEmployeeId.Text.ToString()).FirstOrDefault();
@@ -183,9 +189,9 @@ namespace HeThongQuanLyXeKhach
             txtEmployeeLocation.Text = "";
             cmbcmbEmployeeRole.Text = "";
             dtpEmployeeBirthDay.Value = DateTime.Now;
-            txtSalary.Text = "";
             chkFemale.Checked = false;
             chkMale.Checked = false;
+            pcbEmployeeImage.Image = null;
         }
 
         private void txtEmployeeDelete_Click(object sender, EventArgs e)
@@ -217,7 +223,69 @@ namespace HeThongQuanLyXeKhach
         private void btnEmployeeRefresh_Click(object sender, EventArgs e)
         {
             frmEmployeeManager_Load(sender, e);
+            ClearTextbox() ;
             MessageBox.Show("Đã làm mới");
+        }
+
+        private void BindGridSalary(List<Employee> listEmp)
+        {
+           
+            var listPos = positionBUS.GetAll();
+            dgvTinhLuong.Rows.Clear();
+            foreach ( var emp in listEmp )
+            {
+                int index = dgvTinhLuong.Rows.Add();
+                double TotalSalary = (double)(emp.Position.Salary * emp.Position.Coefficient);
+                dgvTinhLuong.Rows[index].Cells[0].Value = emp.EmployeeId;
+                dgvTinhLuong.Rows[index].Cells[1].Value = emp.EmployeeName;
+                dgvTinhLuong.Rows[index].Cells[2].Value = emp.Position.JobTitle;
+                dgvTinhLuong.Rows[index].Cells[3].Value = emp.Position.Salary;
+                dgvTinhLuong.Rows[index].Cells[4].Value = emp.Position.Coefficient;
+                dgvTinhLuong.Rows[index].Cells[5].Value = TotalSalary;
+            }
+        }
+
+        private void dgvTinhLuong_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            if (index == -1 || dgvTinhLuong.Rows[index].Cells[0].Value == null) return;
+            DataGridViewRow row = dgvTinhLuong.Rows[index];
+            txtId.Text = row.Cells[0].Value.ToString();
+            txtName.Text = row.Cells[1].Value.ToString();
+            txtBasicSalary.Text = row.Cells[3].Value.ToString();
+            txtMulti.Text = row.Cells[4].Value.ToString();
+            txtFinalSalary.Text = row.Cells[5].Value.ToString();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var listEmp = employeeBUS.GetAll();
+                var listPos = positionBUS.GetAll();
+
+                string ma = txtId.Text.ToString();
+                if(employeeBUS.FindById(ma) != null)
+                {
+                    Employee employee = employeeBUS.FindById(ma);
+                    employee.Position.Salary = Convert.ToInt32(txtBasicSalary.Text.ToString());
+                    employee.Position.Coefficient = double.Parse(txtMulti.Text.ToString());
+                    employeeBUS.InsertUpdate(employee);
+                    frmEmployeeManager_Load(sender, e);
+                    MessageBox.Show("Cập nhật lương thành công");
+                }
+                
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void ctlEmploeeManager_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            frmEmployeeManager_Load(sender, e);
         }
     }
 }

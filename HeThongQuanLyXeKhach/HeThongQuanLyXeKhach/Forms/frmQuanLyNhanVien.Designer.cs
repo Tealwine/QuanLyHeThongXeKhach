@@ -43,9 +43,7 @@
             this.cmbcmbEmployeeRole = new System.Windows.Forms.ComboBox();
             this.dtpEmployeeBirthDay = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtSalary = new System.Windows.Forms.TextBox();
             this.txtEmployeeLocation = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtEmployeePhoneNumber = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtEmployeeId = new System.Windows.Forms.TextBox();
@@ -56,6 +54,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tpLuong = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -64,18 +69,15 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnIn = new System.Windows.Forms.Button();
-            this.btnTinh = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txFinalSalary = new System.Windows.Forms.TextBox();
+            this.txtFinalSalary = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtMinus = new System.Windows.Forms.TextBox();
-            this.txtReward = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.txtMulti = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.txtSalaty = new System.Windows.Forms.TextBox();
+            this.txtBasicSalary = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -83,20 +85,18 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnImPort = new System.Windows.Forms.ToolStripButton();
+            this.btnImport = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnExPort = new System.Windows.Forms.ToolStripButton();
+            this.btnExport = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnPrint = new System.Windows.Forms.ToolStripButton();
             this.pnMainManage = new System.Windows.Forms.Panel();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ctlEmploeeManager.SuspendLayout();
             this.tpManagerEmployee.SuspendLayout();
             this.panelManageView.SuspendLayout();
@@ -119,6 +119,7 @@
             resources.ApplyResources(this.ctlEmploeeManager, "ctlEmploeeManager");
             this.ctlEmploeeManager.Name = "ctlEmploeeManager";
             this.ctlEmploeeManager.SelectedIndex = 0;
+            this.ctlEmploeeManager.SelectedIndexChanged += new System.EventHandler(this.ctlEmploeeManager_SelectedIndexChanged);
             // 
             // tpManagerEmployee
             // 
@@ -148,9 +149,7 @@
             this.panel2.Controls.Add(this.cmbcmbEmployeeRole);
             this.panel2.Controls.Add(this.dtpEmployeeBirthDay);
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.txtSalary);
             this.panel2.Controls.Add(this.txtEmployeeLocation);
-            this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.txtEmployeePhoneNumber);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.txtEmployeeId);
@@ -222,11 +221,6 @@
             // 
             resources.ApplyResources(this.cmbcmbEmployeeRole, "cmbcmbEmployeeRole");
             this.cmbcmbEmployeeRole.FormattingEnabled = true;
-            this.cmbcmbEmployeeRole.Items.AddRange(new object[] {
-            resources.GetString("cmbcmbEmployeeRole.Items"),
-            resources.GetString("cmbcmbEmployeeRole.Items1"),
-            resources.GetString("cmbcmbEmployeeRole.Items2"),
-            resources.GetString("cmbcmbEmployeeRole.Items3")});
             this.cmbcmbEmployeeRole.Name = "cmbcmbEmployeeRole";
             // 
             // dtpEmployeeBirthDay
@@ -242,24 +236,11 @@
             resources.ApplyResources(this.label9, "label9");
             this.label9.Name = "label9";
             // 
-            // txtSalary
-            // 
-            this.txtSalary.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtSalary, "txtSalary");
-            this.txtSalary.Name = "txtSalary";
-            // 
             // txtEmployeeLocation
             // 
             this.txtEmployeeLocation.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtEmployeeLocation, "txtEmployeeLocation");
             this.txtEmployeeLocation.Name = "txtEmployeeLocation";
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
             // 
             // txtEmployeePhoneNumber
             // 
@@ -332,226 +313,12 @@
             this.Column4,
             this.Column5,
             this.Column8,
-            this.Column6,
-            this.Column7});
+            this.Column6});
             resources.ApplyResources(this.dgvNhanVien, "dgvNhanVien");
             this.dgvNhanVien.Name = "dgvNhanVien";
             this.dgvNhanVien.RowTemplate.Height = 24;
             this.dgvNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
-            // 
-            // tpLuong
-            // 
-            this.tpLuong.Controls.Add(this.panel1);
-            resources.ApplyResources(this.tpLuong, "tpLuong");
-            this.tpLuong.Name = "tpLuong";
-            this.tpLuong.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.dgvTinhLuong);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.toolStrip1);
-            this.panel1.Name = "panel1";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
-            // dgvTinhLuong
-            // 
-            this.dgvTinhLuong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.dgvTinhLuong, "dgvTinhLuong");
-            this.dgvTinhLuong.Name = "dgvTinhLuong";
-            this.dgvTinhLuong.RowTemplate.Height = 24;
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.btnSua);
-            this.panel3.Controls.Add(this.btnIn);
-            this.panel3.Controls.Add(this.btnTinh);
-            this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.txtId);
-            this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.txFinalSalary);
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.txtMinus);
-            this.panel3.Controls.Add(this.txtReward);
-            this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.label14);
-            this.panel3.Controls.Add(this.label15);
-            this.panel3.Controls.Add(this.txtSalaty);
-            this.panel3.Controls.Add(this.label16);
-            this.panel3.Controls.Add(this.txtName);
-            resources.ApplyResources(this.panel3, "panel3");
-            this.panel3.Name = "panel3";
-            // 
-            // btnSua
-            // 
-            resources.ApplyResources(this.btnSua, "btnSua");
-            this.btnSua.Name = "btnSua";
-            this.btnSua.UseVisualStyleBackColor = true;
-            // 
-            // btnIn
-            // 
-            resources.ApplyResources(this.btnIn, "btnIn");
-            this.btnIn.Name = "btnIn";
-            this.btnIn.UseVisualStyleBackColor = true;
-            // 
-            // btnTinh
-            // 
-            resources.ApplyResources(this.btnTinh, "btnTinh");
-            this.btnTinh.Name = "btnTinh";
-            this.btnTinh.UseVisualStyleBackColor = true;
-            // 
-            // label10
-            // 
-            resources.ApplyResources(this.label10, "label10");
-            this.label10.Name = "label10";
-            // 
-            // txtId
-            // 
-            resources.ApplyResources(this.txtId, "txtId");
-            this.txtId.Name = "txtId";
-            // 
-            // label11
-            // 
-            resources.ApplyResources(this.label11, "label11");
-            this.label11.Name = "label11";
-            // 
-            // txFinalSalary
-            // 
-            resources.ApplyResources(this.txFinalSalary, "txFinalSalary");
-            this.txFinalSalary.Name = "txFinalSalary";
-            // 
-            // label12
-            // 
-            resources.ApplyResources(this.label12, "label12");
-            this.label12.Name = "label12";
-            // 
-            // txtMinus
-            // 
-            resources.ApplyResources(this.txtMinus, "txtMinus");
-            this.txtMinus.Name = "txtMinus";
-            // 
-            // txtReward
-            // 
-            resources.ApplyResources(this.txtReward, "txtReward");
-            this.txtReward.Name = "txtReward";
-            // 
-            // label13
-            // 
-            resources.ApplyResources(this.label13, "label13");
-            this.label13.Name = "label13";
-            // 
-            // label14
-            // 
-            resources.ApplyResources(this.label14, "label14");
-            this.label14.Name = "label14";
-            // 
-            // label15
-            // 
-            resources.ApplyResources(this.label15, "label15");
-            this.label15.Name = "label15";
-            // 
-            // txtSalaty
-            // 
-            resources.ApplyResources(this.txtSalaty, "txtSalaty");
-            this.txtSalaty.Name = "txtSalaty";
-            // 
-            // label16
-            // 
-            resources.ApplyResources(this.label16, "label16");
-            this.label16.Name = "label16";
-            // 
-            // txtName
-            // 
-            resources.ApplyResources(this.txtName, "txtName");
-            this.txtName.Name = "txtName";
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.toolStrip1, "toolStrip1");
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(30, 30);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripSeparator4,
-            this.toolStripTextBox1,
-            this.toolStripSeparator5,
-            this.btnImPort,
-            this.toolStripSeparator2,
-            this.btnExPort,
-            this.toolStripSeparator1,
-            this.btnPrint});
-            this.toolStrip1.Name = "toolStrip1";
-            // 
-            // toolStripButton1
-            // 
-            resources.ApplyResources(this.toolStripButton1, "toolStripButton1");
-            this.toolStripButton1.Name = "toolStripButton1";
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
-            // 
-            // toolStripTextBox1
-            // 
-            resources.ApplyResources(this.toolStripTextBox1, "toolStripTextBox1");
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
-            // 
-            // btnImPort
-            // 
-            this.btnImPort.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.btnImPort, "btnImPort");
-            this.btnImPort.Name = "btnImPort";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
-            // 
-            // btnExPort
-            // 
-            this.btnExPort.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.btnExPort, "btnExPort");
-            this.btnExPort.Name = "btnExPort";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.btnPrint, "btnPrint");
-            this.btnPrint.Name = "btnPrint";
-            // 
-            // pnMainManage
-            // 
-            resources.ApplyResources(this.pnMainManage, "pnMainManage");
-            this.pnMainManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pnMainManage.Controls.Add(this.ctlEmploeeManager);
-            this.pnMainManage.Name = "pnMainManage";
             // 
             // Column1
             // 
@@ -588,10 +355,249 @@
             resources.ApplyResources(this.Column6, "Column6");
             this.Column6.Name = "Column6";
             // 
+            // tpLuong
+            // 
+            this.tpLuong.BackColor = System.Drawing.Color.Transparent;
+            this.tpLuong.Controls.Add(this.panel1);
+            resources.ApplyResources(this.tpLuong, "tpLuong");
+            this.tpLuong.Name = "tpLuong";
+            // 
+            // panel1
+            // 
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.dgvTinhLuong);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.toolStrip1);
+            this.panel1.Name = "panel1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // dgvTinhLuong
+            // 
+            this.dgvTinhLuong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTinhLuong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTinhLuong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column9,
+            this.Column10,
+            this.Column12,
+            this.Column11,
+            this.Column7,
+            this.Column13});
+            resources.ApplyResources(this.dgvTinhLuong, "dgvTinhLuong");
+            this.dgvTinhLuong.Name = "dgvTinhLuong";
+            this.dgvTinhLuong.RowTemplate.Height = 24;
+            this.dgvTinhLuong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTinhLuong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTinhLuong_CellClick);
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.btnSua);
+            this.panel3.Controls.Add(this.btnIn);
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.txtId);
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.txtFinalSalary);
+            this.panel3.Controls.Add(this.label12);
+            this.panel3.Controls.Add(this.txtMulti);
+            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.label15);
+            this.panel3.Controls.Add(this.txtBasicSalary);
+            this.panel3.Controls.Add(this.label16);
+            this.panel3.Controls.Add(this.txtName);
+            resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.Name = "panel3";
+            // 
+            // btnSua
+            // 
+            this.btnSua.BackColor = System.Drawing.Color.LightBlue;
+            resources.ApplyResources(this.btnSua, "btnSua");
+            this.btnSua.Name = "btnSua";
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnIn
+            // 
+            this.btnIn.BackColor = System.Drawing.Color.LightBlue;
+            resources.ApplyResources(this.btnIn, "btnIn");
+            this.btnIn.Name = "btnIn";
+            this.btnIn.UseVisualStyleBackColor = false;
+            // 
+            // label10
+            // 
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.Name = "label10";
+            // 
+            // txtId
+            // 
+            resources.ApplyResources(this.txtId, "txtId");
+            this.txtId.Name = "txtId";
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
+            // 
+            // txtFinalSalary
+            // 
+            resources.ApplyResources(this.txtFinalSalary, "txtFinalSalary");
+            this.txtFinalSalary.Name = "txtFinalSalary";
+            // 
+            // label12
+            // 
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.Name = "label12";
+            // 
+            // txtMulti
+            // 
+            resources.ApplyResources(this.txtMulti, "txtMulti");
+            this.txtMulti.Name = "txtMulti";
+            // 
+            // label14
+            // 
+            resources.ApplyResources(this.label14, "label14");
+            this.label14.Name = "label14";
+            // 
+            // label15
+            // 
+            resources.ApplyResources(this.label15, "label15");
+            this.label15.Name = "label15";
+            // 
+            // txtBasicSalary
+            // 
+            resources.ApplyResources(this.txtBasicSalary, "txtBasicSalary");
+            this.txtBasicSalary.Name = "txtBasicSalary";
+            // 
+            // label16
+            // 
+            resources.ApplyResources(this.label16, "label16");
+            this.label16.Name = "label16";
+            // 
+            // txtName
+            // 
+            resources.ApplyResources(this.txtName, "txtName");
+            this.txtName.Name = "txtName";
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.toolStrip1, "toolStrip1");
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(30, 30);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripSeparator4,
+            this.toolStripTextBox1,
+            this.toolStripSeparator5,
+            this.btnImport,
+            this.toolStripSeparator2,
+            this.btnExport,
+            this.toolStripSeparator1,
+            this.btnPrint});
+            this.toolStrip1.Name = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            resources.ApplyResources(this.toolStripButton1, "toolStripButton1");
+            this.toolStripButton1.Name = "toolStripButton1";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
+            // 
+            // toolStripTextBox1
+            // 
+            resources.ApplyResources(this.toolStripTextBox1, "toolStripTextBox1");
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
+            // 
+            // btnImport
+            // 
+            this.btnImport.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.btnImport, "btnImport");
+            this.btnImport.Name = "btnImport";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            // 
+            // btnExport
+            // 
+            this.btnExport.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.btnExport, "btnExport");
+            this.btnExport.Name = "btnExport";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.btnPrint, "btnPrint");
+            this.btnPrint.Name = "btnPrint";
+            // 
+            // pnMainManage
+            // 
+            resources.ApplyResources(this.pnMainManage, "pnMainManage");
+            this.pnMainManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.pnMainManage.Controls.Add(this.ctlEmploeeManager);
+            this.pnMainManage.Name = "pnMainManage";
+            // 
+            // Column9
+            // 
+            this.Column9.FillWeight = 48.1283F;
+            resources.ApplyResources(this.Column9, "Column9");
+            this.Column9.Name = "Column9";
+            // 
+            // Column10
+            // 
+            this.Column10.FillWeight = 110.3742F;
+            resources.ApplyResources(this.Column10, "Column10");
+            this.Column10.Name = "Column10";
+            // 
+            // Column12
+            // 
+            this.Column12.FillWeight = 110.3742F;
+            resources.ApplyResources(this.Column12, "Column12");
+            this.Column12.Name = "Column12";
+            // 
+            // Column11
+            // 
+            this.Column11.FillWeight = 110.3742F;
+            resources.ApplyResources(this.Column11, "Column11");
+            this.Column11.Name = "Column11";
+            // 
             // Column7
             // 
+            this.Column7.FillWeight = 110.3742F;
             resources.ApplyResources(this.Column7, "Column7");
             this.Column7.Name = "Column7";
+            // 
+            // Column13
+            // 
+            this.Column13.FillWeight = 110.3742F;
+            resources.ApplyResources(this.Column13, "Column13");
+            this.Column13.Name = "Column13";
             // 
             // frmEmployeeManager
             // 
@@ -646,7 +652,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgvNhanVien;
         private System.Windows.Forms.TabPage tpLuong;
         private System.Windows.Forms.Panel panel1;
@@ -656,18 +661,15 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnIn;
-        private System.Windows.Forms.Button btnTinh;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txFinalSalary;
+        private System.Windows.Forms.TextBox txtFinalSalary;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtMinus;
-        private System.Windows.Forms.TextBox txtReward;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtMulti;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txtSalaty;
+        private System.Windows.Forms.TextBox txtBasicSalary;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.ToolStrip toolStrip1;
@@ -675,16 +677,15 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripButton btnImPort;
+        private System.Windows.Forms.ToolStripButton btnImport;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton btnExPort;
+        private System.Windows.Forms.ToolStripButton btnExport;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btnPrint;
         private System.Windows.Forms.Panel pnMainManage;
-        private System.Windows.Forms.TextBox txtSalary;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox chkFemale;
         private System.Windows.Forms.CheckBox chkMale;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -692,6 +693,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
     }
 }

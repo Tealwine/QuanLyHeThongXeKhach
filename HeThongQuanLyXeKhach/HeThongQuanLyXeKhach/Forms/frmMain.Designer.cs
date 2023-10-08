@@ -40,9 +40,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuSystem = new System.Windows.Forms.ToolStripMenuItem();
+            this.submenuMyAccount = new System.Windows.Forms.ToolStripMenuItem();
             this.pnMainFuncion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnMainFuncion
@@ -55,17 +59,17 @@
             this.pnMainFuncion.Controls.Add(this.btnTicketManage);
             this.pnMainFuncion.Controls.Add(this.btnCarManage);
             this.pnMainFuncion.Controls.Add(this.btnSystem);
-            this.pnMainFuncion.Location = new System.Drawing.Point(0, 2);
+            this.pnMainFuncion.Location = new System.Drawing.Point(0, 40);
             this.pnMainFuncion.Name = "pnMainFuncion";
-            this.pnMainFuncion.Size = new System.Drawing.Size(200, 1030);
+            this.pnMainFuncion.Size = new System.Drawing.Size(200, 968);
             this.pnMainFuncion.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 13);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(180, 190);
+            this.pictureBox1.Size = new System.Drawing.Size(180, 181);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -148,7 +152,7 @@
             this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(0, 2);
+            this.panel2.Location = new System.Drawing.Point(0, 36);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1913, 77);
             this.panel2.TabIndex = 1;
@@ -157,7 +161,7 @@
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(1647, 29);
+            this.dateTimePicker1.Location = new System.Drawing.Point(1588, 25);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 30);
             this.dateTimePicker1.TabIndex = 2;
@@ -173,6 +177,34 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "HỆ THỐNG QUẢN LÝ XE KHÁCH";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuSystem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1916, 36);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuSystem
+            // 
+            this.menuSystem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.submenuMyAccount});
+            this.menuSystem.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuSystem.Name = "menuSystem";
+            this.menuSystem.Size = new System.Drawing.Size(120, 32);
+            this.menuSystem.Text = "Hệ thống";
+            // 
+            // submenuMyAccount
+            // 
+            this.submenuMyAccount.Name = "submenuMyAccount";
+            this.submenuMyAccount.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
+            this.submenuMyAccount.Size = new System.Drawing.Size(350, 32);
+            this.submenuMyAccount.Text = "Tài khoản của tôi";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -180,14 +212,20 @@
             this.ClientSize = new System.Drawing.Size(1916, 1033);
             this.Controls.Add(this.pnMainFuncion);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
+            this.Text = "Ampersand Travel";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnMainFuncion.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -204,5 +242,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem menuSystem;
+        private System.Windows.Forms.ToolStripMenuItem submenuMyAccount;
     }
 }

@@ -23,10 +23,6 @@ namespace DAL.Models
         public string EmployeeName { get; set; }
 
         [Required]
-        [StringLength(30)]
-        public string JobTitle { get; set; }
-
-        [Required]
         [StringLength(10)]
         public string Gender { get; set; }
 
@@ -37,8 +33,6 @@ namespace DAL.Models
         [StringLength(11)]
         public string Phone { get; set; }
 
-        public int Salary { get; set; }
-
         [Required]
         [StringLength(50)]
         public string EmpAddress { get; set; }
@@ -46,7 +40,11 @@ namespace DAL.Models
         [StringLength(255)]
         public string Avatar { get; set; }
 
+        public int PositionId { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Bill> Bills { get; set; }
+
+        public virtual Position Position { get; set; }
     }
 }

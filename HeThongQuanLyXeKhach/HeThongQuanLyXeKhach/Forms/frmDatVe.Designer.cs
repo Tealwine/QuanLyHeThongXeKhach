@@ -42,6 +42,7 @@
             this.cmbNumberTicket1 = new System.Windows.Forms.ComboBox();
             this.cmbEndLocation1 = new System.Windows.Forms.ComboBox();
             this.dtpStartDate1 = new System.Windows.Forms.DateTimePicker();
+            this.btnSwap1 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label9 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -54,9 +55,8 @@
             this.cmbNumberTicket2 = new System.Windows.Forms.ComboBox();
             this.cmbEndLocation2 = new System.Windows.Forms.ComboBox();
             this.dtpStartDate2 = new System.Windows.Forms.DateTimePicker();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnSwap1 = new System.Windows.Forms.Button();
             this.btnSwap2 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -208,6 +208,17 @@
             this.dtpStartDate1.Size = new System.Drawing.Size(319, 30);
             this.dtpStartDate1.TabIndex = 3;
             // 
+            // btnSwap1
+            // 
+            this.btnSwap1.AutoSize = true;
+            this.btnSwap1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSwap1.BackgroundImage")));
+            this.btnSwap1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSwap1.Location = new System.Drawing.Point(316, 46);
+            this.btnSwap1.Name = "btnSwap1";
+            this.btnSwap1.Size = new System.Drawing.Size(46, 37);
+            this.btnSwap1.TabIndex = 2;
+            this.btnSwap1.UseVisualStyleBackColor = true;
+            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.PapayaWhip;
@@ -340,25 +351,6 @@
             this.dtpStartDate2.Size = new System.Drawing.Size(245, 30);
             this.dtpStartDate2.TabIndex = 9;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(15, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1213, 305);
-            this.panel2.TabIndex = 1;
-            // 
-            // btnSwap1
-            // 
-            this.btnSwap1.AutoSize = true;
-            this.btnSwap1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSwap1.BackgroundImage")));
-            this.btnSwap1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSwap1.Location = new System.Drawing.Point(316, 46);
-            this.btnSwap1.Name = "btnSwap1";
-            this.btnSwap1.Size = new System.Drawing.Size(46, 37);
-            this.btnSwap1.TabIndex = 2;
-            this.btnSwap1.UseVisualStyleBackColor = true;
-            // 
             // btnSwap2
             // 
             this.btnSwap2.AutoSize = true;
@@ -369,6 +361,14 @@
             this.btnSwap2.Size = new System.Drawing.Size(46, 37);
             this.btnSwap2.TabIndex = 8;
             this.btnSwap2.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Location = new System.Drawing.Point(15, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1213, 305);
+            this.panel2.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -387,7 +387,7 @@
             this.ClientSize = new System.Drawing.Size(1267, 652);
             this.Controls.Add(this.panel1);
             this.Name = "frmDatVe";
-            this.Text = "Form1";
+            this.Text = "Đặt vé";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.tcl1c.ResumeLayout(false);

@@ -1384,7 +1384,7 @@
             this.ClientSize = new System.Drawing.Size(1262, 935);
             this.Controls.Add(this.panel2);
             this.Name = "frmChonGhe";
-            this.Text = "Form1";
+            this.Text = "Chọn ghế";
             this.pnTripInfor.ResumeLayout(false);
             this.pnTripInfor.PerformLayout();
             this.panel2.ResumeLayout(false);
