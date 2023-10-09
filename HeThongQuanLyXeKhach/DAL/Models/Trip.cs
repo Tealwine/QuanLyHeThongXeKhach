@@ -19,13 +19,15 @@ namespace DAL.Models
         [StringLength(10)]
         public string TripID { get; set; }
 
-        public DateTime? StartTime { get; set; }
+        public DateTime StartTime { get; set; }
 
-        public DateTime? ArriveTime { get; set; }
+        public DateTime ArriveTime { get; set; }
 
+        [Required]
         [StringLength(30)]
         public string StartPlace { get; set; }
 
+        [Required]
         [StringLength(30)]
         public string ArrivePlace { get; set; }
 

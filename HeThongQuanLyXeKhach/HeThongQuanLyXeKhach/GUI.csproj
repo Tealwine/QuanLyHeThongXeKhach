@@ -56,114 +56,114 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="Forms\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="Forms\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmStart.cs">
+    <Compile Include="Forms\frmStart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStart.Designer.cs">
+    <Compile Include="Forms\frmStart.Designer.cs">
       <DependentUpon>frmStart.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQuanLyDatVe.cs">
+    <Compile Include="Forms\frmQuanLyDatVe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmQuanLyDatVe.Designer.cs">
+    <Compile Include="Forms\frmQuanLyDatVe.Designer.cs">
       <DependentUpon>frmQuanLyDatVe.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQuanLyXeKhach.cs">
+    <Compile Include="Forms\frmQuanLyXeKhach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmQuanLyXeKhach.Designer.cs">
+    <Compile Include="Forms\frmQuanLyXeKhach.Designer.cs">
       <DependentUpon>frmQuanLyXeKhach.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThuVaChi.cs">
+    <Compile Include="Forms\frmThuVaChi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThuVaChi.Designer.cs">
+    <Compile Include="Forms\frmThuVaChi.Designer.cs">
       <DependentUpon>frmThuVaChi.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmChonGhe.cs">
+    <Compile Include="Forms\frmChonGhe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmChonGhe.Designer.cs">
+    <Compile Include="Forms\frmChonGhe.Designer.cs">
       <DependentUpon>frmChonGhe.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDatVe.cs">
+    <Compile Include="Forms\frmDatVe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDatVe.Designer.cs">
+    <Compile Include="Forms\frmDatVe.Designer.cs">
       <DependentUpon>frmDatVe.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
+    <Compile Include="Forms\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.Designer.cs">
+    <Compile Include="Forms\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQuanLyNhanVien.cs">
+    <Compile Include="Forms\frmQuanLyNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmQuanLyNhanVien.Designer.cs">
+    <Compile Include="Forms\frmQuanLyNhanVien.Designer.cs">
       <DependentUpon>frmQuanLyNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmHeThong.cs">
+    <Compile Include="Forms\frmHeThong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHeThong.Designer.cs">
+    <Compile Include="Forms\frmHeThong.Designer.cs">
       <DependentUpon>frmHeThong.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmInfoChuyen.cs">
+    <Compile Include="Forms\frmInfoChuyen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmInfoChuyen.Designer.cs">
+    <Compile Include="Forms\frmInfoChuyen.Designer.cs">
       <DependentUpon>frmInfoChuyen.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMyTicket.cs">
+    <Compile Include="Forms\frmMyTicket.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMyTicket.Designer.cs">
+    <Compile Include="Forms\frmMyTicket.Designer.cs">
       <DependentUpon>frmMyTicket.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="Forms\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStart.resx">
+    <EmbeddedResource Include="Forms\frmStart.resx">
       <DependentUpon>frmStart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmQuanLyDatVe.resx">
+    <EmbeddedResource Include="Forms\frmQuanLyDatVe.resx">
       <DependentUpon>frmQuanLyDatVe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmQuanLyXeKhach.resx">
+    <EmbeddedResource Include="Forms\frmQuanLyXeKhach.resx">
       <DependentUpon>frmQuanLyXeKhach.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThuVaChi.resx">
+    <EmbeddedResource Include="Forms\frmThuVaChi.resx">
       <DependentUpon>frmThuVaChi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmChonGhe.resx">
+    <EmbeddedResource Include="Forms\frmChonGhe.resx">
       <DependentUpon>frmChonGhe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDatVe.resx">
+    <EmbeddedResource Include="Forms\frmDatVe.resx">
       <DependentUpon>frmDatVe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
+    <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmQuanLyNhanVien.resx">
+    <EmbeddedResource Include="Forms\frmQuanLyNhanVien.resx">
       <DependentUpon>frmQuanLyNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmHeThong.resx">
+    <EmbeddedResource Include="Forms\frmHeThong.resx">
       <DependentUpon>frmHeThong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmInfoChuyen.resx">
+    <EmbeddedResource Include="Forms\frmInfoChuyen.resx">
       <DependentUpon>frmInfoChuyen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMyTicket.resx">
+    <EmbeddedResource Include="Forms\frmMyTicket.resx">
       <DependentUpon>frmMyTicket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -211,6 +211,18 @@
       <Project>{a2a89763-9c1f-4016-a755-9c641db324a6}</Project>
       <Name>DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\0146753298.jpg" />
+    <Content Include="Resources\0335654123.jpg" />
+    <Content Include="Resources\0336852147.jpg" />
+    <Content Include="Resources\0337489512.jpg" />
+    <Content Include="Resources\0338795213.jpg" />
+    <Content Include="Resources\0784806354.jpg" />
+    <Content Include="Resources\C01.png" />
+    <Content Include="Resources\C02.png" />
+    <Content Include="Resources\C03.png" />
+    <Content Include="Resources\C04.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

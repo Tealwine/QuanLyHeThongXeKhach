@@ -20,6 +20,7 @@ namespace DAL.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int TypeId { get; set; }
 
+        [Required]
         [StringLength(30)]
         public string TypeName { get; set; }
 

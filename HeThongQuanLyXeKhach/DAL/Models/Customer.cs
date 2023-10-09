@@ -18,6 +18,7 @@ namespace DAL.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int CustomerId { get; set; }
 
+        [Required]
         [StringLength(30)]
         public string CustomerName { get; set; }
 

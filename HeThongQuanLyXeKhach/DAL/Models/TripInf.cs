@@ -19,7 +19,7 @@ namespace DAL.Models
         [StringLength(10)]
         public string TripID { get; set; }
 
-        public int? Price { get; set; }
+        public int Price { get; set; }
 
         public virtual CoachType CoachType { get; set; }
 

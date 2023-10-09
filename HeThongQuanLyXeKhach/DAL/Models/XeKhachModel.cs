@@ -18,6 +18,7 @@ namespace DAL.Models
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<LogInAccount> LogInAccounts { get; set; }
+        public virtual DbSet<Position> Positions { get; set; }
         public virtual DbSet<TicketInf> TicketInfs { get; set; }
         public virtual DbSet<Trip> Trips { get; set; }
         public virtual DbSet<TripInf> TripInfs { get; set; }
@@ -75,6 +76,11 @@ namespace DAL.Models
             modelBuilder.Entity<LogInAccount>()
                 .Property(e => e.Pass)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<Position>()
+                .HasMany(e => e.Employees)
+                .WithRequired(e => e.Position)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<TicketInf>()
                 .Property(e => e.TripID)
