@@ -21,8 +21,11 @@ namespace HeThongQuanLyXeKhach
         {
            panel1.Height = btnSystem.Height;
            panel1.Top = btnSystem.Top;
-           
-           
+
+            frmSystem frmSystem = new frmSystem();
+            if (ExistForm(frmSystem))
+                return;
+            ViewForm(frmSystem);
 
         }
 
@@ -52,6 +55,10 @@ namespace HeThongQuanLyXeKhach
         {
             panel1.Height = btnCash.Height;
             panel1.Top = btnCash.Top;
+            frmThuVaChi frmThuVaChi = new frmThuVaChi();
+            if (ExistForm(frmThuVaChi))
+                return;
+            ViewForm(frmThuVaChi);
         }
 
         private void btnCarManage_Click_1(object sender, EventArgs e)
@@ -87,6 +94,14 @@ namespace HeThongQuanLyXeKhach
                 }
             }
             return false;
+        }
+
+        private void submenuMyAccount_Click(object sender, EventArgs e)
+        {
+            frmSystem frmSystem = new frmSystem();
+            if (ExistForm(frmSystem))
+                return;
+            ViewForm(frmSystem);
         }
     }
 }

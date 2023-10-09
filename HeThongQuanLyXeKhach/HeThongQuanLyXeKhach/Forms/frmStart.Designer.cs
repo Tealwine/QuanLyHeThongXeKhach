@@ -104,6 +104,7 @@
             this.ClientSize = new System.Drawing.Size(1044, 575);
             this.Controls.Add(this.panel1);
             this.Name = "frmStart";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

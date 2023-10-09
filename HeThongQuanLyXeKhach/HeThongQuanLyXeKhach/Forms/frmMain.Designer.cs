@@ -204,6 +204,7 @@
             this.submenuMyAccount.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
             this.submenuMyAccount.Size = new System.Drawing.Size(350, 32);
             this.submenuMyAccount.Text = "Tài khoản của tôi";
+            this.submenuMyAccount.Click += new System.EventHandler(this.submenuMyAccount_Click);
             // 
             // frmMain
             // 

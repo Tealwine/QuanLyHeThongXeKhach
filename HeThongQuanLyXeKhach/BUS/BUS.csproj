@@ -54,6 +54,7 @@
     <Compile Include="CoachBUS.cs" />
     <Compile Include="CoachTypeBUS.cs" />
     <Compile Include="EmployeeBUS.cs" />
+    <Compile Include="LogInAccountBUS.cs" />
     <Compile Include="PositionBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TripBUS.cs" />

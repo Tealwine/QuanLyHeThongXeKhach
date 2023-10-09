@@ -287,5 +287,25 @@ namespace HeThongQuanLyXeKhach
         {
             frmEmployeeManager_Load(sender, e);
         }
+
+        private void txtFind_TextChanged(object sender, EventArgs e)
+        {
+            string data = txtFind.Text.Trim().ToLower();
+            foreach (DataGridViewRow row in dgvTinhLuong.Rows)
+            {
+                DataGridViewCell cellMa = row.Cells[0];
+                DataGridViewCell cellTen = row.Cells[1];
+                DataGridViewCell cellChucVu = row.Cells[2];
+                
+                if (cellMa.Value != null && cellTen.Value != null && cellChucVu.Value != null)
+                {
+                    string ma = cellMa.Value.ToString().ToLower();
+                    string ten = cellTen.Value.ToString().ToLower();
+                    string chucVu = cellChucVu.Value.ToString().ToLower();
+                   
+                    row.Visible = ma.Contains(data) || ten.Contains(data) || chucVu.Contains(data);
+                }
+            }
+        }
     }
 }

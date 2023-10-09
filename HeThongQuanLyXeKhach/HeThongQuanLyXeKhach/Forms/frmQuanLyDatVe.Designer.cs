@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuanLyDatVe));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvTrip = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnAddTrip = new System.Windows.Forms.ToolStripButton();
             this.btnDeleteTrip = new System.Windows.Forms.ToolStripButton();
             this.btnUpdate = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.dgvTrip = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTrip)).BeginInit();
             this.panel2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTrip)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -52,6 +52,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1295, 691);
             this.panel1.TabIndex = 0;
+            // 
+            // dgvTrip
+            // 
+            this.dgvTrip.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTrip.Location = new System.Drawing.Point(15, 61);
+            this.dgvTrip.Name = "dgvTrip";
+            this.dgvTrip.RowHeadersWidth = 51;
+            this.dgvTrip.RowTemplate.Height = 24;
+            this.dgvTrip.Size = new System.Drawing.Size(1277, 617);
+            this.dgvTrip.TabIndex = 1;
             // 
             // panel2
             // 
@@ -107,30 +117,21 @@
             this.toolStripButton4.Size = new System.Drawing.Size(108, 24);
             this.toolStripButton4.Text = "Tìm chuyến";
             // 
-            // dgvTrip
-            // 
-            this.dgvTrip.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTrip.Location = new System.Drawing.Point(15, 61);
-            this.dgvTrip.Name = "dgvTrip";
-            this.dgvTrip.RowHeadersWidth = 51;
-            this.dgvTrip.RowTemplate.Height = 24;
-            this.dgvTrip.Size = new System.Drawing.Size(1277, 617);
-            this.dgvTrip.TabIndex = 1;
-            // 
             // frmQuanLyDatVe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1320, 715);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmQuanLyDatVe";
             this.Text = "frmQuanLyDatVe";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTrip)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTrip)).EndInit();
             this.ResumeLayout(false);
 
         }
