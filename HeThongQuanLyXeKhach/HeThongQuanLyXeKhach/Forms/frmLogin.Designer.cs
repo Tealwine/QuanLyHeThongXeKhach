@@ -38,6 +38,7 @@
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtUserId = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblMessage = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.gbAccount.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,7 +59,7 @@
             // 
             this.btnSignIn.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignIn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSignIn.Location = new System.Drawing.Point(434, 468);
+            this.btnSignIn.Location = new System.Drawing.Point(408, 468);
             this.btnSignIn.Name = "btnSignIn";
             this.btnSignIn.Size = new System.Drawing.Size(174, 50);
             this.btnSignIn.TabIndex = 5;
@@ -68,14 +69,15 @@
             // 
             // gbAccount
             // 
+            this.gbAccount.Controls.Add(this.lblMessage);
             this.gbAccount.Controls.Add(this.chkShowPass);
             this.gbAccount.Controls.Add(this.label2);
             this.gbAccount.Controls.Add(this.label1);
             this.gbAccount.Controls.Add(this.txtPass);
             this.gbAccount.Controls.Add(this.txtUserId);
-            this.gbAccount.Location = new System.Drawing.Point(274, 226);
+            this.gbAccount.Location = new System.Drawing.Point(241, 189);
             this.gbAccount.Name = "gbAccount";
-            this.gbAccount.Size = new System.Drawing.Size(515, 203);
+            this.gbAccount.Size = new System.Drawing.Size(515, 240);
             this.gbAccount.TabIndex = 4;
             this.gbAccount.TabStop = false;
             this.gbAccount.Text = "Tài khoản";
@@ -119,6 +121,8 @@
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(351, 30);
             this.txtPass.TabIndex = 5;
+            this.txtPass.Enter += new System.EventHandler(this.txtPass_Enter);
+            this.txtPass.Leave += new System.EventHandler(this.txtPass_Leave);
             // 
             // txtUserId
             // 
@@ -127,19 +131,34 @@
             this.txtUserId.Name = "txtUserId";
             this.txtUserId.Size = new System.Drawing.Size(351, 30);
             this.txtUserId.TabIndex = 3;
+            this.txtUserId.Enter += new System.EventHandler(this.txtUserId_Enter);
+            this.txtUserId.Leave += new System.EventHandler(this.txtUserId_Leave);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(425, 18);
+            this.pictureBox1.Location = new System.Drawing.Point(407, 18);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(183, 163);
+            this.pictureBox1.Size = new System.Drawing.Size(183, 142);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // lblMessage
+            // 
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblMessage.Location = new System.Drawing.Point(138, 185);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(289, 22);
+            this.lblMessage.TabIndex = 9;
+            this.lblMessage.Text = "Vui lòng nhập đầy đủ thông tin!";
+            this.lblMessage.Visible = false;
+            // 
             // frmLogin
             // 
+            this.AcceptButton = this.btnSignIn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(975, 559);
@@ -168,5 +187,6 @@
         private System.Windows.Forms.TextBox txtUserId;
         private System.Windows.Forms.Button btnSignIn;
         private System.Windows.Forms.CheckBox chkShowPass;
+        private System.Windows.Forms.Label lblMessage;
     }
 }

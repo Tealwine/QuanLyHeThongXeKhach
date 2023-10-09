@@ -86,7 +86,7 @@
             // 
             this.btnCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCash.Image = ((System.Drawing.Image)(resources.GetObject("btnCash.Image")));
-            this.btnCash.Location = new System.Drawing.Point(3, 496);
+            this.btnCash.Location = new System.Drawing.Point(3, 423);
             this.btnCash.Name = "btnCash";
             this.btnCash.Size = new System.Drawing.Size(194, 67);
             this.btnCash.TabIndex = 4;
@@ -99,7 +99,7 @@
             // 
             this.btnEmployeeManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmployeeManager.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployeeManager.Image")));
-            this.btnEmployeeManager.Location = new System.Drawing.Point(3, 423);
+            this.btnEmployeeManager.Location = new System.Drawing.Point(3, 496);
             this.btnEmployeeManager.Name = "btnEmployeeManager";
             this.btnEmployeeManager.Size = new System.Drawing.Size(194, 67);
             this.btnEmployeeManager.TabIndex = 3;
@@ -219,6 +219,7 @@
             this.Name = "frmMain";
             this.Text = "Ampersand Travel";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.pnMainFuncion.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);

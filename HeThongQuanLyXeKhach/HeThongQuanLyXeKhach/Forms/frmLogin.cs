@@ -21,43 +21,104 @@ namespace HeThongQuanLyXeKhach
 
         private void btnSignIn_Click(object sender, EventArgs e)
         {
-            var logAcc = logInAccountBUS.GetAll();
-            bool test = false;
-            foreach (var log in logAcc)
+            try
             {
-                if(log.UserId == txtUserId.Text && log.Pass == txtPass.Text)
+                var logAcc = logInAccountBUS.GetAll();
+
+
+                bool test = false;
+                foreach (var log in logAcc)
                 {
-                    test = true;
-                    MessageBox.Show("Đăng nhập thành công");
-                    this.Hide();
-                    frmMain main = new frmMain();
-                    main.Show();
+                    if (log.UserId == txtUserId.Text && log.Pass == txtPass.Text)
+                    {
+                        test = true;
+                        MessageBox.Show("Đăng nhập thành công");
+                        this.Hide();
+                        if (log.UserId == "admin")
+                        {
+                            frmMain main = new frmMain();
+                            main.Show();
+
+                        }
+                        else if (log.UserId == "nhanvien")
+                        {
+                            frmMain frmMain = new frmMain();
+                            frmMain.HideButton();
+                            frmMain.Show();
+                        }
+                    }
+                }
+                if (test == false && txtUserId.Text.ToString() != "" && txtPass.Text.ToString() != "")
+                {
+                    MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng!", "LỖI");
+                    txtUserId.Focus();
                 }
             }
-            if (test == false)
+            catch 
             {
-                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng!", "LỖI");
-                txtUserId.Focus();
-            }
 
+               
+            }
 
         }
 
         private void chkShowPass_CheckedChanged(object sender, EventArgs e)
         {
-            if (txtPass.PasswordChar == '*')
+            try
             {
-                txtPass.PasswordChar = '\0';
+                if (txtPass.PasswordChar == '*')
+                {
+                    txtPass.PasswordChar = '\0';
+                }
+                else
+                {
+                    txtPass.PasswordChar = '*';
+                }
             }
-            else
+            catch 
             {
-                txtPass.PasswordChar = '*';
+
+             
             }
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
             txtPass.PasswordChar = '*';
+        }
+
+        private void txtUserId_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtUserId.Text) || string.IsNullOrWhiteSpace(txtPass.Text))
+            {
+                lblMessage.Visible = true;
+                
+            }
+        }
+
+        private void txtPass_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtUserId.Text) && string.IsNullOrWhiteSpace(txtPass.Text))
+            {
+                lblMessage.Visible = true;
+
+            }
+        }
+
+        private void txtUserId_Enter(object sender, EventArgs e)
+        {
+            lblMessage.Visible = false;
+        }
+
+        private void txtPass_Enter(object sender, EventArgs e)
+        {
+            lblMessage.Visible = false;
+        }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            lblMessage.Visible=false;
+            this.Close();
         }
     }
 }

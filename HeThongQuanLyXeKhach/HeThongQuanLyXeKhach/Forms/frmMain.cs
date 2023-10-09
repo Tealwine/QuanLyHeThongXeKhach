@@ -103,6 +103,21 @@ namespace HeThongQuanLyXeKhach
                 return;
             ViewForm(frmSystem);
         }
+
+        public void HideButton()
+        {
+            btnEmployeeManager.Hide();
+        }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Bạn muốn thoát chương trình?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.No)
+            {
+                e.Cancel = true; 
+            }
+            else Application.Exit();
+        }
     }
 }
 
