@@ -16,5 +16,11 @@ namespace DAL.Models
         [Required]
         [StringLength(20)]
         public string Pass { get; set; }
+
+        [Required]
+        [StringLength(10)]
+        public string EmployeeId { get; set; }
+
+        public virtual Employee Employee { get; set; }
     }
 }

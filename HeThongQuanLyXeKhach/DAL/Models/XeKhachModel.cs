@@ -8,7 +8,7 @@ namespace DAL.Models
     public partial class XeKhachModel : DbContext
     {
         public XeKhachModel()
-            : base("name=XeKhachModel")
+            : base("name=XeKhachModel1")
         {
         }
 
@@ -69,12 +69,21 @@ namespace DAL.Models
                 .WithRequired(e => e.Employee)
                 .WillCascadeOnDelete(false);
 
+            modelBuilder.Entity<Employee>()
+                .HasMany(e => e.LogInAccounts)
+                .WithRequired(e => e.Employee)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<LogInAccount>()
                 .Property(e => e.UserId)
                 .IsUnicode(false);
 
             modelBuilder.Entity<LogInAccount>()
                 .Property(e => e.Pass)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<LogInAccount>()
+                .Property(e => e.EmployeeId)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Position>()
