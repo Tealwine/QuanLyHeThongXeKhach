@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace HeThongQuanLyXeKhach
 {
@@ -23,8 +24,10 @@ namespace HeThongQuanLyXeKhach
         {
             try
             {
-                var logAcc = logInAccountBUS.GetAll();
+              
 
+                var logAcc = logInAccountBUS.GetAll();
+                
 
                 bool test = false;
                 foreach (var log in logAcc)
@@ -62,6 +65,8 @@ namespace HeThongQuanLyXeKhach
 
         }
 
+        
+
         private void chkShowPass_CheckedChanged(object sender, EventArgs e)
         {
             try
@@ -85,6 +90,7 @@ namespace HeThongQuanLyXeKhach
         private void frmLogin_Load(object sender, EventArgs e)
         {
             txtPass.PasswordChar = '*';
+
         }
 
         private void txtUserId_Leave(object sender, EventArgs e)
@@ -119,6 +125,13 @@ namespace HeThongQuanLyXeKhach
         {
             lblMessage.Visible=false;
             this.Close();
+        }
+
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmStart frmStart = new frmStart();
+            frmStart.Show();
+           
         }
     }
 }

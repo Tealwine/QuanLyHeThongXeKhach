@@ -108,15 +108,24 @@ namespace HeThongQuanLyXeKhach
         {
             btnEmployeeManager.Hide();
         }
-
+        private bool isClosing = false;
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Bạn muốn thoát chương trình?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dr = MessageBox.Show("Bạn có muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.No)
             {
-                e.Cancel = true; 
+                e.Cancel = true;
             }
-            else Application.Exit();
+            
+
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            frmSystem frmSystem = new frmSystem();
+            if (ExistForm(frmSystem))
+                return;
+            ViewForm(frmSystem);
         }
     }
 }

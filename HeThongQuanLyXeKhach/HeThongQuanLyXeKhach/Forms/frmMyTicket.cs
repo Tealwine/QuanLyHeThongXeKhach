@@ -16,5 +16,11 @@ namespace HeThongQuanLyXeKhach
         {
             InitializeComponent();
         }
+
+        private void frmMyTicket_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmStart frmStart = new frmStart();
+            frmStart.Show();
+        }
     }
 }

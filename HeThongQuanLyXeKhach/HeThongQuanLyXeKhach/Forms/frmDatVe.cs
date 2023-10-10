@@ -22,5 +22,13 @@ namespace HeThongQuanLyXeKhach
             frmInfoChuyen frmInfoChuyen = new frmInfoChuyen();
             frmInfoChuyen.ShowDialog();
         }
+
+     
+
+        private void frmDatVe_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmStart frmStart = new frmStart();
+            frmStart.Show();
+        }
     }
 }

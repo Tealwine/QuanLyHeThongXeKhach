@@ -32,13 +32,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSignIn = new System.Windows.Forms.Button();
             this.gbAccount = new System.Windows.Forms.GroupBox();
+            this.lblMessage = new System.Windows.Forms.Label();
             this.chkShowPass = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtUserId = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblMessage = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.gbAccount.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -81,6 +81,18 @@
             this.gbAccount.TabIndex = 4;
             this.gbAccount.TabStop = false;
             this.gbAccount.Text = "Tài khoản";
+            // 
+            // lblMessage
+            // 
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblMessage.Location = new System.Drawing.Point(138, 185);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(289, 22);
+            this.lblMessage.TabIndex = 9;
+            this.lblMessage.Text = "Vui lòng nhập đầy đủ thông tin!";
+            this.lblMessage.Visible = false;
             // 
             // chkShowPass
             // 
@@ -144,18 +156,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // lblMessage
-            // 
-            this.lblMessage.AutoSize = true;
-            this.lblMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMessage.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblMessage.Location = new System.Drawing.Point(138, 185);
-            this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(289, 22);
-            this.lblMessage.TabIndex = 9;
-            this.lblMessage.Text = "Vui lòng nhập đầy đủ thông tin!";
-            this.lblMessage.Visible = false;
-            // 
             // frmLogin
             // 
             this.AcceptButton = this.btnSignIn;
@@ -163,10 +163,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(975, 559);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmLogin";
+            this.Text = "Đăng nhập";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.panel1.ResumeLayout(false);
             this.gbAccount.ResumeLayout(false);
