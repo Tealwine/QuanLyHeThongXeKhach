@@ -74,26 +74,27 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1243, 637);
+            this.panel1.Size = new System.Drawing.Size(1807, 902);
             this.panel1.TabIndex = 1;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.tcl1c);
-            this.panel3.Location = new System.Drawing.Point(18, 319);
+            this.panel3.Location = new System.Drawing.Point(3, 424);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1209, 309);
+            this.panel3.Size = new System.Drawing.Size(1774, 455);
             this.panel3.TabIndex = 2;
             // 
             // tcl1c
             // 
             this.tcl1c.Controls.Add(this.tabPage1);
             this.tcl1c.Controls.Add(this.tabPage2);
-            this.tcl1c.Location = new System.Drawing.Point(3, 3);
+            this.tcl1c.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tcl1c.Location = new System.Drawing.Point(0, 12);
             this.tcl1c.Name = "tcl1c";
             this.tcl1c.SelectedIndex = 0;
-            this.tcl1c.Size = new System.Drawing.Size(1203, 303);
+            this.tcl1c.Size = new System.Drawing.Size(1771, 428);
             this.tcl1c.TabIndex = 6;
             // 
             // tabPage1
@@ -111,10 +112,10 @@
             this.tabPage1.Controls.Add(this.btnSwap1);
             this.tabPage1.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 38);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1195, 274);
+            this.tabPage1.Size = new System.Drawing.Size(1763, 386);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Một chiều";
             // 
@@ -122,7 +123,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label4.Location = new System.Drawing.Point(1033, 19);
+            this.label4.Location = new System.Drawing.Point(1100, 69);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 24);
             this.label4.TabIndex = 9;
@@ -132,7 +133,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label3.Location = new System.Drawing.Point(686, 19);
+            this.label3.Location = new System.Drawing.Point(753, 69);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 24);
             this.label3.TabIndex = 8;
@@ -142,7 +143,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(381, 19);
+            this.label2.Location = new System.Drawing.Point(448, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 24);
             this.label2.TabIndex = 7;
@@ -163,7 +164,7 @@
             this.btnFind1.BackColor = System.Drawing.Color.Orange;
             this.btnFind1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFind1.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnFind1.Location = new System.Drawing.Point(438, 221);
+            this.btnFind1.Location = new System.Drawing.Point(505, 271);
             this.btnFind1.Name = "btnFind1";
             this.btnFind1.Size = new System.Drawing.Size(359, 47);
             this.btnFind1.TabIndex = 5;
@@ -175,7 +176,7 @@
             // 
             this.cmbStartLocation1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbStartLocation1.FormattingEnabled = true;
-            this.cmbStartLocation1.Location = new System.Drawing.Point(7, 46);
+            this.cmbStartLocation1.Location = new System.Drawing.Point(74, 96);
             this.cmbStartLocation1.Name = "cmbStartLocation1";
             this.cmbStartLocation1.Size = new System.Drawing.Size(288, 37);
             this.cmbStartLocation1.TabIndex = 0;
@@ -184,7 +185,7 @@
             // 
             this.cmbNumberTicket1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNumberTicket1.FormattingEnabled = true;
-            this.cmbNumberTicket1.Location = new System.Drawing.Point(1037, 46);
+            this.cmbNumberTicket1.Location = new System.Drawing.Point(1104, 96);
             this.cmbNumberTicket1.Name = "cmbNumberTicket1";
             this.cmbNumberTicket1.Size = new System.Drawing.Size(132, 37);
             this.cmbNumberTicket1.TabIndex = 4;
@@ -193,7 +194,7 @@
             // 
             this.cmbEndLocation1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEndLocation1.FormattingEnabled = true;
-            this.cmbEndLocation1.Location = new System.Drawing.Point(385, 46);
+            this.cmbEndLocation1.Location = new System.Drawing.Point(452, 96);
             this.cmbEndLocation1.Name = "cmbEndLocation1";
             this.cmbEndLocation1.Size = new System.Drawing.Size(288, 37);
             this.cmbEndLocation1.TabIndex = 1;
@@ -203,7 +204,7 @@
             this.dtpStartDate1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpStartDate1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpStartDate1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpStartDate1.Location = new System.Drawing.Point(690, 46);
+            this.dtpStartDate1.Location = new System.Drawing.Point(757, 99);
             this.dtpStartDate1.Name = "dtpStartDate1";
             this.dtpStartDate1.Size = new System.Drawing.Size(319, 30);
             this.dtpStartDate1.TabIndex = 3;
@@ -213,7 +214,7 @@
             this.btnSwap1.AutoSize = true;
             this.btnSwap1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSwap1.BackgroundImage")));
             this.btnSwap1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSwap1.Location = new System.Drawing.Point(316, 46);
+            this.btnSwap1.Location = new System.Drawing.Point(383, 96);
             this.btnSwap1.Name = "btnSwap1";
             this.btnSwap1.Size = new System.Drawing.Size(46, 37);
             this.btnSwap1.TabIndex = 2;
@@ -238,7 +239,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1195, 274);
+            this.tabPage2.Size = new System.Drawing.Size(1763, 517);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Khứ hồi";
             // 
@@ -367,27 +368,30 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(15, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1213, 305);
+            this.panel2.Size = new System.Drawing.Size(1762, 415);
             this.panel2.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(5, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1207, 302);
+            this.pictureBox1.Size = new System.Drawing.Size(1757, 408);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            
             // 
             // frmDatVe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1267, 652);
+            this.ClientSize = new System.Drawing.Size(1831, 1023);
             this.Controls.Add(this.panel1);
             this.Name = "frmDatVe";
             this.Text = "Đặt vé";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDatVe_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.tcl1c.ResumeLayout(false);

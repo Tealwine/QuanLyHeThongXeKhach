@@ -20,19 +20,27 @@ namespace HeThongQuanLyXeKhach
         private void btnTakeTicket_Click(object sender, EventArgs e)
         {
            frmDatVe frmDatVe = new frmDatVe();
-            frmDatVe.ShowDialog();
+            frmDatVe.Show();
+            this.Hide();
         }
 
         private void btnFindMyTicket_Click(object sender, EventArgs e)
         {
             frmMyTicket frmMyTicket = new frmMyTicket();    
-            frmMyTicket.ShowDialog();
+            frmMyTicket.Show();
+            this.Hide();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             frmLogin frmLogin = new frmLogin(); 
-            frmLogin.ShowDialog();
+            frmLogin.Show();
+            this.Hide();
+        }
+
+        private void frmStart_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -537,7 +537,9 @@
             this.ClientSize = new System.Drawing.Size(1257, 826);
             this.Controls.Add(this.panel1);
             this.Name = "frmMyTicket";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyTicket";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMyTicket_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

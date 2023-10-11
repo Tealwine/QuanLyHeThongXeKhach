@@ -14,5 +14,33 @@ namespace BUS
         {
             return context.LogInAccounts.ToList();
         }
+
+        public LogInAccount GetAccountAdmin()
+        {
+            LogInAccount logIn = null;
+            foreach (var log in context.LogInAccounts.ToList())
+            {
+                if (log.UserId == "admin")
+                {
+                    logIn = log;
+                    break;
+                }
+            }
+            return logIn;
+        }
+
+        public LogInAccount GetAccountNhanvien()
+        {
+            LogInAccount logIn = null;
+            foreach (var log in context.LogInAccounts.ToList())
+            {
+                if (log.UserId == "nhanvien")
+                {
+                    logIn = log;
+                    break;
+                }
+            }
+            return logIn;
+        }
     }
 }

@@ -13,6 +13,7 @@ namespace DAL.Models
         public Employee()
         {
             Bills = new HashSet<Bill>();
+            LogInAccounts = new HashSet<LogInAccount>();
         }
 
         [StringLength(10)]
@@ -46,5 +47,8 @@ namespace DAL.Models
         public virtual ICollection<Bill> Bills { get; set; }
 
         public virtual Position Position { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<LogInAccount> LogInAccounts { get; set; }
     }
 }
