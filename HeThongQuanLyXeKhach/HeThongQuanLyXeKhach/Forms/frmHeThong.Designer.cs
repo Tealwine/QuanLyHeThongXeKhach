@@ -44,6 +44,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chkFemale = new System.Windows.Forms.CheckBox();
+            this.chkMale = new System.Windows.Forms.CheckBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -58,8 +60,6 @@
             this.ptbImage = new System.Windows.Forms.PictureBox();
             this.lblPosition = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.chkMale = new System.Windows.Forms.CheckBox();
-            this.chkFemale = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -79,7 +79,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(658, 346);
             this.txtPassword.Multiline = true;
@@ -89,7 +89,7 @@
             // 
             // txtName
             // 
-            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(107, 198);
             this.txtName.Multiline = true;
@@ -99,7 +99,7 @@
             // 
             // txtLocation
             // 
-            this.txtLocation.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLocation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLocation.Location = new System.Drawing.Point(105, 603);
             this.txtLocation.Multiline = true;
@@ -109,7 +109,7 @@
             // 
             // txtId
             // 
-            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtId.Location = new System.Drawing.Point(658, 262);
             this.txtId.Multiline = true;
@@ -215,7 +215,7 @@
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPhoneNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhoneNumber.Location = new System.Drawing.Point(107, 407);
             this.txtPhoneNumber.Multiline = true;
@@ -258,9 +258,31 @@
             this.panel1.Size = new System.Drawing.Size(1656, 787);
             this.panel1.TabIndex = 23;
             // 
+            // chkFemale
+            // 
+            this.chkFemale.AutoSize = true;
+            this.chkFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkFemale.Location = new System.Drawing.Point(188, 508);
+            this.chkFemale.Name = "chkFemale";
+            this.chkFemale.Size = new System.Drawing.Size(61, 29);
+            this.chkFemale.TabIndex = 34;
+            this.chkFemale.Text = "Nữ";
+            this.chkFemale.UseVisualStyleBackColor = true;
+            // 
+            // chkMale
+            // 
+            this.chkMale.AutoSize = true;
+            this.chkMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkMale.Location = new System.Drawing.Point(104, 508);
+            this.chkMale.Name = "chkMale";
+            this.chkMale.Size = new System.Drawing.Size(78, 29);
+            this.chkMale.TabIndex = 34;
+            this.chkMale.Text = "Nam";
+            this.chkMale.UseVisualStyleBackColor = true;
+            // 
             // textBox2
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(658, 522);
             this.textBox2.Multiline = true;
@@ -282,7 +304,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(658, 439);
             this.textBox1.Multiline = true;
@@ -339,18 +361,17 @@
             // 
             // txtBirthDate
             // 
-            this.txtBirthDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBirthDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBirthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBirthDate.Location = new System.Drawing.Point(258, 504);
             this.txtBirthDate.Multiline = true;
             this.txtBirthDate.Name = "txtBirthDate";
             this.txtBirthDate.Size = new System.Drawing.Size(182, 33);
             this.txtBirthDate.TabIndex = 27;
-            this.txtBirthDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtRole
             // 
-            this.txtRole.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRole.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRole.Location = new System.Drawing.Point(107, 297);
             this.txtRole.Multiline = true;
@@ -414,28 +435,6 @@
             this.lblName.TabIndex = 10;
             this.lblName.Text = "HỌ VÀ TÊN";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // chkMale
-            // 
-            this.chkMale.AutoSize = true;
-            this.chkMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkMale.Location = new System.Drawing.Point(104, 508);
-            this.chkMale.Name = "chkMale";
-            this.chkMale.Size = new System.Drawing.Size(78, 29);
-            this.chkMale.TabIndex = 34;
-            this.chkMale.Text = "Nam";
-            this.chkMale.UseVisualStyleBackColor = true;
-            // 
-            // chkFemale
-            // 
-            this.chkFemale.AutoSize = true;
-            this.chkFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFemale.Location = new System.Drawing.Point(188, 508);
-            this.chkFemale.Name = "chkFemale";
-            this.chkFemale.Size = new System.Drawing.Size(61, 29);
-            this.chkFemale.TabIndex = 34;
-            this.chkFemale.Text = "Nữ";
-            this.chkFemale.UseVisualStyleBackColor = true;
             // 
             // frmSystem
             // 

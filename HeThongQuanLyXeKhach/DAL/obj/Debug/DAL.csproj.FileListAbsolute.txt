@@ -10,3 +10,15 @@ D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\obj\Debug\DAL.csproj.CoreCompil
 D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\obj\Debug\DAL.dll
 D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\obj\Debug\DAL.pdb
+C:\Code\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\bin\Debug\DAL.dll.config
+C:\Code\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\bin\Debug\DAL.dll
+C:\Code\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\bin\Debug\DAL.pdb
+C:\Code\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\bin\Debug\EntityFramework.dll
+C:\Code\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Code\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\bin\Debug\EntityFramework.xml
+C:\Code\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Code\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Code\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Code\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Code\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\obj\Debug\DAL.dll
+C:\Code\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\obj\Debug\DAL.pdb
