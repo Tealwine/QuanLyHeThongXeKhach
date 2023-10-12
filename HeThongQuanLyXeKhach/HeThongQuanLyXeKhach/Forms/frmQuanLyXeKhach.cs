@@ -28,6 +28,12 @@ namespace HeThongQuanLyXeKhach
             this.cmbCoachType.DisplayMember = "TypeName";
             this.cmbCoachType.ValueMember = "TypeId";
         }
+        private void FillComboboxType(List<CoachType> listCoachType)
+        {
+            this.cmbType.DataSource = listCoachType;
+            this.cmbType.DisplayMember = "TypeName";
+            this.cmbType.ValueMember = "TypeId";
+        }
 
         private void BindGrid(List<Coach> coaches)
         {
@@ -55,7 +61,9 @@ namespace HeThongQuanLyXeKhach
             {
                 var coachList = coachBUS.GetAll();
                 var coachTypeList = coachTypeBUS.GetAll();
+                var TypeList = coachTypeBUS.GetAll();
                 FillComboboxCoachType(coachTypeList);
+                FillComboboxType(TypeList);
                 BindGrid(coachList);
 
             }
@@ -103,7 +111,7 @@ namespace HeThongQuanLyXeKhach
             txtVehicleName.Text = row.Cells[2].Value.ToString();
             txtSeatNumber.Text = row.Cells[3].Value.ToString();
             txtWarranty.Text = row.Cells[4].Value.ToString();
-            txtCoachType.Text = row.Cells[5].Value.ToString();
+            cmbType.Text = row.Cells[5].Value.ToString();
 
             var listCoach = coachBUS.GetAll();
             var duLieuAnh = listCoach.Where(emp => emp.CoachId.ToString() == txtID.Text.ToString()).FirstOrDefault();
@@ -129,7 +137,7 @@ namespace HeThongQuanLyXeKhach
         {
             txtID.Text = "";
             txtLicensePlate.Text = "";
-            txtCoachType.Text = "";
+            
             txtSeatNumber.Text = "";
             txtVehicleName.Text = "";
             txtWarranty.Text = "";
@@ -150,14 +158,13 @@ namespace HeThongQuanLyXeKhach
                 var listCoach = coachBUS.GetAll();
                 var listCoachType = coachTypeBUS.GetAll();
                
-                var type = listCoachType.FirstOrDefault(t=>t.TypeName == txtCoachType.Text.ToString());
+                var type = listCoachType.FirstOrDefault(t=>t.TypeName == cmbType.Text.ToString());
 
                 string maXe = txtID.Text.ToString();
                 string hang = txtVehicleName.Text.ToString();
-                int loai = Convert.ToInt32( txtCoachType.Text.ToString());
                 int soGhe = Convert.ToInt32(txtSeatNumber.Text.ToString());
                 string bienSo = txtLicensePlate.Text.ToString();
-                int baoHanh = Convert.ToInt32( txtWarranty.Text.ToString());
+                int baoHanh = Convert.ToInt32(txtWarranty.Text);
 
                 var coach = new Coach
                 {
@@ -166,6 +173,7 @@ namespace HeThongQuanLyXeKhach
                     CoachBrand = hang,
                     CoachPlate = bienSo,
                     SeatNumber = soGhe,
+                    Warranty = baoHanh,
                     CoachImg = tenAnh
                 };
 

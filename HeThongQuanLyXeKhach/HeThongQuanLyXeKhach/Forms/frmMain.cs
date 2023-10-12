@@ -108,7 +108,7 @@ namespace HeThongQuanLyXeKhach
         {
             btnEmployeeManager.Hide();
         }
-        private bool isClosing = false;
+       
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult dr = MessageBox.Show("Bạn có muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

@@ -42,7 +42,6 @@
             this.lbLicensePlate = new System.Windows.Forms.Label();
             this.txtSeatNumber = new System.Windows.Forms.TextBox();
             this.lbSeatNumber = new System.Windows.Forms.Label();
-            this.txtCoachType = new System.Windows.Forms.TextBox();
             this.lblCoachType = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -69,6 +68,7 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmbType = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.pnDataManager.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCoach)).BeginInit();
@@ -91,6 +91,7 @@
             // pnDataManager
             // 
             this.pnDataManager.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pnDataManager.Controls.Add(this.cmbType);
             this.pnDataManager.Controls.Add(this.label6);
             this.pnDataManager.Controls.Add(this.picCoach);
             this.pnDataManager.Controls.Add(this.txtWarranty);
@@ -103,7 +104,6 @@
             this.pnDataManager.Controls.Add(this.lbLicensePlate);
             this.pnDataManager.Controls.Add(this.txtSeatNumber);
             this.pnDataManager.Controls.Add(this.lbSeatNumber);
-            this.pnDataManager.Controls.Add(this.txtCoachType);
             this.pnDataManager.Controls.Add(this.lblCoachType);
             this.pnDataManager.Controls.Add(this.btnDelete);
             this.pnDataManager.Controls.Add(this.btnUpdate);
@@ -233,16 +233,6 @@
             this.lbSeatNumber.Size = new System.Drawing.Size(72, 22);
             this.lbSeatNumber.TabIndex = 7;
             this.lbSeatNumber.Text = "Số ghế:";
-            // 
-            // txtCoachType
-            // 
-            this.txtCoachType.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtCoachType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCoachType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCoachType.Location = new System.Drawing.Point(133, 164);
-            this.txtCoachType.Name = "txtCoachType";
-            this.txtCoachType.Size = new System.Drawing.Size(234, 30);
-            this.txtCoachType.TabIndex = 6;
             // 
             // lblCoachType
             // 
@@ -521,6 +511,14 @@
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             // 
+            // cmbType
+            // 
+            this.cmbType.FormattingEnabled = true;
+            this.cmbType.Location = new System.Drawing.Point(134, 166);
+            this.cmbType.Name = "cmbType";
+            this.cmbType.Size = new System.Drawing.Size(233, 24);
+            this.cmbType.TabIndex = 20;
+            // 
             // frmQuanLyXeKhach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -566,7 +564,6 @@
         private System.Windows.Forms.Label lbLicensePlate;
         private System.Windows.Forms.TextBox txtSeatNumber;
         private System.Windows.Forms.Label lbSeatNumber;
-        private System.Windows.Forms.TextBox txtCoachType;
         private System.Windows.Forms.Label lblCoachType;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
@@ -587,5 +584,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cmbType;
     }
 }
