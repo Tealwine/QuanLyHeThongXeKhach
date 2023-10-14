@@ -38,6 +38,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmThuVaChi";
             this.Text = "Thu/Chi";
+           
             this.ResumeLayout(false);
 
         }

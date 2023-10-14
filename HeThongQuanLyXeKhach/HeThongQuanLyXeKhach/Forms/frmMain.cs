@@ -33,10 +33,13 @@ namespace HeThongQuanLyXeKhach
 
         private void btnTicketManage_Click(object sender, EventArgs e)
         {
-            panel1.Height = btnTicketManage.Height;
-            panel1.Top = btnTicketManage.Top;
-        
-          
+            panel1.Height = btnTripManage.Height;
+            panel1.Top = btnTripManage.Top;
+            frmQuanLyChuyen frmQuanLyChuyen = new frmQuanLyChuyen();
+            if (ExistForm(frmQuanLyChuyen))
+                return;
+            ViewForm(frmQuanLyChuyen);
+
         }
 
         private void btnEmployeeManager_Click(object sender, EventArgs e)
@@ -108,7 +111,7 @@ namespace HeThongQuanLyXeKhach
         {
             btnEmployeeManager.Hide();
         }
-        private bool isClosing = false;
+        
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult dr = MessageBox.Show("Bạn có muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

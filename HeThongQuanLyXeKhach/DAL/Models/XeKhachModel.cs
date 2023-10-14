@@ -8,7 +8,9 @@ namespace DAL.Models
     public partial class XeKhachModel : DbContext
     {
         public XeKhachModel()
-            : base("name=XeKhachModelw")
+
+            : base("name=XeKhachModel2")
+
         {
         }
 
