@@ -25,6 +25,7 @@ namespace HeThongQuanLyXeKhach
         {
             InitializeComponent();
             txtTotalMoney.Enabled = false;
+            dtpBackDate.Enabled = false;
             foreach (Control control in pnPickSeat.Controls)
             {
                 items.Add(control);
@@ -44,16 +45,12 @@ namespace HeThongQuanLyXeKhach
 
         private void FillcmbStartLocation(List<Trip> listTripBUSS)
         {
-            this.cmbStartLocation1.DataSource= listTripBUSS;
-            this.cmbStartLocation1.DisplayMember = "StartPlace";
-            this.cmbStartLocation1.ValueMember = "TripID";
+            
         }
 
         private void FillcmbEndLocation(List<Trip> listTripBUSE)
         {
-            this.cmbStartLocation1.DataSource = listTripBUSE;
-            this.cmbStartLocation1.DisplayMember = "ArrivePlace";
-            this.cmbStartLocation1.ValueMember = "TripID";
+           
         }
 
 
@@ -116,51 +113,18 @@ namespace HeThongQuanLyXeKhach
             }
         }
 
-        private void btnComplete_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void txtTotalMoney_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void cmbCoachType_SelectedIndexChanged(object sender, EventArgs e)
         {
             //string selectedValue = cmbCoachType.SelectedItem.ToString();
 
 
-            if (cmbCoachType.Text == "Ghế")
-            {
-                txtPrice.Text = "400";
-            }
-            else if (cmbCoachType.Text == "Giường Nằm")
-            {
-                txtPrice.Text = "550";
-            }
-            else if (cmbCoachType.Text == "Limousine")
-            {
-                txtPrice.Text = "700";
-            }
 
         }
 
-        private void cmbCoachType_SelectedValueChanged(object sender, EventArgs e)
-        {
-            
+     
 
-        }
-
-        private void cmbNumberTicket1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
+   
+      
         public Dictionary<Control, Point> originalLocations = new Dictionary<Control, Point>();
  
         private void ResetLocations()
@@ -240,6 +204,40 @@ namespace HeThongQuanLyXeKhach
         private void btnConfirmInfor_Click(object sender, EventArgs e)
         {
             checktype();
+        }
+
+    
+        private void cbkRoundCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cbkRoundCheck.Checked)
+            {
+            
+                dtpBackDate.Enabled = true;
+            }
+            else
+            { 
+                dtpBackDate.Enabled=false;
+            }
+
+        }
+
+        
+
+        private void cmbCoachType_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+            if (cmbCoachType.Text == "Ghế")
+            {
+                txtPrice.Text = "400";
+            }
+            else if (cmbCoachType.Text == "Giường Nằm")
+            {
+                txtPrice.Text = "550";
+            }
+            else if (cmbCoachType.Text == "Limousine")
+            {
+                txtPrice.Text = "700";
+            }
         }
     }
 }

@@ -33,44 +33,30 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnConfirmInfor = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.tcl1c = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.cmbCoachType = new System.Windows.Forms.ComboBox();
-            this.btnFind1 = new System.Windows.Forms.Button();
-            this.cmbStartLocation1 = new System.Windows.Forms.ComboBox();
-            this.cmbEndLocation1 = new System.Windows.Forms.ComboBox();
-            this.dtpStart1 = new System.Windows.Forms.DateTimePicker();
-            this.button2 = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnFind = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.dtpBackDate = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnFind2 = new System.Windows.Forms.Button();
-            this.cmbStartLocation2 = new System.Windows.Forms.ComboBox();
-            this.cmbNumberTicket2 = new System.Windows.Forms.ComboBox();
-            this.cmbEndLocation2 = new System.Windows.Forms.ComboBox();
-            this.dtpStartDate2 = new System.Windows.Forms.DateTimePicker();
+            this.cmbStartLocation = new System.Windows.Forms.ComboBox();
+            this.cmbCoachType = new System.Windows.Forms.ComboBox();
+            this.cmbEndLocation = new System.Windows.Forms.ComboBox();
+            this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
             this.btnSwap2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbNumberTicket1 = new System.Windows.Forms.ComboBox();
             this.pnPickSeat = new System.Windows.Forms.Panel();
-            this.button12 = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -145,21 +131,22 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
+            this.cbkRoundCheck = new System.Windows.Forms.CheckBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.tcl1c.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnPickSeat.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -177,9 +164,9 @@
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.btnConfirmInfor);
-            this.panel3.Location = new System.Drawing.Point(547, 199);
+            this.panel3.Location = new System.Drawing.Point(615, 199);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(430, 251);
+            this.panel3.Size = new System.Drawing.Size(362, 251);
             this.panel3.TabIndex = 8;
             // 
             // btnConfirmInfor
@@ -198,196 +185,45 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.tcl1c);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.txtPrice);
+            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.btnFind);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.cbkRoundCheck);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.cmbStartLocation);
+            this.panel2.Controls.Add(this.cmbCoachType);
+            this.panel2.Controls.Add(this.dtpBackDate);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.dtpStartDate);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.cmbEndLocation);
+            this.panel2.Controls.Add(this.btnSwap2);
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Location = new System.Drawing.Point(3, 199);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(538, 251);
+            this.panel2.Size = new System.Drawing.Size(606, 251);
             this.panel2.TabIndex = 7;
             // 
-            // tcl1c
+            // btnFind
             // 
-            this.tcl1c.Controls.Add(this.tabPage1);
-            this.tcl1c.Controls.Add(this.tabPage2);
-            this.tcl1c.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tcl1c.Location = new System.Drawing.Point(1, 1);
-            this.tcl1c.Name = "tcl1c";
-            this.tcl1c.Padding = new System.Drawing.Point(0, 0);
-            this.tcl1c.SelectedIndex = 0;
-            this.tcl1c.Size = new System.Drawing.Size(510, 243);
-            this.tcl1c.TabIndex = 6;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.PapayaWhip;
-            this.tabPage1.Controls.Add(this.txtPrice);
-            this.tabPage1.Controls.Add(this.label12);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.label11);
-            this.tabPage1.Controls.Add(this.label10);
-            this.tabPage1.Controls.Add(this.cmbCoachType);
-            this.tabPage1.Controls.Add(this.btnFind1);
-            this.tabPage1.Controls.Add(this.cmbStartLocation1);
-            this.tabPage1.Controls.Add(this.cmbEndLocation1);
-            this.tabPage1.Controls.Add(this.dtpStart1);
-            this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(502, 210);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Một chiều";
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Location = new System.Drawing.Point(10, 177);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.ReadOnly = true;
-            this.txtPrice.Size = new System.Drawing.Size(103, 27);
-            this.txtPrice.TabIndex = 24;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label12.Location = new System.Drawing.Point(10, 155);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(58, 19);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "Giá vé";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label3.Location = new System.Drawing.Point(210, 92);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 19);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "Ngày đi";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label4.Location = new System.Drawing.Point(208, 18);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 19);
-            this.label4.TabIndex = 26;
-            this.label4.Text = "Điểm đến";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label11.Location = new System.Drawing.Point(8, 89);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 19);
-            this.label11.TabIndex = 23;
-            this.label11.Text = "Loại xe";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label10.Location = new System.Drawing.Point(8, 18);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 19);
-            this.label10.TabIndex = 25;
-            this.label10.Text = "Điểm đi";
-            // 
-            // cmbCoachType
-            // 
-            this.cmbCoachType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbCoachType.FormattingEnabled = true;
-            this.cmbCoachType.Location = new System.Drawing.Point(12, 113);
-            this.cmbCoachType.Name = "cmbCoachType";
-            this.cmbCoachType.Size = new System.Drawing.Size(160, 28);
-            this.cmbCoachType.TabIndex = 20;
-            this.cmbCoachType.SelectedIndexChanged += new System.EventHandler(this.cmbCoachType_SelectedIndexChanged);
-            this.cmbCoachType.SelectedValueChanged += new System.EventHandler(this.cmbCoachType_SelectedValueChanged);
-            // 
-            // btnFind1
-            // 
-            this.btnFind1.BackColor = System.Drawing.Color.Orange;
-            this.btnFind1.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFind1.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnFind1.Location = new System.Drawing.Point(212, 168);
-            this.btnFind1.Name = "btnFind1";
-            this.btnFind1.Size = new System.Drawing.Size(132, 35);
-            this.btnFind1.TabIndex = 24;
-            this.btnFind1.Text = "Tìm chuyến xe";
-            this.btnFind1.UseVisualStyleBackColor = false;
-            // 
-            // cmbStartLocation1
-            // 
-            this.cmbStartLocation1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbStartLocation1.FormattingEnabled = true;
-            this.cmbStartLocation1.Location = new System.Drawing.Point(10, 45);
-            this.cmbStartLocation1.Name = "cmbStartLocation1";
-            this.cmbStartLocation1.Size = new System.Drawing.Size(160, 28);
-            this.cmbStartLocation1.TabIndex = 19;
-            // 
-            // cmbEndLocation1
-            // 
-            this.cmbEndLocation1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbEndLocation1.FormattingEnabled = true;
-            this.cmbEndLocation1.Location = new System.Drawing.Point(212, 45);
-            this.cmbEndLocation1.Name = "cmbEndLocation1";
-            this.cmbEndLocation1.Size = new System.Drawing.Size(160, 28);
-            this.cmbEndLocation1.TabIndex = 20;
-            // 
-            // dtpStart1
-            // 
-            this.dtpStart1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpStart1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpStart1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpStart1.Location = new System.Drawing.Point(212, 114);
-            this.dtpStart1.Name = "dtpStart1";
-            this.dtpStart1.Size = new System.Drawing.Size(160, 27);
-            this.dtpStart1.TabIndex = 22;
-            // 
-            // button2
-            // 
-            this.button2.AutoSize = true;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(176, 45);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(30, 30);
-            this.button2.TabIndex = 21;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.PapayaWhip;
-            this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Controls.Add(this.dtpBackDate);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.btnFind2);
-            this.tabPage2.Controls.Add(this.cmbStartLocation2);
-            this.tabPage2.Controls.Add(this.cmbNumberTicket2);
-            this.tabPage2.Controls.Add(this.cmbEndLocation2);
-            this.tabPage2.Controls.Add(this.dtpStartDate2);
-            this.tabPage2.Controls.Add(this.btnSwap2);
-            this.tabPage2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(502, 210);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Khứ hồi";
+            this.btnFind.BackColor = System.Drawing.Color.Orange;
+            this.btnFind.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFind.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnFind.Location = new System.Drawing.Point(443, 200);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(132, 35);
+            this.btnFind.TabIndex = 24;
+            this.btnFind.Text = "Tìm chuyến xe";
+            this.btnFind.UseVisualStyleBackColor = false;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label9.Location = new System.Drawing.Point(208, 88);
+            this.label9.Location = new System.Drawing.Point(218, 114);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(118, 19);
             this.label9.TabIndex = 18;
@@ -398,7 +234,7 @@
             this.dtpBackDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpBackDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpBackDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpBackDate.Location = new System.Drawing.Point(212, 110);
+            this.dtpBackDate.Location = new System.Drawing.Point(222, 136);
             this.dtpBackDate.Name = "dtpBackDate";
             this.dtpBackDate.Size = new System.Drawing.Size(160, 27);
             this.dtpBackDate.TabIndex = 17;
@@ -407,17 +243,18 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label5.Location = new System.Drawing.Point(8, 157);
+            this.label5.Location = new System.Drawing.Point(18, 181);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 19);
+            this.label5.Size = new System.Drawing.Size(67, 19);
             this.label5.TabIndex = 16;
-            this.label5.Text = "Số vé";
+            this.label5.Text = "Loại Xe";
+     
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label6.Location = new System.Drawing.Point(8, 88);
+            this.label6.Location = new System.Drawing.Point(18, 114);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 19);
             this.label6.TabIndex = 15;
@@ -427,7 +264,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label7.Location = new System.Drawing.Point(208, 16);
+            this.label7.Location = new System.Drawing.Point(218, 42);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(82, 19);
             this.label7.TabIndex = 14;
@@ -437,67 +274,56 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label8.Location = new System.Drawing.Point(8, 16);
+            this.label8.Location = new System.Drawing.Point(18, 42);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(67, 19);
             this.label8.TabIndex = 13;
             this.label8.Text = "Điểm đi";
             // 
-            // btnFind2
+            // cmbStartLocation
             // 
-            this.btnFind2.BackColor = System.Drawing.Color.Orange;
-            this.btnFind2.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFind2.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnFind2.Location = new System.Drawing.Point(128, 218);
-            this.btnFind2.Name = "btnFind2";
-            this.btnFind2.Size = new System.Drawing.Size(132, 35);
-            this.btnFind2.TabIndex = 12;
-            this.btnFind2.Text = "Tìm chuyến xe";
-            this.btnFind2.UseVisualStyleBackColor = false;
+            this.cmbStartLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbStartLocation.FormattingEnabled = true;
+            this.cmbStartLocation.Location = new System.Drawing.Point(20, 69);
+            this.cmbStartLocation.Name = "cmbStartLocation";
+            this.cmbStartLocation.Size = new System.Drawing.Size(160, 28);
+            this.cmbStartLocation.TabIndex = 6;
             // 
-            // cmbStartLocation2
+            // cmbCoachType
             // 
-            this.cmbStartLocation2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbStartLocation2.FormattingEnabled = true;
-            this.cmbStartLocation2.Location = new System.Drawing.Point(10, 43);
-            this.cmbStartLocation2.Name = "cmbStartLocation2";
-            this.cmbStartLocation2.Size = new System.Drawing.Size(160, 28);
-            this.cmbStartLocation2.TabIndex = 6;
+            this.cmbCoachType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCoachType.FormattingEnabled = true;
+            this.cmbCoachType.Location = new System.Drawing.Point(22, 203);
+            this.cmbCoachType.Name = "cmbCoachType";
+            this.cmbCoachType.Size = new System.Drawing.Size(160, 28);
+            this.cmbCoachType.TabIndex = 10;
+            this.cmbCoachType.SelectedIndexChanged += new System.EventHandler(this.cmbCoachType_SelectedIndexChanged_1);
             // 
-            // cmbNumberTicket2
+            // cmbEndLocation
             // 
-            this.cmbNumberTicket2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbNumberTicket2.FormattingEnabled = true;
-            this.cmbNumberTicket2.Location = new System.Drawing.Point(12, 179);
-            this.cmbNumberTicket2.Name = "cmbNumberTicket2";
-            this.cmbNumberTicket2.Size = new System.Drawing.Size(160, 28);
-            this.cmbNumberTicket2.TabIndex = 10;
+            this.cmbEndLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEndLocation.FormattingEnabled = true;
+            this.cmbEndLocation.Location = new System.Drawing.Point(222, 69);
+            this.cmbEndLocation.Name = "cmbEndLocation";
+            this.cmbEndLocation.Size = new System.Drawing.Size(160, 28);
+            this.cmbEndLocation.TabIndex = 7;
             // 
-            // cmbEndLocation2
+            // dtpStartDate
             // 
-            this.cmbEndLocation2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbEndLocation2.FormattingEnabled = true;
-            this.cmbEndLocation2.Location = new System.Drawing.Point(212, 43);
-            this.cmbEndLocation2.Name = "cmbEndLocation2";
-            this.cmbEndLocation2.Size = new System.Drawing.Size(160, 28);
-            this.cmbEndLocation2.TabIndex = 7;
-            // 
-            // dtpStartDate2
-            // 
-            this.dtpStartDate2.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpStartDate2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpStartDate2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpStartDate2.Location = new System.Drawing.Point(10, 110);
-            this.dtpStartDate2.Name = "dtpStartDate2";
-            this.dtpStartDate2.Size = new System.Drawing.Size(160, 27);
-            this.dtpStartDate2.TabIndex = 9;
+            this.dtpStartDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpStartDate.Location = new System.Drawing.Point(20, 136);
+            this.dtpStartDate.Name = "dtpStartDate";
+            this.dtpStartDate.Size = new System.Drawing.Size(160, 27);
+            this.dtpStartDate.TabIndex = 9;
             // 
             // btnSwap2
             // 
             this.btnSwap2.AutoSize = true;
             this.btnSwap2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSwap2.BackgroundImage")));
             this.btnSwap2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSwap2.Location = new System.Drawing.Point(176, 43);
+            this.btnSwap2.Location = new System.Drawing.Point(186, 69);
             this.btnSwap2.Name = "btnSwap2";
             this.btnSwap2.Size = new System.Drawing.Size(30, 30);
             this.btnSwap2.TabIndex = 8;
@@ -523,7 +349,7 @@
             this.label2.Size = new System.Drawing.Size(53, 19);
             this.label2.TabIndex = 28;
             this.label2.Text = "Số vé";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+          
             // 
             // cmbNumberTicket1
             // 
@@ -533,7 +359,7 @@
             this.cmbNumberTicket1.Name = "cmbNumberTicket1";
             this.cmbNumberTicket1.Size = new System.Drawing.Size(160, 28);
             this.cmbNumberTicket1.TabIndex = 23;
-            this.cmbNumberTicket1.SelectedIndexChanged += new System.EventHandler(this.cmbNumberTicket1_SelectedIndexChanged);
+     
             // 
             // pnPickSeat
             // 
@@ -549,56 +375,18 @@
             this.pnPickSeat.Size = new System.Drawing.Size(578, 380);
             this.pnPickSeat.TabIndex = 10;
             // 
-            // button12
+            // panel9
             // 
-            this.button12.BackColor = System.Drawing.Color.PaleVioletRed;
-            this.button12.Enabled = false;
-            this.button12.Location = new System.Drawing.Point(3, 64);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(25, 25);
-            this.button12.TabIndex = 14;
-            this.button12.UseVisualStyleBackColor = false;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(39, 69);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(68, 16);
-            this.label18.TabIndex = 13;
-            this.label18.Text = "Đang chọn";
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.DarkGray;
-            this.button10.Enabled = false;
-            this.button10.Location = new System.Drawing.Point(3, 33);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(25, 25);
-            this.button10.TabIndex = 12;
-            this.button10.UseVisualStyleBackColor = false;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(39, 38);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(48, 16);
-            this.label17.TabIndex = 11;
-            this.label17.Text = "Đã bán";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label16.Location = new System.Drawing.Point(9, 13);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(116, 24);
-            this.label16.TabIndex = 5;
-            this.label16.Text = "CHỌN GHẾ";
+            this.panel9.Controls.Add(this.button9);
+            this.panel9.Controls.Add(this.button12);
+            this.panel9.Controls.Add(this.label15);
+            this.panel9.Controls.Add(this.label18);
+            this.panel9.Controls.Add(this.label17);
+            this.panel9.Controls.Add(this.button10);
+            this.panel9.Location = new System.Drawing.Point(460, 139);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(111, 100);
+            this.panel9.TabIndex = 15;
             // 
             // button9
             // 
@@ -610,6 +398,16 @@
             this.button9.TabIndex = 10;
             this.button9.UseVisualStyleBackColor = false;
             // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.button12.Enabled = false;
+            this.button12.Location = new System.Drawing.Point(3, 64);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(25, 25);
+            this.button12.TabIndex = 14;
+            this.button12.UseVisualStyleBackColor = false;
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -619,6 +417,47 @@
             this.label15.Size = new System.Drawing.Size(63, 16);
             this.label15.TabIndex = 9;
             this.label15.Text = "Còn trống";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(39, 69);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(68, 16);
+            this.label18.TabIndex = 13;
+            this.label18.Text = "Đang chọn";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(39, 38);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(48, 16);
+            this.label17.TabIndex = 11;
+            this.label17.Text = "Đã bán";
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.DarkGray;
+            this.button10.Enabled = false;
+            this.button10.Location = new System.Drawing.Point(3, 33);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(25, 25);
+            this.button10.TabIndex = 12;
+            this.button10.UseVisualStyleBackColor = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label16.Location = new System.Drawing.Point(9, 13);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(116, 24);
+            this.label16.TabIndex = 5;
+            this.label16.Text = "CHỌN GHẾ";
             // 
             // panel4
             // 
@@ -1612,7 +1451,7 @@
             this.btnComplete.TabIndex = 7;
             this.btnComplete.Text = "ĐẶT VÉ";
             this.btnComplete.UseVisualStyleBackColor = false;
-            this.btnComplete.Click += new System.EventHandler(this.btnComplete_Click);
+      
             // 
             // label30
             // 
@@ -1634,7 +1473,7 @@
             this.txtTotalMoney.ReadOnly = true;
             this.txtTotalMoney.Size = new System.Drawing.Size(230, 27);
             this.txtTotalMoney.TabIndex = 5;
-            this.txtTotalMoney.TextChanged += new System.EventHandler(this.txtTotalMoney_TextChanged);
+       
             // 
             // label28
             // 
@@ -1664,18 +1503,54 @@
             this.label31.Size = new System.Drawing.Size(577, 383);
             this.label31.TabIndex = 14;
             // 
-            // panel9
+            // cbkRoundCheck
             // 
-            this.panel9.Controls.Add(this.button9);
-            this.panel9.Controls.Add(this.button12);
-            this.panel9.Controls.Add(this.label15);
-            this.panel9.Controls.Add(this.label18);
-            this.panel9.Controls.Add(this.label17);
-            this.panel9.Controls.Add(this.button10);
-            this.panel9.Location = new System.Drawing.Point(460, 139);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(111, 100);
-            this.panel9.TabIndex = 15;
+            this.cbkRoundCheck.AutoSize = true;
+            this.cbkRoundCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbkRoundCheck.Location = new System.Drawing.Point(424, 77);
+            this.cbkRoundCheck.Name = "cbkRoundCheck";
+            this.cbkRoundCheck.Size = new System.Drawing.Size(87, 22);
+            this.cbkRoundCheck.TabIndex = 25;
+            this.cbkRoundCheck.Text = "Khứ hồi";
+            this.cbkRoundCheck.UseVisualStyleBackColor = true;
+            this.cbkRoundCheck.CheckedChanged += new System.EventHandler(this.cbkRoundCheck_CheckedChanged);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(424, 135);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(160, 28);
+            this.comboBox1.TabIndex = 26;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label3.Location = new System.Drawing.Point(420, 111);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 19);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "Số vé";
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.Location = new System.Drawing.Point(219, 203);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(163, 27);
+            this.txtPrice.TabIndex = 28;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label4.Location = new System.Drawing.Point(221, 181);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 19);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "Giá tiền";
             // 
             // frmDatVe
             // 
@@ -1697,14 +1572,12 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.tcl1c.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnPickSeat.ResumeLayout(false);
             this.pnPickSeat.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -1715,8 +1588,6 @@
             this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1726,35 +1597,22 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TabControl tcl1c;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.ComboBox cmbStartLocation2;
-        private System.Windows.Forms.ComboBox cmbNumberTicket2;
-        private System.Windows.Forms.ComboBox cmbEndLocation2;
-        private System.Windows.Forms.DateTimePicker dtpStartDate2;
+        private System.Windows.Forms.ComboBox cmbStartLocation;
+        private System.Windows.Forms.ComboBox cmbCoachType;
+        private System.Windows.Forms.ComboBox cmbEndLocation;
+        private System.Windows.Forms.DateTimePicker dtpStartDate;
         private System.Windows.Forms.Button btnSwap2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnFind2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dtpBackDate;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button btnFind1;
-        private System.Windows.Forms.ComboBox cmbStartLocation1;
+        private System.Windows.Forms.Button btnFind;
         private System.Windows.Forms.ComboBox cmbNumberTicket1;
-        private System.Windows.Forms.ComboBox cmbEndLocation1;
-        private System.Windows.Forms.DateTimePicker dtpStart1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox cmbCoachType;
         private System.Windows.Forms.Button btnConfirmInfor;
         private System.Windows.Forms.Panel pnPickSeat;
         private System.Windows.Forms.Button button12;
@@ -1837,9 +1695,12 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnComplete;
-        private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.CheckBox cbkRoundCheck;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.Label label4;
     }
 }
