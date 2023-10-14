@@ -34,7 +34,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCash = new System.Windows.Forms.Button();
             this.btnEmployeeManager = new System.Windows.Forms.Button();
-            this.btnTicketManage = new System.Windows.Forms.Button();
+            this.btnTripManage = new System.Windows.Forms.Button();
             this.btnCarManage = new System.Windows.Forms.Button();
             this.btnSystem = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -56,7 +56,7 @@
             this.pnMainFuncion.Controls.Add(this.panel1);
             this.pnMainFuncion.Controls.Add(this.btnCash);
             this.pnMainFuncion.Controls.Add(this.btnEmployeeManager);
-            this.pnMainFuncion.Controls.Add(this.btnTicketManage);
+            this.pnMainFuncion.Controls.Add(this.btnTripManage);
             this.pnMainFuncion.Controls.Add(this.btnCarManage);
             this.pnMainFuncion.Controls.Add(this.btnSystem);
             this.pnMainFuncion.Location = new System.Drawing.Point(0, 40);
@@ -108,18 +108,18 @@
             this.btnEmployeeManager.UseVisualStyleBackColor = true;
             this.btnEmployeeManager.Click += new System.EventHandler(this.btnEmployeeManager_Click);
             // 
-            // btnTicketManage
+            // btnTripManage
             // 
-            this.btnTicketManage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTicketManage.Image = ((System.Drawing.Image)(resources.GetObject("btnTicketManage.Image")));
-            this.btnTicketManage.Location = new System.Drawing.Point(3, 350);
-            this.btnTicketManage.Name = "btnTicketManage";
-            this.btnTicketManage.Size = new System.Drawing.Size(194, 67);
-            this.btnTicketManage.TabIndex = 2;
-            this.btnTicketManage.Text = "Quản lý\r\nđặt vé\r\n";
-            this.btnTicketManage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTicketManage.UseVisualStyleBackColor = true;
-            this.btnTicketManage.Click += new System.EventHandler(this.btnTicketManage_Click);
+            this.btnTripManage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTripManage.Image = ((System.Drawing.Image)(resources.GetObject("btnTripManage.Image")));
+            this.btnTripManage.Location = new System.Drawing.Point(3, 350);
+            this.btnTripManage.Name = "btnTripManage";
+            this.btnTripManage.Size = new System.Drawing.Size(194, 67);
+            this.btnTripManage.TabIndex = 2;
+            this.btnTripManage.Text = "Quản lý\r\n chuyến\r\n";
+            this.btnTripManage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTripManage.UseVisualStyleBackColor = true;
+            this.btnTripManage.Click += new System.EventHandler(this.btnTicketManage_Click);
             // 
             // btnCarManage
             // 
@@ -239,7 +239,7 @@
         private System.Windows.Forms.Button btnCarManage;
         private System.Windows.Forms.Button btnCash;
         private System.Windows.Forms.Button btnEmployeeManager;
-        private System.Windows.Forms.Button btnTicketManage;
+        private System.Windows.Forms.Button btnTripManage;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
