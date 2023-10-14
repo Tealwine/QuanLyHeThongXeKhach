@@ -19,8 +19,6 @@ namespace DAL.Models
         [StringLength(30)]
         public string CoachBrand { get; set; }
 
-        public int SeatNumber { get; set; }
-
         public int Warranty { get; set; }
 
         public int TypeId { get; set; }

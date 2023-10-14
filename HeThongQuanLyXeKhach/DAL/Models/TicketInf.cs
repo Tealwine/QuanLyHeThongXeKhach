@@ -11,6 +11,8 @@ namespace DAL.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int TicketId { get; set; }
+
         public int BillId { get; set; }
 
         [Required]

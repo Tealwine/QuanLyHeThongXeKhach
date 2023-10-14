@@ -9,6 +9,12 @@ namespace DAL.Models
     [Table("Bill")]
     public partial class Bill
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Bill()
+        {
+            TicketInfs = new HashSet<TicketInf>();
+        }
+
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int BillId { get; set; }
 
@@ -24,6 +30,7 @@ namespace DAL.Models
 
         public virtual Employee Employee { get; set; }
 
-        public virtual TicketInf TicketInf { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TicketInf> TicketInfs { get; set; }
     }
 }

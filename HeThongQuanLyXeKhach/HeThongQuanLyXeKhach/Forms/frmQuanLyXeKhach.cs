@@ -38,7 +38,7 @@ namespace HeThongQuanLyXeKhach
                 dgvCoachList.Rows[index].Cells[0].Value = item.CoachId;
                 dgvCoachList.Rows[index].Cells[1].Value = item.CoachPlate;
                 dgvCoachList.Rows[index].Cells[2].Value = item.CoachBrand;
-                dgvCoachList.Rows[index].Cells[3].Value = item.SeatNumber;
+                dgvCoachList.Rows[index].Cells[3].Value = "";
                 dgvCoachList.Rows[index].Cells[4].Value = item.Warranty;
                 dgvCoachList.Rows[index].Cells[5].Value = item.CoachType.TypeName;
                 ShowAvatar(tenAnh);
@@ -165,7 +165,7 @@ namespace HeThongQuanLyXeKhach
                     TypeId = type.TypeId,
                     CoachBrand = hang,
                     CoachPlate = bienSo,
-                    SeatNumber = soGhe,
+                    //SeatNumber = soGhe,
                     CoachImg = tenAnh
                 };
 

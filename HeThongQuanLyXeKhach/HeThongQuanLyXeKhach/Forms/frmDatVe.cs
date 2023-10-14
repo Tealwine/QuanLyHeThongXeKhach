@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 
+
 namespace HeThongQuanLyXeKhach
 {
     public partial class frmDatVe : Form
@@ -45,12 +46,28 @@ namespace HeThongQuanLyXeKhach
 
         private void FillcmbStartLocation(List<Trip> listTripBUSS)
         {
-            
+            List<Trip> list = new List<Trip>();
+            foreach (Trip item in listTripBUSS)
+            {
+                if (!cmbStartLocation.Items.Contains(item.StartPlace))
+                {
+                    // Nếu chưa tồn tại, thì thêm vào combobox
+                    cmbStartLocation.Items.Add(item.StartPlace);
+                }
+            }
         }
 
         private void FillcmbEndLocation(List<Trip> listTripBUSE)
         {
-           
+            List<Trip> list = new List<Trip>();
+            foreach (Trip item in listTripBUSE)
+            {
+                if (!cmbEndLocation.Items.Contains(item.ArrivePlace) )
+                {
+                    // Nếu chưa tồn tại, thì thêm vào combobox
+                    cmbEndLocation.Items.Add(item.ArrivePlace);
+                }
+            }
         }
 
 
@@ -77,12 +94,15 @@ namespace HeThongQuanLyXeKhach
         {
             var coachTypeList = coachTypeBUS.GetAll();
             var TripList = tripBUS.GetAll();
+            
             pnPickSeat.Hide();
             FillComboboxCoachType(coachTypeList);
             FillcmbStartLocation(TripList);
-            
-            
-            
+            FillcmbEndLocation(TripList);
+
+
+
+
         }
 
         private void btnSeatA01_Click(object sender, EventArgs e)
@@ -237,6 +257,29 @@ namespace HeThongQuanLyXeKhach
             else if (cmbCoachType.Text == "Limousine")
             {
                 txtPrice.Text = "700";
+            }
+        }
+
+        private void txtTotalMoney_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbStartLocation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void btnFind_Click(object sender, EventArgs e)
+        {
+            List<TripInf> list = new List<TripInf>();
+            foreach (TripInf trip in list)
+            {
+                if (cmbStartLocation.Text == trip.Trip.StartPlace && cmbEndLocation.Text == trip.Trip.ArrivePlace && cmbCoachType.Text == trip.CoachType.TypeName)
+                {
+
+                }
             }
         }
     }

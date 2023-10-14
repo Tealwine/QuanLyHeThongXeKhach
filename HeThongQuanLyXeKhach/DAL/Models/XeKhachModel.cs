@@ -8,9 +8,7 @@ namespace DAL.Models
     public partial class XeKhachModel : DbContext
     {
         public XeKhachModel()
-
-            : base("name=XeKhachModel2")
-
+            : base("name=XeKhachModel1")
         {
         }
 
@@ -32,8 +30,9 @@ namespace DAL.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<Bill>()
-                .HasOptional(e => e.TicketInf)
-                .WithRequired(e => e.Bill);
+                .HasMany(e => e.TicketInfs)
+                .WithRequired(e => e.Bill)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Coach>()
                 .Property(e => e.CoachId)
