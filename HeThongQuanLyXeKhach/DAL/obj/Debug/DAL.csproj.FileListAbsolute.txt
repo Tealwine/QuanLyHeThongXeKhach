@@ -1,16 +1,3 @@
-D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\bin\Debug\DAL.dll.config
-D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\bin\Debug\DAL.dll
-D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\bin\Debug\DAL.pdb
-D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\bin\Debug\EntityFramework.dll
-D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\bin\Debug\EntityFramework.SqlServer.dll
-D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\bin\Debug\EntityFramework.xml
-D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\bin\Debug\EntityFramework.SqlServer.xml
-D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
-D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\obj\Debug\DAL.csproj.CopyComplete
-D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\obj\Debug\DAL.dll
-D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\obj\Debug\DAL.pdb
-<<<<<<< Updated upstream
 C:\Code\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\bin\Debug\DAL.dll.config
 C:\Code\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\bin\Debug\DAL.dll
 C:\Code\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\bin\Debug\DAL.pdb
@@ -23,17 +10,3 @@ C:\Code\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\obj\Debug\DAL.csproj.CoreC
 C:\Code\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Code\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\obj\Debug\DAL.dll
 C:\Code\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\obj\Debug\DAL.pdb
-=======
-C:\Users\admin\Documents\DoAn\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\bin\Debug\DAL.dll.config
-C:\Users\admin\Documents\DoAn\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\bin\Debug\DAL.dll
-C:\Users\admin\Documents\DoAn\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\bin\Debug\DAL.pdb
-C:\Users\admin\Documents\DoAn\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\bin\Debug\EntityFramework.dll
-C:\Users\admin\Documents\DoAn\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\admin\Documents\DoAn\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\bin\Debug\EntityFramework.xml
-C:\Users\admin\Documents\DoAn\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\admin\Documents\DoAn\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
-C:\Users\admin\Documents\DoAn\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-C:\Users\admin\Documents\DoAn\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\obj\Debug\DAL.csproj.CopyComplete
-C:\Users\admin\Documents\DoAn\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\obj\Debug\DAL.dll
-C:\Users\admin\Documents\DoAn\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\DAL\obj\Debug\DAL.pdb
->>>>>>> Stashed changes

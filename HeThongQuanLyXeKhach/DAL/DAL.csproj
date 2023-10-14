@@ -60,12 +60,11 @@
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\LogInAccount.cs" />
+    <Compile Include="Models\XeKhachModel.cs" />
     <Compile Include="Models\Position.cs" />
-    <Compile Include="Models\sysdiagram.cs" />
     <Compile Include="Models\TicketInf.cs" />
     <Compile Include="Models\Trip.cs" />
     <Compile Include="Models\TripInf.cs" />
-    <Compile Include="Models\XeKhachModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

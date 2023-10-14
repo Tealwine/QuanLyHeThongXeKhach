@@ -20,11 +20,17 @@ namespace HeThongQuanLyXeKhach
         private readonly CoachTypeBUS coachTypeBUS = new CoachTypeBUS();
         List<Button> buttonList = new List<Button>();
 
-
+        private List<Control> items = new List<Control>();
         public frmDatVe()
         {
             InitializeComponent();
             txtTotalMoney.Enabled = false;
+            foreach (Control control in pnPickSeat.Controls)
+            {
+                items.Add(control);
+                originalLocations.Add(control, control.Location);
+          
+            }
         }
         
         
@@ -74,7 +80,7 @@ namespace HeThongQuanLyXeKhach
         {
             var coachTypeList = coachTypeBUS.GetAll();
             var TripList = tripBUS.GetAll();
-            
+            pnPickSeat.Hide();
             FillComboboxCoachType(coachTypeList);
             FillcmbStartLocation(TripList);
             
@@ -154,6 +160,86 @@ namespace HeThongQuanLyXeKhach
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+        public Dictionary<Control, Point> originalLocations = new Dictionary<Control, Point>();
+ 
+        private void ResetLocations()
+        {
+            foreach (Control control in pnPickSeat.Controls)
+            {
+                // Lấy vị trí ban đầu từ Dictionary
+                Point originalLocation;
+                if (originalLocations.TryGetValue(control, out originalLocation))
+                {
+                    // Gán lại vị trí cho item
+                    control.Location = originalLocation;
+                }
+            }
+        }
+        private void ShowAllItems()
+        {
+            foreach (Control control in items)
+            {
+                // Thiết lập trạng thái hiển thị cho item
+                control.Visible = true;
+
+            }
+        }
+
+  
+        private void checktype()
+        {
+            ResetLocations();
+           
+            if (cmbCoachType.Text == "Ghế")
+            {
+     
+                panel5.Location = new Point(150, 44);
+                panel4.Hide();
+                label1.Hide();
+
+                pnPickSeat.Show();
+                btnSeatA16.Show();
+                btnSeatA17.Show();
+                btnSeatA18.Show();
+                btnSeatA19.Show();
+                btnSeatA20.Show();
+                btnSeatA21.Show();
+                btnSeatA22.Show();
+            }
+            if (cmbCoachType.Text == "Giường Nằm")
+            {
+                
+                pnPickSeat.Show();
+                panel4.Show();
+                btnSeatA16.Show();
+                btnSeatA17.Show();
+                btnSeatA18.Show(); 
+                btnSeatA19.Show();
+                btnSeatA20.Show();
+                btnSeatA21.Show();
+                btnSeatA22.Show();
+            }
+            if (cmbCoachType.Text == "Limousine")
+            {
+    
+                panel5.Location = new Point(150, 44);
+                pnPickSeat.Show();
+                btnSeatA16.Hide();
+                btnSeatA17.Hide();
+                btnSeatA18.Hide();
+                btnSeatA19.Hide();
+                btnSeatA20.Hide();
+                btnSeatA21.Hide();
+                btnSeatA22.Hide();
+                panel4.Hide();
+                label1.Hide();
+            }
+
+        }
+        private void btnConfirmInfor_Click(object sender, EventArgs e)
+        {
+            checktype();
         }
     }
 }

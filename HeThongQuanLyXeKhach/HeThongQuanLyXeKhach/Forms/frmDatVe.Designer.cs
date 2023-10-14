@@ -32,18 +32,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnConfirmInfor = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.cmbCoachType = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tcl1c = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.cmbCoachType = new System.Windows.Forms.ComboBox();
             this.btnFind1 = new System.Windows.Forms.Button();
             this.cmbStartLocation1 = new System.Windows.Forms.ComboBox();
-            this.cmbNumberTicket1 = new System.Windows.Forms.ComboBox();
             this.cmbEndLocation1 = new System.Windows.Forms.ComboBox();
             this.dtpStart1 = new System.Windows.Forms.DateTimePicker();
             this.button2 = new System.Windows.Forms.Button();
@@ -61,6 +61,8 @@
             this.dtpStartDate2 = new System.Windows.Forms.DateTimePicker();
             this.btnSwap2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbNumberTicket1 = new System.Windows.Forms.ComboBox();
             this.pnPickSeat = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
@@ -142,8 +144,8 @@
             this.txtTotalMoney = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -157,6 +159,7 @@
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -190,27 +193,7 @@
             this.btnConfirmInfor.TabIndex = 19;
             this.btnConfirmInfor.Text = "Xác nhận";
             this.btnConfirmInfor.UseVisualStyleBackColor = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label11.Location = new System.Drawing.Point(8, 89);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 19);
-            this.label11.TabIndex = 23;
-            this.label11.Text = "Loại xe";
-            // 
-            // cmbCoachType
-            // 
-            this.cmbCoachType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbCoachType.FormattingEnabled = true;
-            this.cmbCoachType.Location = new System.Drawing.Point(12, 113);
-            this.cmbCoachType.Name = "cmbCoachType";
-            this.cmbCoachType.Size = new System.Drawing.Size(160, 28);
-            this.cmbCoachType.TabIndex = 20;
-            this.cmbCoachType.SelectedIndexChanged += new System.EventHandler(this.cmbCoachType_SelectedIndexChanged);
-            this.cmbCoachType.SelectedValueChanged += new System.EventHandler(this.cmbCoachType_SelectedValueChanged);
+            this.btnConfirmInfor.Click += new System.EventHandler(this.btnConfirmInfor_Click);
             // 
             // panel2
             // 
@@ -257,16 +240,23 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Một chiều";
             // 
-            // label2
+            // txtPrice
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(35, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 19);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "Số vé";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.txtPrice.Location = new System.Drawing.Point(10, 177);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.ReadOnly = true;
+            this.txtPrice.Size = new System.Drawing.Size(103, 27);
+            this.txtPrice.TabIndex = 24;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label12.Location = new System.Drawing.Point(10, 155);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(58, 19);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "Giá vé";
             // 
             // label3
             // 
@@ -288,6 +278,16 @@
             this.label4.TabIndex = 26;
             this.label4.Text = "Điểm đến";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label11.Location = new System.Drawing.Point(8, 89);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(65, 19);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "Loại xe";
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -297,6 +297,17 @@
             this.label10.Size = new System.Drawing.Size(67, 19);
             this.label10.TabIndex = 25;
             this.label10.Text = "Điểm đi";
+            // 
+            // cmbCoachType
+            // 
+            this.cmbCoachType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCoachType.FormattingEnabled = true;
+            this.cmbCoachType.Location = new System.Drawing.Point(12, 113);
+            this.cmbCoachType.Name = "cmbCoachType";
+            this.cmbCoachType.Size = new System.Drawing.Size(160, 28);
+            this.cmbCoachType.TabIndex = 20;
+            this.cmbCoachType.SelectedIndexChanged += new System.EventHandler(this.cmbCoachType_SelectedIndexChanged);
+            this.cmbCoachType.SelectedValueChanged += new System.EventHandler(this.cmbCoachType_SelectedValueChanged);
             // 
             // btnFind1
             // 
@@ -318,16 +329,6 @@
             this.cmbStartLocation1.Name = "cmbStartLocation1";
             this.cmbStartLocation1.Size = new System.Drawing.Size(160, 28);
             this.cmbStartLocation1.TabIndex = 19;
-            // 
-            // cmbNumberTicket1
-            // 
-            this.cmbNumberTicket1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbNumberTicket1.FormattingEnabled = true;
-            this.cmbNumberTicket1.Location = new System.Drawing.Point(124, 18);
-            this.cmbNumberTicket1.Name = "cmbNumberTicket1";
-            this.cmbNumberTicket1.Size = new System.Drawing.Size(160, 28);
-            this.cmbNumberTicket1.TabIndex = 23;
-            this.cmbNumberTicket1.SelectedIndexChanged += new System.EventHandler(this.cmbNumberTicket1_SelectedIndexChanged);
             // 
             // cmbEndLocation1
             // 
@@ -513,30 +514,46 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label2.Location = new System.Drawing.Point(35, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 19);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Số vé";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // cmbNumberTicket1
+            // 
+            this.cmbNumberTicket1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbNumberTicket1.FormattingEnabled = true;
+            this.cmbNumberTicket1.Location = new System.Drawing.Point(124, 18);
+            this.cmbNumberTicket1.Name = "cmbNumberTicket1";
+            this.cmbNumberTicket1.Size = new System.Drawing.Size(160, 28);
+            this.cmbNumberTicket1.TabIndex = 23;
+            this.cmbNumberTicket1.SelectedIndexChanged += new System.EventHandler(this.cmbNumberTicket1_SelectedIndexChanged);
+            // 
             // pnPickSeat
             // 
             this.pnPickSeat.AutoSize = true;
             this.pnPickSeat.BackColor = System.Drawing.Color.Moccasin;
             this.pnPickSeat.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnPickSeat.Controls.Add(this.button12);
-            this.pnPickSeat.Controls.Add(this.label18);
-            this.pnPickSeat.Controls.Add(this.button10);
-            this.pnPickSeat.Controls.Add(this.label17);
+            this.pnPickSeat.Controls.Add(this.panel9);
             this.pnPickSeat.Controls.Add(this.label16);
-            this.pnPickSeat.Controls.Add(this.button9);
-            this.pnPickSeat.Controls.Add(this.label15);
             this.pnPickSeat.Controls.Add(this.panel4);
             this.pnPickSeat.Controls.Add(this.panel5);
-            this.pnPickSeat.Location = new System.Drawing.Point(0, 470);
+            this.pnPickSeat.Location = new System.Drawing.Point(1, 470);
             this.pnPickSeat.Name = "pnPickSeat";
-            this.pnPickSeat.Size = new System.Drawing.Size(573, 380);
+            this.pnPickSeat.Size = new System.Drawing.Size(578, 380);
             this.pnPickSeat.TabIndex = 10;
             // 
             // button12
             // 
             this.button12.BackColor = System.Drawing.Color.PaleVioletRed;
             this.button12.Enabled = false;
-            this.button12.Location = new System.Drawing.Point(462, 185);
+            this.button12.Location = new System.Drawing.Point(3, 64);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(25, 25);
             this.button12.TabIndex = 14;
@@ -546,7 +563,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(498, 190);
+            this.label18.Location = new System.Drawing.Point(39, 69);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(68, 16);
             this.label18.TabIndex = 13;
@@ -556,7 +573,7 @@
             // 
             this.button10.BackColor = System.Drawing.Color.DarkGray;
             this.button10.Enabled = false;
-            this.button10.Location = new System.Drawing.Point(462, 154);
+            this.button10.Location = new System.Drawing.Point(3, 33);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(25, 25);
             this.button10.TabIndex = 12;
@@ -566,7 +583,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(498, 159);
+            this.label17.Location = new System.Drawing.Point(39, 38);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(48, 16);
             this.label17.TabIndex = 11;
@@ -587,7 +604,7 @@
             // 
             this.button9.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button9.Enabled = false;
-            this.button9.Location = new System.Drawing.Point(462, 124);
+            this.button9.Location = new System.Drawing.Point(3, 3);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(25, 25);
             this.button9.TabIndex = 10;
@@ -597,7 +614,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(498, 129);
+            this.label15.Location = new System.Drawing.Point(39, 8);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(63, 16);
             this.label15.TabIndex = 9;
@@ -661,11 +678,11 @@
             this.button7.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.AliceBlue;
             this.button7.Location = new System.Drawing.Point(174, 285);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(34, 32);
+            this.button7.Size = new System.Drawing.Size(36, 34);
             this.button7.TabIndex = 137;
             this.button7.Text = "B22";
             this.button7.UseVisualStyleBackColor = false;
@@ -676,11 +693,11 @@
             this.btnSeat9.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeat9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeat9.FlatAppearance.BorderSize = 0;
-            this.btnSeat9.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeat9.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat9.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeat9.Location = new System.Drawing.Point(134, 285);
             this.btnSeat9.Name = "btnSeat9";
-            this.btnSeat9.Size = new System.Drawing.Size(34, 32);
+            this.btnSeat9.Size = new System.Drawing.Size(36, 34);
             this.btnSeat9.TabIndex = 136;
             this.btnSeat9.Text = "B21";
             this.btnSeat9.UseVisualStyleBackColor = false;
@@ -691,11 +708,11 @@
             this.btnSeat7.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeat7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeat7.FlatAppearance.BorderSize = 0;
-            this.btnSeat7.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeat7.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat7.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeat7.Location = new System.Drawing.Point(54, 285);
             this.btnSeat7.Name = "btnSeat7";
-            this.btnSeat7.Size = new System.Drawing.Size(34, 32);
+            this.btnSeat7.Size = new System.Drawing.Size(36, 34);
             this.btnSeat7.TabIndex = 135;
             this.btnSeat7.Text = "B19";
             this.btnSeat7.UseVisualStyleBackColor = false;
@@ -706,11 +723,11 @@
             this.button11.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.Color.AliceBlue;
             this.button11.Location = new System.Drawing.Point(94, 285);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(34, 32);
+            this.button11.Size = new System.Drawing.Size(36, 34);
             this.button11.TabIndex = 134;
             this.button11.Text = "B20";
             this.button11.UseVisualStyleBackColor = false;
@@ -721,11 +738,11 @@
             this.button8.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.AliceBlue;
             this.button8.Location = new System.Drawing.Point(14, 285);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(34, 32);
+            this.button8.Size = new System.Drawing.Size(36, 34);
             this.button8.TabIndex = 133;
             this.button8.Text = "B18";
             this.button8.UseVisualStyleBackColor = false;
@@ -736,11 +753,11 @@
             this.btnSeat31.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeat31.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeat31.FlatAppearance.BorderSize = 0;
-            this.btnSeat31.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeat31.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat31.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeat31.Location = new System.Drawing.Point(174, 209);
             this.btnSeat31.Name = "btnSeat31";
-            this.btnSeat31.Size = new System.Drawing.Size(34, 32);
+            this.btnSeat31.Size = new System.Drawing.Size(36, 34);
             this.btnSeat31.TabIndex = 130;
             this.btnSeat31.Text = "B15";
             this.btnSeat31.UseVisualStyleBackColor = false;
@@ -751,11 +768,11 @@
             this.btnSeat32.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeat32.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeat32.FlatAppearance.BorderSize = 0;
-            this.btnSeat32.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeat32.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat32.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeat32.Location = new System.Drawing.Point(174, 170);
             this.btnSeat32.Name = "btnSeat32";
-            this.btnSeat32.Size = new System.Drawing.Size(34, 32);
+            this.btnSeat32.Size = new System.Drawing.Size(36, 34);
             this.btnSeat32.TabIndex = 129;
             this.btnSeat32.Text = "B12";
             this.btnSeat32.UseVisualStyleBackColor = false;
@@ -766,11 +783,11 @@
             this.btnSeat33.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeat33.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeat33.FlatAppearance.BorderSize = 0;
-            this.btnSeat33.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeat33.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat33.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeat33.Location = new System.Drawing.Point(174, 132);
             this.btnSeat33.Name = "btnSeat33";
-            this.btnSeat33.Size = new System.Drawing.Size(34, 32);
+            this.btnSeat33.Size = new System.Drawing.Size(36, 34);
             this.btnSeat33.TabIndex = 128;
             this.btnSeat33.Text = "B09";
             this.btnSeat33.UseVisualStyleBackColor = false;
@@ -781,11 +798,11 @@
             this.btnSeat34.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeat34.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeat34.FlatAppearance.BorderSize = 0;
-            this.btnSeat34.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeat34.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat34.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeat34.Location = new System.Drawing.Point(174, 94);
             this.btnSeat34.Name = "btnSeat34";
-            this.btnSeat34.Size = new System.Drawing.Size(34, 32);
+            this.btnSeat34.Size = new System.Drawing.Size(36, 34);
             this.btnSeat34.TabIndex = 127;
             this.btnSeat34.Text = "B06";
             this.btnSeat34.UseVisualStyleBackColor = false;
@@ -796,11 +813,11 @@
             this.btnSeat35.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeat35.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeat35.FlatAppearance.BorderSize = 0;
-            this.btnSeat35.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeat35.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat35.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeat35.Location = new System.Drawing.Point(174, 56);
             this.btnSeat35.Name = "btnSeat35";
-            this.btnSeat35.Size = new System.Drawing.Size(34, 32);
+            this.btnSeat35.Size = new System.Drawing.Size(36, 34);
             this.btnSeat35.TabIndex = 126;
             this.btnSeat35.Text = "B03";
             this.btnSeat35.UseVisualStyleBackColor = false;
@@ -811,11 +828,11 @@
             this.btnSeat30.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeat30.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeat30.FlatAppearance.BorderSize = 0;
-            this.btnSeat30.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeat30.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat30.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeat30.Location = new System.Drawing.Point(174, 247);
             this.btnSeat30.Name = "btnSeat30";
-            this.btnSeat30.Size = new System.Drawing.Size(34, 32);
+            this.btnSeat30.Size = new System.Drawing.Size(36, 34);
             this.btnSeat30.TabIndex = 125;
             this.btnSeat30.Text = "B17";
             this.btnSeat30.UseVisualStyleBackColor = false;
@@ -826,11 +843,11 @@
             this.btnSeat40.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeat40.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeat40.FlatAppearance.BorderSize = 0;
-            this.btnSeat40.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeat40.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat40.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeat40.Location = new System.Drawing.Point(94, 209);
             this.btnSeat40.Name = "btnSeat40";
-            this.btnSeat40.Size = new System.Drawing.Size(34, 32);
+            this.btnSeat40.Size = new System.Drawing.Size(36, 34);
             this.btnSeat40.TabIndex = 122;
             this.btnSeat40.Text = "B14";
             this.btnSeat40.UseVisualStyleBackColor = false;
@@ -841,11 +858,11 @@
             this.btnSeat39.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeat39.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeat39.FlatAppearance.BorderSize = 0;
-            this.btnSeat39.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeat39.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat39.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeat39.Location = new System.Drawing.Point(94, 170);
             this.btnSeat39.Name = "btnSeat39";
-            this.btnSeat39.Size = new System.Drawing.Size(34, 32);
+            this.btnSeat39.Size = new System.Drawing.Size(36, 34);
             this.btnSeat39.TabIndex = 121;
             this.btnSeat39.Text = "B11";
             this.btnSeat39.UseVisualStyleBackColor = false;
@@ -856,11 +873,11 @@
             this.btnSeat38.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeat38.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeat38.FlatAppearance.BorderSize = 0;
-            this.btnSeat38.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeat38.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat38.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeat38.Location = new System.Drawing.Point(94, 132);
             this.btnSeat38.Name = "btnSeat38";
-            this.btnSeat38.Size = new System.Drawing.Size(34, 32);
+            this.btnSeat38.Size = new System.Drawing.Size(36, 34);
             this.btnSeat38.TabIndex = 120;
             this.btnSeat38.Text = "B08";
             this.btnSeat38.UseVisualStyleBackColor = false;
@@ -871,11 +888,11 @@
             this.btnSeat37.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeat37.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeat37.FlatAppearance.BorderSize = 0;
-            this.btnSeat37.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeat37.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat37.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeat37.Location = new System.Drawing.Point(94, 94);
             this.btnSeat37.Name = "btnSeat37";
-            this.btnSeat37.Size = new System.Drawing.Size(34, 32);
+            this.btnSeat37.Size = new System.Drawing.Size(36, 34);
             this.btnSeat37.TabIndex = 118;
             this.btnSeat37.Text = "B05";
             this.btnSeat37.UseVisualStyleBackColor = false;
@@ -886,11 +903,11 @@
             this.btnSeat36.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeat36.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeat36.FlatAppearance.BorderSize = 0;
-            this.btnSeat36.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeat36.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat36.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeat36.Location = new System.Drawing.Point(94, 56);
             this.btnSeat36.Name = "btnSeat36";
-            this.btnSeat36.Size = new System.Drawing.Size(34, 32);
+            this.btnSeat36.Size = new System.Drawing.Size(36, 34);
             this.btnSeat36.TabIndex = 117;
             this.btnSeat36.Text = "B02";
             this.btnSeat36.UseVisualStyleBackColor = false;
@@ -901,11 +918,11 @@
             this.btnSeat25.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeat25.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeat25.FlatAppearance.BorderSize = 0;
-            this.btnSeat25.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeat25.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat25.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeat25.Location = new System.Drawing.Point(14, 209);
             this.btnSeat25.Name = "btnSeat25";
-            this.btnSeat25.Size = new System.Drawing.Size(34, 32);
+            this.btnSeat25.Size = new System.Drawing.Size(36, 34);
             this.btnSeat25.TabIndex = 116;
             this.btnSeat25.Text = "B13";
             this.btnSeat25.UseVisualStyleBackColor = false;
@@ -916,11 +933,11 @@
             this.btnSeat24.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeat24.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeat24.FlatAppearance.BorderSize = 0;
-            this.btnSeat24.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeat24.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat24.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeat24.Location = new System.Drawing.Point(14, 171);
             this.btnSeat24.Name = "btnSeat24";
-            this.btnSeat24.Size = new System.Drawing.Size(34, 32);
+            this.btnSeat24.Size = new System.Drawing.Size(36, 34);
             this.btnSeat24.TabIndex = 115;
             this.btnSeat24.Text = "B10";
             this.btnSeat24.UseVisualStyleBackColor = false;
@@ -931,11 +948,11 @@
             this.btnSeat23.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeat23.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeat23.FlatAppearance.BorderSize = 0;
-            this.btnSeat23.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeat23.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat23.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeat23.Location = new System.Drawing.Point(14, 133);
             this.btnSeat23.Name = "btnSeat23";
-            this.btnSeat23.Size = new System.Drawing.Size(34, 32);
+            this.btnSeat23.Size = new System.Drawing.Size(36, 34);
             this.btnSeat23.TabIndex = 114;
             this.btnSeat23.Text = "B07";
             this.btnSeat23.UseVisualStyleBackColor = false;
@@ -946,11 +963,11 @@
             this.btnSeat26.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeat26.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeat26.FlatAppearance.BorderSize = 0;
-            this.btnSeat26.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeat26.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat26.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeat26.Location = new System.Drawing.Point(14, 247);
             this.btnSeat26.Name = "btnSeat26";
-            this.btnSeat26.Size = new System.Drawing.Size(34, 32);
+            this.btnSeat26.Size = new System.Drawing.Size(36, 34);
             this.btnSeat26.TabIndex = 113;
             this.btnSeat26.Text = "B16";
             this.btnSeat26.UseVisualStyleBackColor = false;
@@ -961,11 +978,11 @@
             this.btnSeat22.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeat22.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeat22.FlatAppearance.BorderSize = 0;
-            this.btnSeat22.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeat22.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat22.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeat22.Location = new System.Drawing.Point(14, 94);
             this.btnSeat22.Name = "btnSeat22";
-            this.btnSeat22.Size = new System.Drawing.Size(34, 32);
+            this.btnSeat22.Size = new System.Drawing.Size(36, 34);
             this.btnSeat22.TabIndex = 112;
             this.btnSeat22.Text = "B04";
             this.btnSeat22.UseVisualStyleBackColor = false;
@@ -976,11 +993,11 @@
             this.btnSeat21.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeat21.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeat21.FlatAppearance.BorderSize = 0;
-            this.btnSeat21.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeat21.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat21.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeat21.Location = new System.Drawing.Point(14, 56);
             this.btnSeat21.Name = "btnSeat21";
-            this.btnSeat21.Size = new System.Drawing.Size(34, 32);
+            this.btnSeat21.Size = new System.Drawing.Size(36, 34);
             this.btnSeat21.TabIndex = 111;
             this.btnSeat21.Text = "B01";
             this.btnSeat21.UseVisualStyleBackColor = false;
@@ -1026,11 +1043,11 @@
             this.btnSeatA22.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeatA22.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeatA22.FlatAppearance.BorderSize = 0;
-            this.btnSeatA22.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeatA22.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeatA22.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeatA22.Location = new System.Drawing.Point(173, 285);
             this.btnSeatA22.Name = "btnSeatA22";
-            this.btnSeatA22.Size = new System.Drawing.Size(34, 32);
+            this.btnSeatA22.Size = new System.Drawing.Size(36, 34);
             this.btnSeatA22.TabIndex = 94;
             this.btnSeatA22.Text = "A22";
             this.btnSeatA22.UseVisualStyleBackColor = false;
@@ -1041,11 +1058,11 @@
             this.btnSeatA21.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeatA21.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeatA21.FlatAppearance.BorderSize = 0;
-            this.btnSeatA21.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeatA21.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeatA21.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeatA21.Location = new System.Drawing.Point(133, 285);
             this.btnSeatA21.Name = "btnSeatA21";
-            this.btnSeatA21.Size = new System.Drawing.Size(34, 32);
+            this.btnSeatA21.Size = new System.Drawing.Size(36, 34);
             this.btnSeatA21.TabIndex = 93;
             this.btnSeatA21.Text = "A21";
             this.btnSeatA21.UseVisualStyleBackColor = false;
@@ -1056,11 +1073,11 @@
             this.btnSeatA19.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeatA19.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeatA19.FlatAppearance.BorderSize = 0;
-            this.btnSeatA19.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeatA19.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeatA19.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeatA19.Location = new System.Drawing.Point(53, 285);
             this.btnSeatA19.Name = "btnSeatA19";
-            this.btnSeatA19.Size = new System.Drawing.Size(34, 32);
+            this.btnSeatA19.Size = new System.Drawing.Size(36, 34);
             this.btnSeatA19.TabIndex = 92;
             this.btnSeatA19.Text = "A19";
             this.btnSeatA19.UseVisualStyleBackColor = false;
@@ -1071,11 +1088,11 @@
             this.btnSeatA20.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeatA20.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeatA20.FlatAppearance.BorderSize = 0;
-            this.btnSeatA20.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeatA20.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeatA20.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeatA20.Location = new System.Drawing.Point(93, 285);
             this.btnSeatA20.Name = "btnSeatA20";
-            this.btnSeatA20.Size = new System.Drawing.Size(34, 32);
+            this.btnSeatA20.Size = new System.Drawing.Size(36, 34);
             this.btnSeatA20.TabIndex = 91;
             this.btnSeatA20.Text = "A20";
             this.btnSeatA20.UseVisualStyleBackColor = false;
@@ -1097,11 +1114,11 @@
             this.btnSeatA18.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeatA18.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeatA18.FlatAppearance.BorderSize = 0;
-            this.btnSeatA18.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeatA18.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeatA18.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeatA18.Location = new System.Drawing.Point(13, 285);
             this.btnSeatA18.Name = "btnSeatA18";
-            this.btnSeatA18.Size = new System.Drawing.Size(34, 32);
+            this.btnSeatA18.Size = new System.Drawing.Size(36, 34);
             this.btnSeatA18.TabIndex = 90;
             this.btnSeatA18.Text = "A18";
             this.btnSeatA18.UseVisualStyleBackColor = false;
@@ -1142,11 +1159,11 @@
             this.btnSeatA15.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeatA15.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeatA15.FlatAppearance.BorderSize = 0;
-            this.btnSeatA15.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeatA15.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeatA15.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeatA15.Location = new System.Drawing.Point(173, 209);
             this.btnSeatA15.Name = "btnSeatA15";
-            this.btnSeatA15.Size = new System.Drawing.Size(34, 32);
+            this.btnSeatA15.Size = new System.Drawing.Size(36, 34);
             this.btnSeatA15.TabIndex = 86;
             this.btnSeatA15.Text = "A15";
             this.btnSeatA15.UseVisualStyleBackColor = false;
@@ -1157,11 +1174,11 @@
             this.btnSeatA12.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeatA12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeatA12.FlatAppearance.BorderSize = 0;
-            this.btnSeatA12.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeatA12.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeatA12.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeatA12.Location = new System.Drawing.Point(173, 171);
             this.btnSeatA12.Name = "btnSeatA12";
-            this.btnSeatA12.Size = new System.Drawing.Size(34, 32);
+            this.btnSeatA12.Size = new System.Drawing.Size(36, 34);
             this.btnSeatA12.TabIndex = 85;
             this.btnSeatA12.Text = "A12";
             this.btnSeatA12.UseVisualStyleBackColor = false;
@@ -1172,11 +1189,11 @@
             this.btnSeatA09.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeatA09.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeatA09.FlatAppearance.BorderSize = 0;
-            this.btnSeatA09.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeatA09.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeatA09.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeatA09.Location = new System.Drawing.Point(173, 133);
             this.btnSeatA09.Name = "btnSeatA09";
-            this.btnSeatA09.Size = new System.Drawing.Size(34, 32);
+            this.btnSeatA09.Size = new System.Drawing.Size(36, 34);
             this.btnSeatA09.TabIndex = 84;
             this.btnSeatA09.Text = "A09";
             this.btnSeatA09.UseVisualStyleBackColor = false;
@@ -1187,11 +1204,11 @@
             this.btnSeatA06.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeatA06.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeatA06.FlatAppearance.BorderSize = 0;
-            this.btnSeatA06.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeatA06.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeatA06.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeatA06.Location = new System.Drawing.Point(173, 95);
             this.btnSeatA06.Name = "btnSeatA06";
-            this.btnSeatA06.Size = new System.Drawing.Size(34, 32);
+            this.btnSeatA06.Size = new System.Drawing.Size(36, 34);
             this.btnSeatA06.TabIndex = 83;
             this.btnSeatA06.Text = "A06";
             this.btnSeatA06.UseVisualStyleBackColor = false;
@@ -1202,11 +1219,11 @@
             this.btnSeatA03.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeatA03.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeatA03.FlatAppearance.BorderSize = 0;
-            this.btnSeatA03.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeatA03.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeatA03.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeatA03.Location = new System.Drawing.Point(173, 56);
             this.btnSeatA03.Name = "btnSeatA03";
-            this.btnSeatA03.Size = new System.Drawing.Size(34, 32);
+            this.btnSeatA03.Size = new System.Drawing.Size(36, 34);
             this.btnSeatA03.TabIndex = 82;
             this.btnSeatA03.Text = "A03";
             this.btnSeatA03.UseVisualStyleBackColor = false;
@@ -1217,11 +1234,11 @@
             this.btnSeatA17.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeatA17.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeatA17.FlatAppearance.BorderSize = 0;
-            this.btnSeatA17.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeatA17.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeatA17.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeatA17.Location = new System.Drawing.Point(173, 247);
             this.btnSeatA17.Name = "btnSeatA17";
-            this.btnSeatA17.Size = new System.Drawing.Size(34, 32);
+            this.btnSeatA17.Size = new System.Drawing.Size(36, 34);
             this.btnSeatA17.TabIndex = 81;
             this.btnSeatA17.Text = "A17";
             this.btnSeatA17.UseVisualStyleBackColor = false;
@@ -1232,11 +1249,11 @@
             this.btnSeatA14.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeatA14.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeatA14.FlatAppearance.BorderSize = 0;
-            this.btnSeatA14.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeatA14.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeatA14.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeatA14.Location = new System.Drawing.Point(93, 209);
             this.btnSeatA14.Name = "btnSeatA14";
-            this.btnSeatA14.Size = new System.Drawing.Size(34, 32);
+            this.btnSeatA14.Size = new System.Drawing.Size(36, 34);
             this.btnSeatA14.TabIndex = 78;
             this.btnSeatA14.Text = "A14";
             this.btnSeatA14.UseVisualStyleBackColor = false;
@@ -1247,11 +1264,11 @@
             this.btnSeatA11.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeatA11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeatA11.FlatAppearance.BorderSize = 0;
-            this.btnSeatA11.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeatA11.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeatA11.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeatA11.Location = new System.Drawing.Point(93, 171);
             this.btnSeatA11.Name = "btnSeatA11";
-            this.btnSeatA11.Size = new System.Drawing.Size(34, 32);
+            this.btnSeatA11.Size = new System.Drawing.Size(36, 34);
             this.btnSeatA11.TabIndex = 77;
             this.btnSeatA11.Text = "A11";
             this.btnSeatA11.UseVisualStyleBackColor = false;
@@ -1262,11 +1279,11 @@
             this.btnSeatA08.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeatA08.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeatA08.FlatAppearance.BorderSize = 0;
-            this.btnSeatA08.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeatA08.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeatA08.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeatA08.Location = new System.Drawing.Point(93, 133);
             this.btnSeatA08.Name = "btnSeatA08";
-            this.btnSeatA08.Size = new System.Drawing.Size(34, 32);
+            this.btnSeatA08.Size = new System.Drawing.Size(36, 34);
             this.btnSeatA08.TabIndex = 76;
             this.btnSeatA08.Text = "A08";
             this.btnSeatA08.UseVisualStyleBackColor = false;
@@ -1277,11 +1294,11 @@
             this.btnSeatA05.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeatA05.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeatA05.FlatAppearance.BorderSize = 0;
-            this.btnSeatA05.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeatA05.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeatA05.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeatA05.Location = new System.Drawing.Point(93, 95);
             this.btnSeatA05.Name = "btnSeatA05";
-            this.btnSeatA05.Size = new System.Drawing.Size(34, 32);
+            this.btnSeatA05.Size = new System.Drawing.Size(36, 34);
             this.btnSeatA05.TabIndex = 74;
             this.btnSeatA05.Text = "A05";
             this.btnSeatA05.UseVisualStyleBackColor = false;
@@ -1292,11 +1309,11 @@
             this.btnSeatA02.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeatA02.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeatA02.FlatAppearance.BorderSize = 0;
-            this.btnSeatA02.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeatA02.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeatA02.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeatA02.Location = new System.Drawing.Point(93, 56);
             this.btnSeatA02.Name = "btnSeatA02";
-            this.btnSeatA02.Size = new System.Drawing.Size(34, 32);
+            this.btnSeatA02.Size = new System.Drawing.Size(36, 34);
             this.btnSeatA02.TabIndex = 73;
             this.btnSeatA02.Text = "A02";
             this.btnSeatA02.UseVisualStyleBackColor = false;
@@ -1307,11 +1324,11 @@
             this.btnSeatA13.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeatA13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeatA13.FlatAppearance.BorderSize = 0;
-            this.btnSeatA13.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeatA13.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeatA13.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeatA13.Location = new System.Drawing.Point(13, 209);
             this.btnSeatA13.Name = "btnSeatA13";
-            this.btnSeatA13.Size = new System.Drawing.Size(34, 32);
+            this.btnSeatA13.Size = new System.Drawing.Size(36, 34);
             this.btnSeatA13.TabIndex = 72;
             this.btnSeatA13.Text = "A13";
             this.btnSeatA13.UseVisualStyleBackColor = false;
@@ -1322,11 +1339,11 @@
             this.btnSeatA10.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeatA10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeatA10.FlatAppearance.BorderSize = 0;
-            this.btnSeatA10.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeatA10.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeatA10.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeatA10.Location = new System.Drawing.Point(13, 172);
             this.btnSeatA10.Name = "btnSeatA10";
-            this.btnSeatA10.Size = new System.Drawing.Size(34, 32);
+            this.btnSeatA10.Size = new System.Drawing.Size(36, 34);
             this.btnSeatA10.TabIndex = 71;
             this.btnSeatA10.Text = "A10";
             this.btnSeatA10.UseVisualStyleBackColor = false;
@@ -1337,11 +1354,11 @@
             this.btnSeatA07.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeatA07.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeatA07.FlatAppearance.BorderSize = 0;
-            this.btnSeatA07.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeatA07.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeatA07.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeatA07.Location = new System.Drawing.Point(13, 134);
             this.btnSeatA07.Name = "btnSeatA07";
-            this.btnSeatA07.Size = new System.Drawing.Size(34, 32);
+            this.btnSeatA07.Size = new System.Drawing.Size(36, 34);
             this.btnSeatA07.TabIndex = 70;
             this.btnSeatA07.Text = "A07";
             this.btnSeatA07.UseVisualStyleBackColor = false;
@@ -1352,11 +1369,11 @@
             this.btnSeatA16.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeatA16.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeatA16.FlatAppearance.BorderSize = 0;
-            this.btnSeatA16.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeatA16.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeatA16.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeatA16.Location = new System.Drawing.Point(13, 247);
             this.btnSeatA16.Name = "btnSeatA16";
-            this.btnSeatA16.Size = new System.Drawing.Size(34, 32);
+            this.btnSeatA16.Size = new System.Drawing.Size(36, 34);
             this.btnSeatA16.TabIndex = 69;
             this.btnSeatA16.Text = "A16";
             this.btnSeatA16.UseVisualStyleBackColor = false;
@@ -1367,11 +1384,11 @@
             this.btnSeatA04.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeatA04.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeatA04.FlatAppearance.BorderSize = 0;
-            this.btnSeatA04.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeatA04.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeatA04.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeatA04.Location = new System.Drawing.Point(13, 95);
             this.btnSeatA04.Name = "btnSeatA04";
-            this.btnSeatA04.Size = new System.Drawing.Size(34, 32);
+            this.btnSeatA04.Size = new System.Drawing.Size(36, 34);
             this.btnSeatA04.TabIndex = 68;
             this.btnSeatA04.Text = "A04";
             this.btnSeatA04.UseVisualStyleBackColor = false;
@@ -1382,11 +1399,11 @@
             this.btnSeatA01.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeatA01.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeatA01.FlatAppearance.BorderSize = 0;
-            this.btnSeatA01.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeatA01.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeatA01.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSeatA01.Location = new System.Drawing.Point(13, 56);
             this.btnSeatA01.Name = "btnSeatA01";
-            this.btnSeatA01.Size = new System.Drawing.Size(34, 32);
+            this.btnSeatA01.Size = new System.Drawing.Size(36, 34);
             this.btnSeatA01.TabIndex = 66;
             this.btnSeatA01.Text = "A01";
             this.btnSeatA01.UseVisualStyleBackColor = false;
@@ -1639,23 +1656,26 @@
             this.label29.TabIndex = 4;
             this.label29.Text = "Tổng tiền:";
             // 
-            // label12
+            // label31
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label12.Location = new System.Drawing.Point(10, 155);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(58, 19);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "Giá vé";
+            this.label31.BackColor = System.Drawing.Color.Moccasin;
+            this.label31.Location = new System.Drawing.Point(-3, 470);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(577, 383);
+            this.label31.TabIndex = 14;
             // 
-            // txtPrice
+            // panel9
             // 
-            this.txtPrice.Location = new System.Drawing.Point(10, 177);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.ReadOnly = true;
-            this.txtPrice.Size = new System.Drawing.Size(103, 27);
-            this.txtPrice.TabIndex = 24;
+            this.panel9.Controls.Add(this.button9);
+            this.panel9.Controls.Add(this.button12);
+            this.panel9.Controls.Add(this.label15);
+            this.panel9.Controls.Add(this.label18);
+            this.panel9.Controls.Add(this.label17);
+            this.panel9.Controls.Add(this.button10);
+            this.panel9.Location = new System.Drawing.Point(460, 139);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(111, 100);
+            this.panel9.TabIndex = 15;
             // 
             // frmDatVe
             // 
@@ -1668,6 +1688,7 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.pnPickSeat);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label31);
             this.Name = "frmDatVe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đặt vé";
@@ -1694,6 +1715,8 @@
             this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1816,5 +1839,7 @@
         private System.Windows.Forms.Button btnComplete;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Panel panel9;
     }
 }
