@@ -32,6 +32,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvFindTrip = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnConfirmInfor = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -133,11 +137,14 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
+=======
             this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+>>>>>>> parent of 835ee14 (Update)
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFindTrip)).BeginInit();
@@ -188,6 +195,36 @@
             this.dgvFindTrip.RowTemplate.Height = 24;
             this.dgvFindTrip.Size = new System.Drawing.Size(391, 164);
             this.dgvFindTrip.TabIndex = 20;
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 40F;
+            this.Column1.HeaderText = "";
+            this.Column1.MinimumWidth = 2;
+            this.Column1.Name = "Column1";
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Column4
+            // 
+            this.Column4.FillWeight = 104.8128F;
+            this.Column4.HeaderText = "Mã chuyến";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 104.8128F;
+            this.Column2.HeaderText = "Thời gian đi";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            // 
+            // Column5
+            // 
+            this.Column5.FillWeight = 104.8128F;
+            this.Column5.HeaderText = "Thời gian đến";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
             // 
             // btnConfirmInfor
             // 
@@ -380,7 +417,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Enabled = false;
+            this.pictureBox1.Image = global::HeThongQuanLyXeKhach.Properties.Resources.HÂN_HẠNH_ĐƯỢC_PHỤC_VỤ;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(977, 196);
@@ -1528,6 +1566,8 @@
             this.label31.Size = new System.Drawing.Size(577, 383);
             this.label31.TabIndex = 14;
             // 
+<<<<<<< HEAD
+=======
             // Column1
             // 
             this.Column1.HeaderText = "";
@@ -1563,6 +1603,7 @@
             this.Column3.Name = "Column3";
             this.Column3.Width = 80;
             // 
+>>>>>>> parent of 835ee14 (Update)
             // frmDatVe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);

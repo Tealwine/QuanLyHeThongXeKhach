@@ -243,6 +243,7 @@
     <Content Include="Resources\C02.png" />
     <Content Include="Resources\C03.png" />
     <Content Include="Resources\C04.png" />
+    <None Include="Resources\HÂN HẠNH ĐƯỢC PHỤC VỤ.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

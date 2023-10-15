@@ -63,6 +63,16 @@ namespace HeThongQuanLyXeKhach.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap HÂN_HẠNH_ĐƯỢC_PHỤC_VỤ {
+            get {
+                object obj = ResourceManager.GetObject("HÂN HẠNH ĐƯỢC PHỤC VỤ", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hình_ảnh_2023_09_17_164341454_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("hình_ảnh_2023-09-17_164341454-removebg-preview", resourceCulture);
