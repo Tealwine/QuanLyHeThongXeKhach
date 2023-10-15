@@ -37,11 +37,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.btnFind = new System.Windows.Forms.Button();
-            this.cbkRoundCheck = new System.Windows.Forms.CheckBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.cmbStartLocation = new System.Windows.Forms.ComboBox();
             this.cmbCoachType = new System.Windows.Forms.ComboBox();
-            this.dtpBackDate = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
@@ -137,7 +134,6 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFindTrip)).BeginInit();
@@ -175,16 +171,20 @@
             // 
             // dgvFindTrip
             // 
+            this.dgvFindTrip.AllowUserToAddRows = false;
+            this.dgvFindTrip.AllowUserToDeleteRows = false;
+            this.dgvFindTrip.AllowUserToResizeColumns = false;
+            this.dgvFindTrip.AllowUserToResizeRows = false;
+            this.dgvFindTrip.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgvFindTrip.ColumnHeadersHeight = 29;
             this.dgvFindTrip.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column4,
             this.Column2,
-            this.Column5,
-            this.Column3});
+            this.Column5});
             this.dgvFindTrip.Location = new System.Drawing.Point(8, 16);
             this.dgvFindTrip.Name = "dgvFindTrip";
-            this.dgvFindTrip.RowHeadersWidth = 51;
+            this.dgvFindTrip.RowHeadersWidth = 5;
             this.dgvFindTrip.RowTemplate.Height = 24;
             this.dgvFindTrip.Size = new System.Drawing.Size(391, 164);
             this.dgvFindTrip.TabIndex = 20;
@@ -208,11 +208,8 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.txtPrice);
             this.panel2.Controls.Add(this.btnFind);
-            this.panel2.Controls.Add(this.cbkRoundCheck);
-            this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.cmbStartLocation);
             this.panel2.Controls.Add(this.cmbCoachType);
-            this.panel2.Controls.Add(this.dtpBackDate);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.dtpStartDate);
             this.panel2.Controls.Add(this.label5);
@@ -229,7 +226,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label4.Location = new System.Drawing.Point(221, 181);
+            this.label4.Location = new System.Drawing.Point(219, 114);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 19);
             this.label4.TabIndex = 29;
@@ -237,8 +234,9 @@
             // 
             // txtPrice
             // 
+            this.txtPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrice.Location = new System.Drawing.Point(219, 203);
+            this.txtPrice.Location = new System.Drawing.Point(217, 136);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(163, 27);
             this.txtPrice.TabIndex = 28;
@@ -248,35 +246,13 @@
             this.btnFind.BackColor = System.Drawing.Color.Orange;
             this.btnFind.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFind.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnFind.Location = new System.Drawing.Point(414, 198);
+            this.btnFind.Location = new System.Drawing.Point(217, 196);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(132, 35);
             this.btnFind.TabIndex = 24;
             this.btnFind.Text = "Tìm chuyến xe";
             this.btnFind.UseVisualStyleBackColor = false;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
-            // 
-            // cbkRoundCheck
-            // 
-            this.cbkRoundCheck.AutoSize = true;
-            this.cbkRoundCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbkRoundCheck.Location = new System.Drawing.Point(414, 77);
-            this.cbkRoundCheck.Name = "cbkRoundCheck";
-            this.cbkRoundCheck.Size = new System.Drawing.Size(87, 22);
-            this.cbkRoundCheck.TabIndex = 25;
-            this.cbkRoundCheck.Text = "Khứ hồi";
-            this.cbkRoundCheck.UseVisualStyleBackColor = true;
-            this.cbkRoundCheck.CheckedChanged += new System.EventHandler(this.cbkRoundCheck_CheckedChanged);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label9.Location = new System.Drawing.Point(218, 114);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(118, 19);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Thêm ngày về";
             // 
             // cmbStartLocation
             // 
@@ -297,16 +273,6 @@
             this.cmbCoachType.Size = new System.Drawing.Size(160, 28);
             this.cmbCoachType.TabIndex = 10;
             this.cmbCoachType.SelectedIndexChanged += new System.EventHandler(this.cmbCoachType_SelectedIndexChanged_1);
-            // 
-            // dtpBackDate
-            // 
-            this.dtpBackDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpBackDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpBackDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpBackDate.Location = new System.Drawing.Point(222, 136);
-            this.dtpBackDate.Name = "dtpBackDate";
-            this.dtpBackDate.Size = new System.Drawing.Size(160, 27);
-            this.dtpBackDate.TabIndex = 17;
             // 
             // label8
             // 
@@ -1446,6 +1412,7 @@
             // txtNumber
             // 
             this.txtNumber.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNumber.Enabled = false;
             this.txtNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumber.Location = new System.Drawing.Point(124, 19);
@@ -1491,6 +1458,7 @@
             // txtTotalMoney
             // 
             this.txtTotalMoney.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtTotalMoney.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTotalMoney.Enabled = false;
             this.txtTotalMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalMoney.Location = new System.Drawing.Point(124, 64);
@@ -1531,37 +1499,35 @@
             // Column1
             // 
             this.Column1.HeaderText = "";
-            this.Column1.MinimumWidth = 6;
+            this.Column1.MinimumWidth = 30;
             this.Column1.Name = "Column1";
             this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column1.Width = 40;
+            this.Column1.Width = 30;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Mã chuyến";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
-            this.Column4.Width = 80;
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 101;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Thời gian đi";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 106;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Thời gian đến";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Số ghế còn";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 80;
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 118;
             // 
             // frmDatVe
             // 
@@ -1618,8 +1584,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker dtpBackDate;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnFind;
@@ -1706,7 +1670,6 @@
         private System.Windows.Forms.Button btnComplete;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.CheckBox cbkRoundCheck;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNumber;
@@ -1715,6 +1678,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

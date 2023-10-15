@@ -31,7 +31,7 @@ namespace HeThongQuanLyXeKhach
         {
             InitializeComponent();
             txtTotalMoney.Enabled = false;
-            dtpBackDate.Enabled = false;
+       
             foreach (Control control in pnPickSeat.Controls)
             {
                 items.Add(control);
@@ -235,15 +235,7 @@ namespace HeThongQuanLyXeKhach
 
         private void cbkRoundCheck_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbkRoundCheck.Checked)
-            {
-
-                dtpBackDate.Enabled = true;
-            }
-            else
-            {
-                dtpBackDate.Enabled = false;
-            }
+            
 
         }
 
@@ -296,8 +288,6 @@ namespace HeThongQuanLyXeKhach
             }
             if (cmbStartLocation.Text == cmbEndLocation.Text)
                 MessageBox.Show("Trung dia diem ! Khong the tim thay chuyen!");
-
-
         }
         private void countSeat()
         {
