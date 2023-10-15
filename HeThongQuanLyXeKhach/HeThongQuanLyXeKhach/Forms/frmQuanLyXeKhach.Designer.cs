@@ -42,9 +42,6 @@
             this.lbID = new System.Windows.Forms.Label();
             this.txtLicensePlate = new System.Windows.Forms.TextBox();
             this.lbLicensePlate = new System.Windows.Forms.Label();
-            this.txtSeatNumber = new System.Windows.Forms.TextBox();
-            this.lbSeatNumber = new System.Windows.Forms.Label();
-            this.txtCoachType = new System.Windows.Forms.TextBox();
             this.lblCoachType = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -71,6 +68,7 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmbType = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.pnDataManager.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCoach)).BeginInit();
@@ -93,6 +91,7 @@
             // pnDataManager
             // 
             this.pnDataManager.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pnDataManager.Controls.Add(this.cmbType);
             this.pnDataManager.Controls.Add(this.label6);
             this.pnDataManager.Controls.Add(this.picCoach);
             this.pnDataManager.Controls.Add(this.txtWarranty);
@@ -103,9 +102,6 @@
             this.pnDataManager.Controls.Add(this.lbID);
             this.pnDataManager.Controls.Add(this.txtLicensePlate);
             this.pnDataManager.Controls.Add(this.lbLicensePlate);
-            this.pnDataManager.Controls.Add(this.txtSeatNumber);
-            this.pnDataManager.Controls.Add(this.lbSeatNumber);
-            this.pnDataManager.Controls.Add(this.txtCoachType);
             this.pnDataManager.Controls.Add(this.lblCoachType);
             this.pnDataManager.Controls.Add(this.btnDelete);
             this.pnDataManager.Controls.Add(this.btnUpdate);
@@ -161,7 +157,7 @@
             this.txtVehicleName.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtVehicleName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtVehicleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVehicleName.Location = new System.Drawing.Point(133, 113);
+            this.txtVehicleName.Location = new System.Drawing.Point(133, 120);
             this.txtVehicleName.Name = "txtVehicleName";
             this.txtVehicleName.Size = new System.Drawing.Size(234, 30);
             this.txtVehicleName.TabIndex = 15;
@@ -170,7 +166,7 @@
             // 
             this.lbVehicleName.AutoSize = true;
             this.lbVehicleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbVehicleName.Location = new System.Drawing.Point(38, 117);
+            this.lbVehicleName.Location = new System.Drawing.Point(38, 124);
             this.lbVehicleName.Name = "lbVehicleName";
             this.lbVehicleName.Size = new System.Drawing.Size(82, 22);
             this.lbVehicleName.TabIndex = 14;
@@ -201,7 +197,7 @@
             this.txtLicensePlate.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtLicensePlate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLicensePlate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLicensePlate.Location = new System.Drawing.Point(133, 257);
+            this.txtLicensePlate.Location = new System.Drawing.Point(133, 245);
             this.txtLicensePlate.Name = "txtLicensePlate";
             this.txtLicensePlate.Size = new System.Drawing.Size(234, 30);
             this.txtLicensePlate.TabIndex = 10;
@@ -210,47 +206,17 @@
             // 
             this.lbLicensePlate.AutoSize = true;
             this.lbLicensePlate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLicensePlate.Location = new System.Drawing.Point(37, 265);
+            this.lbLicensePlate.Location = new System.Drawing.Point(37, 253);
             this.lbLicensePlate.Name = "lbLicensePlate";
             this.lbLicensePlate.Size = new System.Drawing.Size(75, 22);
             this.lbLicensePlate.TabIndex = 9;
             this.lbLicensePlate.Text = "Biển số:";
             // 
-            // txtSeatNumber
-            // 
-            this.txtSeatNumber.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtSeatNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSeatNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSeatNumber.Location = new System.Drawing.Point(133, 212);
-            this.txtSeatNumber.Name = "txtSeatNumber";
-            this.txtSeatNumber.Size = new System.Drawing.Size(234, 30);
-            this.txtSeatNumber.TabIndex = 8;
-            // 
-            // lbSeatNumber
-            // 
-            this.lbSeatNumber.AutoSize = true;
-            this.lbSeatNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSeatNumber.Location = new System.Drawing.Point(37, 220);
-            this.lbSeatNumber.Name = "lbSeatNumber";
-            this.lbSeatNumber.Size = new System.Drawing.Size(72, 22);
-            this.lbSeatNumber.TabIndex = 7;
-            this.lbSeatNumber.Text = "Số ghế:";
-            // 
-            // txtCoachType
-            // 
-            this.txtCoachType.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtCoachType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCoachType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCoachType.Location = new System.Drawing.Point(133, 164);
-            this.txtCoachType.Name = "txtCoachType";
-            this.txtCoachType.Size = new System.Drawing.Size(234, 30);
-            this.txtCoachType.TabIndex = 6;
-            // 
             // lblCoachType
             // 
             this.lblCoachType.AutoSize = true;
             this.lblCoachType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCoachType.Location = new System.Drawing.Point(37, 168);
+            this.lblCoachType.Location = new System.Drawing.Point(37, 188);
             this.lblCoachType.Name = "lblCoachType";
             this.lblCoachType.Size = new System.Drawing.Size(73, 22);
             this.lblCoachType.TabIndex = 5;
@@ -539,6 +505,15 @@
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             // 
+            // cmbType
+            // 
+            this.cmbType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbType.FormattingEnabled = true;
+            this.cmbType.Location = new System.Drawing.Point(133, 184);
+            this.cmbType.Name = "cmbType";
+            this.cmbType.Size = new System.Drawing.Size(234, 33);
+            this.cmbType.TabIndex = 20;
+            // 
             // frmQuanLyXeKhach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -582,9 +557,6 @@
         private System.Windows.Forms.Label lbID;
         private System.Windows.Forms.TextBox txtLicensePlate;
         private System.Windows.Forms.Label lbLicensePlate;
-        private System.Windows.Forms.TextBox txtSeatNumber;
-        private System.Windows.Forms.Label lbSeatNumber;
-        private System.Windows.Forms.TextBox txtCoachType;
         private System.Windows.Forms.Label lblCoachType;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
@@ -605,5 +577,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cmbType;
     }
 }

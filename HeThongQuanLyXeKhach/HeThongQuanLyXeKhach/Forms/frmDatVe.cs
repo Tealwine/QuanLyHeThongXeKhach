@@ -284,18 +284,20 @@ namespace HeThongQuanLyXeKhach
             // List<TripInf> list = new List<TripInf>();
             foreach (var trip in tripInfLst)
             {
-                if (cmbStartLocation.Text == trip.Trip.StartPlace && cmbEndLocation.Text == trip.Trip.ArrivePlace && cmbCoachType.Text == trip.CoachType.TypeName /*&& dtpStartDate. == trip.Trip.StartTime.ToShortDateString()*/)
+                if (cmbStartLocation.Text == trip.Trip.StartPlace && cmbEndLocation.Text == trip.Trip.ArrivePlace && cmbCoachType.Text == trip.CoachType.TypeName && dtpStartDate.Text == trip.Trip.StartTime.ToShortDateString())
                 {
 
                     int index = dgvFindTrip.Rows.Add();
                     dgvFindTrip.Rows[index].Cells[1].Value = trip.TripID;
                     dgvFindTrip.Rows[index].Cells[2].Value = trip.Trip.StartTime.ToShortTimeString();
                     dgvFindTrip.Rows[index].Cells[3].Value = trip.Trip.ArriveTime.ToShortTimeString();
-                    dgvFindTrip.Rows[index].Cells[4].Value = "";
+
                 }
             }
             if (cmbStartLocation.Text == cmbEndLocation.Text)
                 MessageBox.Show("Trung dia diem ! Khong the tim thay chuyen!");
+
+
         }
         private void countSeat()
         {
@@ -386,6 +388,11 @@ namespace HeThongQuanLyXeKhach
             else if (ckbRule.Checked == false)
             {               
                 MessageBox.Show("Dong y chap nhan dieu khoan");
+                return false;
+            }
+            else if (cmbStartLocation.Text == cmbEndLocation.Text)
+            {
+                MessageBox.Show("Điểm di và điểm đến không được trùng nhau");
                 return false;
             }
             else { return true; }
