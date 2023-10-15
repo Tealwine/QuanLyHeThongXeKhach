@@ -32,9 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvFindTrip = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnConfirmInfor = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -123,14 +120,12 @@
             this.label26 = new System.Windows.Forms.Label();
             this.ckbRule = new System.Windows.Forms.CheckBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.txtCusEmail = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.txtCusPhoneNumber = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.txtCusName = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNumber = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnComplete = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
@@ -138,6 +133,11 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFindTrip)).BeginInit();
@@ -178,7 +178,9 @@
             this.dgvFindTrip.ColumnHeadersHeight = 29;
             this.dgvFindTrip.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
+            this.Column4,
             this.Column2,
+            this.Column5,
             this.Column3});
             this.dgvFindTrip.Location = new System.Drawing.Point(8, 16);
             this.dgvFindTrip.Name = "dgvFindTrip";
@@ -186,29 +188,6 @@
             this.dgvFindTrip.RowTemplate.Height = 24;
             this.dgvFindTrip.Size = new System.Drawing.Size(391, 164);
             this.dgvFindTrip.TabIndex = 20;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column1.Width = 40;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Thời gian ";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 150;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Số ghế còn";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
             // 
             // btnConfirmInfor
             // 
@@ -1353,8 +1332,6 @@
             this.panel7.Controls.Add(this.label26);
             this.panel7.Controls.Add(this.ckbRule);
             this.panel7.Controls.Add(this.label24);
-            this.panel7.Controls.Add(this.txtCusEmail);
-            this.panel7.Controls.Add(this.label21);
             this.panel7.Controls.Add(this.txtCusPhoneNumber);
             this.panel7.Controls.Add(this.label22);
             this.panel7.Controls.Add(this.txtCusName);
@@ -1397,6 +1374,7 @@
             this.ckbRule.Size = new System.Drawing.Size(18, 17);
             this.ckbRule.TabIndex = 25;
             this.ckbRule.UseVisualStyleBackColor = true;
+            this.ckbRule.CheckedChanged += new System.EventHandler(this.ckbRule_CheckedChanged);
             // 
             // label24
             // 
@@ -1408,27 +1386,6 @@
             this.label24.TabIndex = 24;
             this.label24.Text = "THÔNG TIN KHÁCH HÀNG";
             // 
-            // txtCusEmail
-            // 
-            this.txtCusEmail.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtCusEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCusEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCusEmail.Location = new System.Drawing.Point(169, 120);
-            this.txtCusEmail.Name = "txtCusEmail";
-            this.txtCusEmail.ReadOnly = true;
-            this.txtCusEmail.Size = new System.Drawing.Size(270, 27);
-            this.txtCusEmail.TabIndex = 21;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(17, 130);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(57, 19);
-            this.label21.TabIndex = 18;
-            this.label21.Text = "Email:";
-            // 
             // txtCusPhoneNumber
             // 
             this.txtCusPhoneNumber.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -1436,7 +1393,6 @@
             this.txtCusPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCusPhoneNumber.Location = new System.Drawing.Point(169, 80);
             this.txtCusPhoneNumber.Name = "txtCusPhoneNumber";
-            this.txtCusPhoneNumber.ReadOnly = true;
             this.txtCusPhoneNumber.Size = new System.Drawing.Size(270, 27);
             this.txtCusPhoneNumber.TabIndex = 22;
             // 
@@ -1457,7 +1413,6 @@
             this.txtCusName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCusName.Location = new System.Drawing.Point(169, 45);
             this.txtCusName.Name = "txtCusName";
-            this.txtCusName.ReadOnly = true;
             this.txtCusName.Size = new System.Drawing.Size(270, 27);
             this.txtCusName.TabIndex = 23;
             // 
@@ -1475,7 +1430,7 @@
             // 
             this.panel8.BackColor = System.Drawing.Color.Moccasin;
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel8.Controls.Add(this.textBox1);
+            this.panel8.Controls.Add(this.txtNumber);
             this.panel8.Controls.Add(this.btnCancel);
             this.panel8.Controls.Add(this.label2);
             this.panel8.Controls.Add(this.btnComplete);
@@ -1488,16 +1443,16 @@
             this.panel8.Size = new System.Drawing.Size(460, 187);
             this.panel8.TabIndex = 13;
             // 
-            // textBox1
+            // txtNumber
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(124, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(230, 27);
-            this.textBox1.TabIndex = 29;
+            this.txtNumber.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtNumber.Enabled = false;
+            this.txtNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumber.Location = new System.Drawing.Point(124, 19);
+            this.txtNumber.Name = "txtNumber";
+            this.txtNumber.ReadOnly = true;
+            this.txtNumber.Size = new System.Drawing.Size(230, 27);
+            this.txtNumber.TabIndex = 29;
             // 
             // btnCancel
             // 
@@ -1521,6 +1476,7 @@
             this.btnComplete.TabIndex = 7;
             this.btnComplete.Text = "ĐẶT VÉ";
             this.btnComplete.UseVisualStyleBackColor = false;
+            this.btnComplete.Click += new System.EventHandler(this.btnComplete_Click);
             // 
             // label30
             // 
@@ -1571,6 +1527,41 @@
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(577, 383);
             this.label31.TabIndex = 14;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column1.Width = 40;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Mã chuyến";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 80;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Thời gian đi";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Thời gian đến";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Số ghế còn";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 80;
             // 
             // frmDatVe
             // 
@@ -1699,8 +1690,6 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox txtCusEmail;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtCusPhoneNumber;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox txtCusName;
@@ -1720,10 +1709,12 @@
         private System.Windows.Forms.CheckBox cbkRoundCheck;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNumber;
         private System.Windows.Forms.DataGridView dgvFindTrip;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }
