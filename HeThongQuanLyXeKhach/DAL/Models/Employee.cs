@@ -12,7 +12,6 @@ namespace DAL.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Employee()
         {
-            Bills = new HashSet<Bill>();
             LogInAccounts = new HashSet<LogInAccount>();
         }
 
@@ -42,9 +41,6 @@ namespace DAL.Models
         public string Avatar { get; set; }
 
         public int PositionId { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Bill> Bills { get; set; }
 
         public virtual Position Position { get; set; }
 

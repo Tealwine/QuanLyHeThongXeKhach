@@ -57,11 +57,9 @@
     <Compile Include="Models\Bill.cs" />
     <Compile Include="Models\Coach.cs" />
     <Compile Include="Models\CoachType.cs" />
-    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\LogInAccount.cs" />
     <Compile Include="Models\Position.cs" />
-    <Compile Include="Models\TicketInf.cs" />
     <Compile Include="Models\Trip.cs" />
     <Compile Include="Models\TripInf.cs" />
     <Compile Include="Models\XeKhachModel.cs" />
@@ -71,6 +69,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -22,8 +22,8 @@ namespace HeThongQuanLyXeKhach
         private readonly TripBUS tripBUS = new TripBUS();
         private readonly CoachTypeBUS coachTypeBUS = new CoachTypeBUS();
         private readonly TripInfBUS infBUS = new TripInfBUS();
-        private readonly TicketInfBUS ticketInfBUS = new TicketInfBUS();
-        private readonly CusBUS cusBUS = new CusBUS();
+        private readonly BillBus billBus = new BillBus();
+
         List<Button> buttonList = new List<Button>();
 
         private List<Control> items = new List<Control>();
@@ -226,11 +226,7 @@ namespace HeThongQuanLyXeKhach
             }
 
         }
-        private void btnConfirmInfor_Click(object sender, EventArgs e)
-        {
-            checktype();
-            checkSeat(sender, e);
-        }
+        
 
 
         private void cbkRoundCheck_CheckedChanged(object sender, EventArgs e)
@@ -243,19 +239,16 @@ namespace HeThongQuanLyXeKhach
 
         private void cmbCoachType_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-
-            if (cmbCoachType.Text == "Ghế")
+            var infbus = infBUS.GetAll();
+            foreach (var item in infbus)
             {
-                txtPrice.Text = "400";
+                if (cmbCoachType.Text == item.CoachType.TypeName)
+                {
+                    txtPrice.Text = item.Price.ToString();
+                }
+                
             }
-            else if (cmbCoachType.Text == "Giường Nằm")
-            {
-                txtPrice.Text = "550";
-            }
-            else if (cmbCoachType.Text == "Limousine")
-            {
-                txtPrice.Text = "700";
-            }
+            
         }
 
         private void txtTotalMoney_TextChanged(object sender, EventArgs e)
@@ -319,9 +312,22 @@ namespace HeThongQuanLyXeKhach
         }
 
         string temp;
+        private void btnConfirmInfor_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow check in (dgvFindTrip).Rows)
+            {
+
+
+                if ((bool)check.Cells[0].FormattedValue)
+                {
+                    checktype();
+                    checkSeat(sender, e);
+                }
+            }
+        }
         private void checkSeat(object sender, EventArgs e)
         {
-            var ticketlist = ticketInfBUS.GetAll();
+            var ticketlist = billBus.GetAll();
             
      
             foreach (DataGridViewRow check in (dgvFindTrip).Rows)
@@ -377,9 +383,19 @@ namespace HeThongQuanLyXeKhach
             }
             else if (ckbRule.Checked == false)
             {               
-                MessageBox.Show("Dong y chap nhan dieu khoan");
+                MessageBox.Show("Vui lòng chấp nhận điều khoản!");
                 return false;
             }
+            else if (txtCusPhoneNumber.Text.Length != 10)
+            {
+                MessageBox.Show("Vui lòng nhập sđt đủ 10 kí tự");
+                return false;
+            }
+            else if (txtCusName.Text.Length < 3 || txtCusName.Text.Length >100)
+            {
+                MessageBox.Show("Vui lòng nhập tên nhiều hơn 3 kí tự!");
+                return false;
+            }    
             else if (cmbStartLocation.Text == cmbEndLocation.Text)
             {
                 MessageBox.Show("Điểm di và điểm đến không được trùng nhau");
@@ -393,59 +409,86 @@ namespace HeThongQuanLyXeKhach
 
         private void btnComplete_Click(object sender, EventArgs e)
         {
-            if( CheckData() == true )
+            if( txtTotalMoney.Text == "" || int.Parse(txtTotalMoney.Text) == 0)
+            {
+                MessageBox.Show("Vui lòng chọn ghế!");
+                return;
+            }
+            if( CheckData() == true  )
             {
                
-                var cusinf = new Customer
+
+                foreach (Control control in panel5.Controls)
                 {
-                    CustomerId = int.Parse(txtCusPhoneNumber.Text),
-                    CustomerName = txtCusName.Text,
-                };
+                    if (control is Button)
+                    {
+
+                        if (control.BackColor == Color.PaleVioletRed)
+                        {
+
+                            var ticket = new Bill
+                            {
+                                InvoiceDate = DateTime.Now,
+                                Total = int.Parse(txtTotalMoney.Text),
+                                Seat = control.Text,
+                                CustomerPhone = int.Parse(txtCusPhoneNumber.Text),
+                                CustomerName = txtCusName.Text,
+                                
+                                TripID = temp,
+                                TypeId = int.Parse(cmbCoachType.SelectedValue.ToString())
+                            };
+                            billBus.InsertUpdate(ticket);
+                        }
+                    }
+                }
+                foreach (Control control in panel4.Controls)
+                {
+                    if (control is Button)
+                    {
+
+                        if (control.BackColor == Color.PaleVioletRed)
+                        {
+
+                            var ticket = new Bill
+                            {
+                                InvoiceDate = DateTime.Now,
+                                Total = int.Parse(txtTotalMoney.Text),
+                                Seat = control.Text,
+                                CustomerPhone = int.Parse(txtCusPhoneNumber.Text),
+                                CustomerName = txtCusName.Text,
+                                TripID = temp,
+                                TypeId = int.Parse(cmbCoachType.SelectedValue.ToString())
+                            };
+                            billBus.InsertUpdate(ticket);
+                        }
+                    }
+                }
+
                 
-                //foreach (Control control in panel5.Controls)
-                //{
-                //    if (control is Button)
-                //    {
-
-                //        if (control.BackColor == Color.PaleVioletRed)
-                //        {
-
-                //            var ticket = new TicketInf
-                //            {
-                //                Seat = control.Text,
-                //            };
-                //            ticketInfBUS.InsertUpdate(ticket);
-                //        }
-                //    }
-                //}
-                //foreach (Control control in panel4.Controls)
-                //{
-                //    if (control is Button)
-                //    {
-
-                //        if (control.BackColor == Color.PaleVioletRed)
-                //        {
-
-                //            var ticket = new TicketInf
-                //            {
-
-                //                BillId = 2023003,
-                //                TripID = temp,
-                //                CustomerId = int.Parse(txtCusPhoneNumber.Text),
-                //                Seat = control.Text
-                //            };
-                //            ticketInfBUS.InsertUpdate(ticket);
-                //        }
-                //    }
-                //}
-
-                cusBUS.InsertUpdate(cusinf);
-                MessageBox.Show("Dat ve thanh cong!!!");
+                MessageBox.Show("Đặt vé thành công!!!");
+                frmMyTicket frm = new frmMyTicket();
+                frm.message = txtCusPhoneNumber.Text;
+                frm.Show();
             }
+  
+            
+           
+        }
+
+     
+        private void ckbRule_CheckedChanged(object sender, EventArgs e)
+        {
 
         }
 
-        private void ckbRule_CheckedChanged(object sender, EventArgs e)
+        private void btnSwap2_Click(object sender, EventArgs e)
+        {
+            var temp = cmbStartLocation.Text;
+            cmbStartLocation.Text = cmbEndLocation.Text;
+            cmbEndLocation.Text = temp; 
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
         {
 
         }

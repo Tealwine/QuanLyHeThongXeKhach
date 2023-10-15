@@ -12,7 +12,6 @@ namespace DAL.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Trip()
         {
-            TicketInfs = new HashSet<TicketInf>();
             TripInfs = new HashSet<TripInf>();
         }
 
@@ -30,9 +29,6 @@ namespace DAL.Models
         [Required]
         [StringLength(30)]
         public string ArrivePlace { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TicketInf> TicketInfs { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TripInf> TripInfs { get; set; }

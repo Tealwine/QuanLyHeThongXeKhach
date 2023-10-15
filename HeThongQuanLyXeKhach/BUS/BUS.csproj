@@ -54,14 +54,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BillBus.cs" />
     <Compile Include="CoachBUS.cs" />
     <Compile Include="CoachTypeBUS.cs" />
-    <Compile Include="CusBUS.cs" />
     <Compile Include="EmployeeBUS.cs" />
     <Compile Include="LogInAccountBUS.cs" />
     <Compile Include="PositionBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TicketInfBUS.cs" />
     <Compile Include="TripBUS.cs" />
     <Compile Include="TripInfBUS.cs" />
   </ItemGroup>
