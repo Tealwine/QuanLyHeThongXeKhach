@@ -32,10 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvFindTrip = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnConfirmInfor = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -130,6 +126,10 @@
             this.txtTotalMoney = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSwap2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -154,7 +154,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(980, 455);
+            this.panel1.Size = new System.Drawing.Size(983, 455);
             this.panel1.TabIndex = 1;
             // 
             // panel3
@@ -162,9 +162,9 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.dgvFindTrip);
             this.panel3.Controls.Add(this.btnConfirmInfor);
-            this.panel3.Location = new System.Drawing.Point(571, 199);
+            this.panel3.Location = new System.Drawing.Point(564, 199);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(406, 251);
+            this.panel3.Size = new System.Drawing.Size(419, 251);
             this.panel3.TabIndex = 8;
             // 
             // dgvFindTrip
@@ -173,7 +173,7 @@
             this.dgvFindTrip.AllowUserToDeleteRows = false;
             this.dgvFindTrip.AllowUserToResizeColumns = false;
             this.dgvFindTrip.AllowUserToResizeRows = false;
-            this.dgvFindTrip.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dgvFindTrip.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvFindTrip.BackgroundColor = System.Drawing.Color.PapayaWhip;
             this.dgvFindTrip.ColumnHeadersHeight = 29;
             this.dgvFindTrip.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -187,39 +187,6 @@
             this.dgvFindTrip.RowTemplate.Height = 24;
             this.dgvFindTrip.Size = new System.Drawing.Size(391, 164);
             this.dgvFindTrip.TabIndex = 20;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "";
-            this.Column1.MinimumWidth = 30;
-            this.Column1.Name = "Column1";
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column1.Width = 30;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Mã chuyến";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 101;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Thời gian đi";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 106;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Thời gian đến";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 118;
             // 
             // btnConfirmInfor
             // 
@@ -251,7 +218,7 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Location = new System.Drawing.Point(3, 199);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(562, 251);
+            this.panel2.Size = new System.Drawing.Size(555, 251);
             this.panel2.TabIndex = 7;
             // 
             // label4
@@ -296,7 +263,6 @@
             this.cmbStartLocation.Name = "cmbStartLocation";
             this.cmbStartLocation.Size = new System.Drawing.Size(160, 28);
             this.cmbStartLocation.TabIndex = 6;
-            this.cmbStartLocation.SelectedIndexChanged += new System.EventHandler(this.cmbStartLocation_SelectedIndexChanged);
             // 
             // cmbCoachType
             // 
@@ -385,14 +351,14 @@
             // 
             this.pnPickSeat.AutoSize = true;
             this.pnPickSeat.BackColor = System.Drawing.Color.Moccasin;
-            this.pnPickSeat.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnPickSeat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnPickSeat.Controls.Add(this.panel9);
             this.pnPickSeat.Controls.Add(this.label16);
             this.pnPickSeat.Controls.Add(this.panel4);
             this.pnPickSeat.Controls.Add(this.panel5);
-            this.pnPickSeat.Location = new System.Drawing.Point(1, 470);
+            this.pnPickSeat.Location = new System.Drawing.Point(1, 461);
             this.pnPickSeat.Name = "pnPickSeat";
-            this.pnPickSeat.Size = new System.Drawing.Size(557, 599);
+            this.pnPickSeat.Size = new System.Drawing.Size(557, 590);
             this.pnPickSeat.TabIndex = 10;
             // 
             // panel9
@@ -896,7 +862,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(250, 400);
             this.panel5.TabIndex = 5;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // btnSeatA22
             // 
@@ -1273,10 +1238,10 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Moccasin;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.label25);
             this.panel6.Controls.Add(this.richTextBox1);
-            this.panel6.Location = new System.Drawing.Point(564, 638);
+            this.panel6.Location = new System.Drawing.Point(564, 630);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(419, 198);
             this.panel6.TabIndex = 11;
@@ -1300,11 +1265,11 @@
             this.richTextBox1.BackColor = System.Drawing.Color.Moccasin;
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(5, 39);
+            this.richTextBox1.Location = new System.Drawing.Point(5, 30);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox1.Size = new System.Drawing.Size(405, 152);
+            this.richTextBox1.Size = new System.Drawing.Size(407, 154);
             this.richTextBox1.TabIndex = 19;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
@@ -1319,20 +1284,20 @@
             this.panel7.Controls.Add(this.label22);
             this.panel7.Controls.Add(this.txtCusName);
             this.panel7.Controls.Add(this.label23);
-            this.panel7.Location = new System.Drawing.Point(564, 470);
+            this.panel7.Location = new System.Drawing.Point(564, 461);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(416, 165);
+            this.panel7.Size = new System.Drawing.Size(419, 165);
             this.panel7.TabIndex = 12;
             // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label26.Location = new System.Drawing.Point(33, 128);
+            this.label26.Location = new System.Drawing.Point(41, 123);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(114, 13);
+            this.label26.Size = new System.Drawing.Size(140, 16);
             this.label26.TabIndex = 26;
             this.label26.Text = "Chấp nhận điều khoản";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1340,7 +1305,7 @@
             // ckbRule
             // 
             this.ckbRule.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbRule.Location = new System.Drawing.Point(17, 127);
+            this.ckbRule.Location = new System.Drawing.Point(25, 122);
             this.ckbRule.Name = "ckbRule";
             this.ckbRule.Size = new System.Drawing.Size(18, 17);
             this.ckbRule.TabIndex = 25;
@@ -1409,9 +1374,9 @@
             this.panel8.Controls.Add(this.txtTotalMoney);
             this.panel8.Controls.Add(this.label28);
             this.panel8.Controls.Add(this.label29);
-            this.panel8.Location = new System.Drawing.Point(564, 837);
+            this.panel8.Location = new System.Drawing.Point(564, 831);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(419, 232);
+            this.panel8.Size = new System.Drawing.Size(419, 220);
             this.panel8.TabIndex = 13;
             // 
             // txtNumber
@@ -1420,7 +1385,7 @@
             this.txtNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNumber.Enabled = false;
             this.txtNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumber.Location = new System.Drawing.Point(100, 30);
+            this.txtNumber.Location = new System.Drawing.Point(107, 30);
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.ReadOnly = true;
             this.txtNumber.Size = new System.Drawing.Size(230, 27);
@@ -1454,7 +1419,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(336, 78);
+            this.label30.Location = new System.Drawing.Point(343, 78);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(48, 20);
             this.label30.TabIndex = 6;
@@ -1466,12 +1431,11 @@
             this.txtTotalMoney.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTotalMoney.Enabled = false;
             this.txtTotalMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalMoney.Location = new System.Drawing.Point(100, 75);
+            this.txtTotalMoney.Location = new System.Drawing.Point(107, 75);
             this.txtTotalMoney.Name = "txtTotalMoney";
             this.txtTotalMoney.ReadOnly = true;
             this.txtTotalMoney.Size = new System.Drawing.Size(230, 27);
             this.txtTotalMoney.TabIndex = 5;
-            this.txtTotalMoney.TextChanged += new System.EventHandler(this.txtTotalMoney_TextChanged);
             // 
             // label28
             // 
@@ -1486,12 +1450,42 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.Location = new System.Drawing.Point(11, 78);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(83, 20);
+            this.label29.Size = new System.Drawing.Size(93, 20);
             this.label29.TabIndex = 4;
             this.label29.Text = "Tổng tiền:";
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 35F;
+            this.Column1.HeaderText = "";
+            this.Column1.MinimumWidth = 30;
+            this.Column1.Name = "Column1";
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Mã chuyến";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Thời gian đi";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Thời gian đến";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // btnSwap2
             // 
@@ -1511,11 +1505,10 @@
             this.pictureBox1.Image = global::HeThongQuanLyXeKhach.Properties.Resources.HÂN_HẠNH_ĐƯỢC_PHỤC_VỤ;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(977, 196);
+            this.pictureBox1.Size = new System.Drawing.Size(983, 196);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // frmDatVe
             // 

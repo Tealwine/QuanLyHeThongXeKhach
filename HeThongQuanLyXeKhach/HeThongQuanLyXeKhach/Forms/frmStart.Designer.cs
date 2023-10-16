@@ -66,7 +66,7 @@
             // btnTakeTicket
             // 
             this.btnTakeTicket.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTakeTicket.ForeColor = System.Drawing.Color.Turquoise;
+            this.btnTakeTicket.ForeColor = System.Drawing.Color.Orange;
             this.btnTakeTicket.Location = new System.Drawing.Point(304, 465);
             this.btnTakeTicket.Name = "btnTakeTicket";
             this.btnTakeTicket.Size = new System.Drawing.Size(182, 61);
@@ -78,7 +78,7 @@
             // btnFindMyTicket
             // 
             this.btnFindMyTicket.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFindMyTicket.ForeColor = System.Drawing.Color.Turquoise;
+            this.btnFindMyTicket.ForeColor = System.Drawing.Color.Orange;
             this.btnFindMyTicket.Location = new System.Drawing.Point(547, 465);
             this.btnFindMyTicket.Name = "btnFindMyTicket";
             this.btnFindMyTicket.Size = new System.Drawing.Size(180, 61);

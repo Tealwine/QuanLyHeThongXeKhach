@@ -105,12 +105,6 @@
     <Compile Include="Forms\frmThuVaChi.Designer.cs">
       <DependentUpon>frmThuVaChi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmChonGhe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmChonGhe.Designer.cs">
-      <DependentUpon>frmChonGhe.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\frmDatVe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,12 +128,6 @@
     </Compile>
     <Compile Include="Forms\frmHeThong.Designer.cs">
       <DependentUpon>frmHeThong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmInfoChuyen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmInfoChuyen.Designer.cs">
-      <DependentUpon>frmInfoChuyen.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmMyTicket.cs">
       <SubType>Form</SubType>
@@ -165,9 +153,6 @@
     <EmbeddedResource Include="Forms\frmThuVaChi.resx">
       <DependentUpon>frmThuVaChi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmChonGhe.resx">
-      <DependentUpon>frmChonGhe.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDatVe.resx">
       <DependentUpon>frmDatVe.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,9 +164,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmHeThong.resx">
       <DependentUpon>frmHeThong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmInfoChuyen.resx">
-      <DependentUpon>frmInfoChuyen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMyTicket.resx">
       <DependentUpon>frmMyTicket.cs</DependentUpon>
@@ -239,11 +221,22 @@
     <Content Include="Resources\0337489512.jpg" />
     <Content Include="Resources\0338795213.jpg" />
     <Content Include="Resources\0784806354.jpg" />
+    <None Include="Resources\add-file.png" />
+    <None Include="Resources\4-removebg-preview.png" />
+    <None Include="Resources\3-removebg-preview.png" />
     <Content Include="Resources\C01.png" />
     <Content Include="Resources\C02.png" />
     <Content Include="Resources\C03.png" />
     <Content Include="Resources\C04.png" />
     <None Include="Resources\HÂN HẠNH ĐƯỢC PHỤC VỤ.png" />
+    <None Include="Resources\data-processing.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\delete-folder.png" />
+    <None Include="Resources\eye.png" />
+    <None Include="Resources\password.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\eye1.png" />
+    <None Include="Resources\password1.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

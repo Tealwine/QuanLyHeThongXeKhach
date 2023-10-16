@@ -69,22 +69,7 @@ namespace HeThongQuanLyXeKhach
 
         private void chkShowPass_CheckedChanged(object sender, EventArgs e)
         {
-            try
-            {
-                if (txtPass.PasswordChar == '*')
-                {
-                    txtPass.PasswordChar = '\0';
-                }
-                else
-                {
-                    txtPass.PasswordChar = '*';
-                }
-            }
-            catch 
-            {
-
-             
-            }
+            
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
@@ -132,6 +117,27 @@ namespace HeThongQuanLyXeKhach
             frmStart frmStart = new frmStart();
             frmStart.Show();
            
+        }
+
+      
+        private void btnHide_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtPass.PasswordChar == '*')
+                {
+                    txtPass.PasswordChar = '\0';
+                }
+                else
+                {
+                    txtPass.PasswordChar = '*';
+                }
+            }
+            catch
+            {
+
+
+            }
         }
     }
 }

@@ -76,25 +76,11 @@ namespace HeThongQuanLyXeKhach
         }
 
 
-
-        private void btnFind1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
         private void frmDatVe_FormClosing(object sender, FormClosingEventArgs e)
         {
             frmStart frmStart = new frmStart();
             frmStart.Show();
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmDatVe_Load(object sender, EventArgs e)
         {
             var coachTypeList = coachTypeBUS.GetAll();
@@ -141,12 +127,7 @@ namespace HeThongQuanLyXeKhach
             txtTotalMoney.Text = total.ToString(); 
         }
 
-        private void cmbCoachType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-         
-        }
-
-
+ 
 
 
 
@@ -183,7 +164,7 @@ namespace HeThongQuanLyXeKhach
             if (cmbCoachType.Text == "Ghế")
             {
 
-                panel5.Location = new Point(150, 44);
+                panel5.Location = new Point(140, 100);
                 panel4.Hide();
                 label1.Hide();
 
@@ -212,7 +193,7 @@ namespace HeThongQuanLyXeKhach
             if (cmbCoachType.Text == "Limousine")
             {
 
-                panel5.Location = new Point(150, 44);
+                panel5.Location = new Point(140, 100);
                 pnPickSeat.Show();
                 btnSeatA16.Hide();
                 btnSeatA17.Hide();
@@ -227,16 +208,6 @@ namespace HeThongQuanLyXeKhach
 
         }
         
-
-
-        private void cbkRoundCheck_CheckedChanged(object sender, EventArgs e)
-        {
-            
-
-        }
-
-
-
         private void cmbCoachType_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             var infbus = infBUS.GetAll();
@@ -249,17 +220,6 @@ namespace HeThongQuanLyXeKhach
                 
             }
             
-        }
-
-        private void txtTotalMoney_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbStartLocation_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-
         }
 
         private void btnFind_Click(object sender, EventArgs e)
@@ -488,9 +448,5 @@ namespace HeThongQuanLyXeKhach
             cmbEndLocation.Text = temp; 
         }
 
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
