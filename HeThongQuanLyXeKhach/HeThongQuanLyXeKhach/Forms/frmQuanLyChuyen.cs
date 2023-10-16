@@ -31,21 +31,25 @@ namespace HeThongQuanLyXeKhach
 
         private void BindGrid(List<TripInf> tripInfs)
         {
-            dgvTrip.Rows.Clear();
-            foreach (var item in tripInfs)
+            try
             {
-                int index = dgvTrip.Rows.Add();
-                dgvTrip.Rows[index].Cells[0].Value = item.TripID;
-                dgvTrip.Rows[index].Cells[1].Value = item.CoachType.TypeName;
-                string connect = item.Trip.StartPlace.ToString() + "-" + item.Trip.ArrivePlace.ToString();
-                dgvTrip.Rows[index].Cells[2].Value = connect;
-                dgvTrip.Rows[index].Cells[3].Value = item.Trip.StartTime.ToShortTimeString();
-                dgvTrip.Rows[index].Cells[4].Value = item.Trip.ArriveTime.ToShortTimeString();
-                dgvTrip.Rows[index].Cells[5].Value = item.Trip.StartTime.ToShortDateString();
-                dgvTrip.Rows[index].Cells[6].Value = item.Trip.ArriveTime.ToShortDateString();
-                dgvTrip.Rows[index].Cells[7].Value = item.Price;
+                dgvTrip.Rows.Clear();
+                foreach (var item in tripInfs)
+                {
+                    int index = dgvTrip.Rows.Add();
+                    dgvTrip.Rows[index].Cells[0].Value = item.TripID;
+                    dgvTrip.Rows[index].Cells[1].Value = item.CoachType.TypeName;
+                    dgvTrip.Rows[index].Cells[2].Value = string.Concat(item.Trip.StartPlace.ToString(), "-", item.Trip.ArrivePlace.ToString());
 
+                    dgvTrip.Rows[index].Cells[3].Value = item.Trip.StartTime.ToShortTimeString();
+                    dgvTrip.Rows[index].Cells[4].Value = item.Trip.ArriveTime.ToShortTimeString();
+                    dgvTrip.Rows[index].Cells[5].Value = item.Trip.StartTime.ToShortDateString();
+                    dgvTrip.Rows[index].Cells[6].Value = item.Trip.ArriveTime.ToShortDateString();
+                    dgvTrip.Rows[index].Cells[7].Value = item.Price;
+
+                }
             }
+            catch  { }
         }
 
         private void frmQuanLyChuyen_Load(object sender, EventArgs e)
@@ -74,6 +78,10 @@ namespace HeThongQuanLyXeKhach
             dtStart.Value = DateTime.Parse(di);
             dtArrive.Value = DateTime.Parse(den);
             txtPrice.Text = dgvTrip.Rows[index].Cells[7].Value.ToString();
+            string str = dgvTrip.Rows[index].Cells[2].Value.ToString();
+            string[] arr = str.Split('-');
+            txtStart.Text = arr[0];
+            txtArrive.Text = arr[1];
         }
 
         private void ClearControl()

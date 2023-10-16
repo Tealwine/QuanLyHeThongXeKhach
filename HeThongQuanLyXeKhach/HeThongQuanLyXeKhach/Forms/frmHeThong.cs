@@ -48,20 +48,9 @@ namespace HeThongQuanLyXeKhach
 
         private void frm_Load(object sender, EventArgs e)
         {
-            var listAcc = logInAccountBUS.GetAll();
-            LogInAccount logAd = logInAccountBUS.GetAccountAdmin();
-            LogInAccount logNV = logInAccountBUS.GetAccountNhanvien();
-            foreach (var item in listAcc)
-            {
-                if(item.UserId == logAd.UserId)
-                {
-                    BindData(logAd);
-                }
-                else if (item.UserId == logNV.UserId)
-                {
-                    BindData(logNV);
-                }
-            }
+            var admin = logInAccountBUS.GetAccountLogged("admin");
+            var nhanvien = logInAccountBUS.GetAccountLogged("nhanvien");
+            BindData(admin);
         }
 
         private void btnClose_Click(object sender, EventArgs e)

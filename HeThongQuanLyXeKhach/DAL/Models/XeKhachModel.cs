@@ -8,7 +8,7 @@ namespace DAL.Models
     public partial class XeKhachModel : DbContext
     {
         public XeKhachModel()
-            : base("name=XeKhachModel")
+            : base("name=XeKhachModel3")
         {
         }
 
@@ -25,6 +25,10 @@ namespace DAL.Models
         {
             modelBuilder.Entity<Bill>()
                 .Property(e => e.Seat)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Bill>()
+                .Property(e => e.CustomerPhone)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Bill>()

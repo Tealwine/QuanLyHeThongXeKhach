@@ -31,15 +31,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMyTicket));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmbSeat = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnFindMyTicket = new System.Windows.Forms.Button();
             this.txtCusPhoneToFind = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtMyTicketPrice = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.txtMyPay = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.txtMyPhoneNumber = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -62,13 +69,6 @@
             this.txtMyStartLocation = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbSeat = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtMyTicketPrice = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -103,6 +103,28 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1223, 64);
             this.panel3.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(672, 26);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(114, 21);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Số ghế đã đặt";
+            // 
+            // cmbSeat
+            // 
+            this.cmbSeat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSeat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSeat.FormattingEnabled = true;
+            this.cmbSeat.ItemHeight = 20;
+            this.cmbSeat.Location = new System.Drawing.Point(801, 20);
+            this.cmbSeat.Name = "cmbSeat";
+            this.cmbSeat.Size = new System.Drawing.Size(167, 28);
+            this.cmbSeat.TabIndex = 1;
+            this.cmbSeat.SelectedValueChanged += new System.EventHandler(this.cmbSeat_SelectedValueChanged);
             // 
             // pictureBox2
             // 
@@ -169,6 +191,37 @@
             this.panel2.Size = new System.Drawing.Size(632, 494);
             this.panel2.TabIndex = 13;
             // 
+            // txtMyTicketPrice
+            // 
+            this.txtMyTicketPrice.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtMyTicketPrice.Enabled = false;
+            this.txtMyTicketPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMyTicketPrice.Location = new System.Drawing.Point(194, 389);
+            this.txtMyTicketPrice.Name = "txtMyTicketPrice";
+            this.txtMyTicketPrice.ReadOnly = true;
+            this.txtMyTicketPrice.Size = new System.Drawing.Size(363, 27);
+            this.txtMyTicketPrice.TabIndex = 26;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(563, 392);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(57, 28);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "VNĐ";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(23, 392);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(56, 21);
+            this.label13.TabIndex = 25;
+            this.label13.Text = "Giá vé";
+            // 
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
@@ -183,6 +236,16 @@
             this.textBox3.TabIndex = 8;
             this.textBox3.Text = "_________________________________________________________________________________" +
     "____________________________________________________________________________";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(23, 326);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(375, 34);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "THÔNG TIN THANH TOÁN";
             // 
             // textBox2
             // 
@@ -219,6 +282,16 @@
             this.label9.Size = new System.Drawing.Size(57, 28);
             this.label9.TabIndex = 19;
             this.label9.Text = "VNĐ";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(23, 449);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(171, 21);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "Tổng tiền thanh toán:";
             // 
             // txtMyPhoneNumber
             // 
@@ -474,78 +547,6 @@
             this.label1.Size = new System.Drawing.Size(350, 34);
             this.label1.TabIndex = 0;
             this.label1.Text = "THÔNG TIN CHUYẾN XE";
-            // 
-            // cmbSeat
-            // 
-            this.cmbSeat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSeat.FormattingEnabled = true;
-            this.cmbSeat.ItemHeight = 16;
-            this.cmbSeat.Location = new System.Drawing.Point(801, 26);
-            this.cmbSeat.Name = "cmbSeat";
-            this.cmbSeat.Size = new System.Drawing.Size(167, 24);
-            this.cmbSeat.TabIndex = 1;
-            this.cmbSeat.SelectedValueChanged += new System.EventHandler(this.cmbSeat_SelectedValueChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(672, 26);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(112, 21);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "So ghe da dat";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(23, 326);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(375, 34);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "THÔNG TIN THANH TOÁN";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(23, 449);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(171, 21);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "Tổng tiền thanh toán:";
-            // 
-            // txtMyTicketPrice
-            // 
-            this.txtMyTicketPrice.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtMyTicketPrice.Enabled = false;
-            this.txtMyTicketPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMyTicketPrice.Location = new System.Drawing.Point(194, 389);
-            this.txtMyTicketPrice.Name = "txtMyTicketPrice";
-            this.txtMyTicketPrice.ReadOnly = true;
-            this.txtMyTicketPrice.Size = new System.Drawing.Size(363, 27);
-            this.txtMyTicketPrice.TabIndex = 26;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(563, 392);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(57, 28);
-            this.label10.TabIndex = 24;
-            this.label10.Text = "VNĐ";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(23, 392);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(56, 21);
-            this.label13.TabIndex = 25;
-            this.label13.Text = "Giá vé";
             // 
             // frmMyTicket
             // 

@@ -19,7 +19,9 @@ namespace DAL.Models
         [StringLength(10)]
         public string Seat { get; set; }
 
-        public int CustomerPhone { get; set; }
+        [Required]
+        [StringLength(11)]
+        public string CustomerPhone { get; set; }
 
         [Required]
         [StringLength(30)]

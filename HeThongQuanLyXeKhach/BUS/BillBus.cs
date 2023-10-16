@@ -20,7 +20,7 @@ namespace BUS
             context.Bills.AddOrUpdate(bill);
             context.SaveChanges();
         }
-        public Bill FindById(int CustomerPhone)
+        public Bill FindById(string CustomerPhone)
         {
             return context.Bills.FirstOrDefault(emp => emp.CustomerPhone == CustomerPhone);
         }

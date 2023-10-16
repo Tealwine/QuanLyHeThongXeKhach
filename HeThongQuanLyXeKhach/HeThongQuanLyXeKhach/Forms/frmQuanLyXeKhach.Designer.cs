@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnDataManager = new System.Windows.Forms.Panel();
+            this.cmbType = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.picCoach = new System.Windows.Forms.PictureBox();
             this.txtWarranty = new System.Windows.Forms.TextBox();
@@ -47,14 +48,9 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.pnSearch = new System.Windows.Forms.Panel();
-            this.btnReset = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmbState = new System.Windows.Forms.ComboBox();
             this.cmbCoachType = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbSeatNumber = new System.Windows.Forms.ComboBox();
             this.cmbCoachBrand = new System.Windows.Forms.ComboBox();
             this.lbSearch = new System.Windows.Forms.Label();
             this.btnSeacrhCar = new System.Windows.Forms.Button();
@@ -68,7 +64,7 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmbType = new System.Windows.Forms.ComboBox();
+            this.btnReset = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnDataManager.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCoach)).BeginInit();
@@ -110,6 +106,15 @@
             this.pnDataManager.Name = "pnDataManager";
             this.pnDataManager.Size = new System.Drawing.Size(667, 455);
             this.pnDataManager.TabIndex = 17;
+            // 
+            // cmbType
+            // 
+            this.cmbType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbType.FormattingEnabled = true;
+            this.cmbType.Location = new System.Drawing.Point(133, 184);
+            this.cmbType.Name = "cmbType";
+            this.cmbType.Size = new System.Drawing.Size(234, 33);
+            this.cmbType.TabIndex = 20;
             // 
             // label6
             // 
@@ -268,13 +273,9 @@
             // 
             this.pnSearch.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pnSearch.Controls.Add(this.btnReset);
-            this.pnSearch.Controls.Add(this.label4);
             this.pnSearch.Controls.Add(this.label3);
-            this.pnSearch.Controls.Add(this.label2);
-            this.pnSearch.Controls.Add(this.cmbState);
             this.pnSearch.Controls.Add(this.cmbCoachType);
             this.pnSearch.Controls.Add(this.label1);
-            this.pnSearch.Controls.Add(this.cmbSeatNumber);
             this.pnSearch.Controls.Add(this.cmbCoachBrand);
             this.pnSearch.Controls.Add(this.lbSearch);
             this.pnSearch.Controls.Add(this.btnSeacrhCar);
@@ -283,66 +284,21 @@
             this.pnSearch.Size = new System.Drawing.Size(667, 266);
             this.pnSearch.TabIndex = 15;
             // 
-            // btnReset
-            // 
-            this.btnReset.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.btnReset.FlatAppearance.BorderSize = 0;
-            this.btnReset.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnReset.Location = new System.Drawing.Point(331, 193);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(144, 42);
-            this.btnReset.TabIndex = 23;
-            this.btnReset.Text = "Xóa lọc";
-            this.btnReset.UseVisualStyleBackColor = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(324, 114);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 21);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "Trạng thái";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(52, 114);
+            this.label3.Location = new System.Drawing.Point(338, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 21);
             this.label3.TabIndex = 21;
             this.label3.Text = "Loại Xe";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(323, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 21);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Số ghế";
-            // 
-            // cmbState
-            // 
-            this.cmbState.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbState.FormattingEnabled = true;
-            this.cmbState.Items.AddRange(new object[] {
-            "Đang chạy",
-            "Đang nghỉ"});
-            this.cmbState.Location = new System.Drawing.Point(327, 135);
-            this.cmbState.Name = "cmbState";
-            this.cmbState.Size = new System.Drawing.Size(248, 30);
-            this.cmbState.TabIndex = 19;
-            // 
             // cmbCoachType
             // 
             this.cmbCoachType.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCoachType.FormattingEnabled = true;
-            this.cmbCoachType.Location = new System.Drawing.Point(52, 135);
+            this.cmbCoachType.Location = new System.Drawing.Point(338, 111);
             this.cmbCoachType.Name = "cmbCoachType";
             this.cmbCoachType.Size = new System.Drawing.Size(258, 30);
             this.cmbCoachType.TabIndex = 18;
@@ -351,29 +307,24 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(49, 49);
+            this.label1.Location = new System.Drawing.Point(41, 87);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 21);
             this.label1.TabIndex = 17;
             this.label1.Text = "Hãng xe";
             // 
-            // cmbSeatNumber
-            // 
-            this.cmbSeatNumber.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSeatNumber.FormattingEnabled = true;
-            this.cmbSeatNumber.Location = new System.Drawing.Point(327, 73);
-            this.cmbSeatNumber.Name = "cmbSeatNumber";
-            this.cmbSeatNumber.Size = new System.Drawing.Size(248, 30);
-            this.cmbSeatNumber.TabIndex = 16;
-            // 
             // cmbCoachBrand
             // 
             this.cmbCoachBrand.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCoachBrand.FormattingEnabled = true;
-            this.cmbCoachBrand.Location = new System.Drawing.Point(52, 73);
+            this.cmbCoachBrand.Items.AddRange(new object[] {
+            "BMW",
+            "Honda"});
+            this.cmbCoachBrand.Location = new System.Drawing.Point(44, 111);
             this.cmbCoachBrand.Name = "cmbCoachBrand";
             this.cmbCoachBrand.Size = new System.Drawing.Size(258, 30);
             this.cmbCoachBrand.TabIndex = 15;
+            this.cmbCoachBrand.SelectedIndexChanged += new System.EventHandler(this.cmbCoachBrand_SelectedIndexChanged);
             // 
             // lbSearch
             // 
@@ -399,6 +350,7 @@
             this.btnSeacrhCar.TabIndex = 0;
             this.btnSeacrhCar.Text = "Thực hiện";
             this.btnSeacrhCar.UseVisualStyleBackColor = false;
+            this.btnSeacrhCar.Click += new System.EventHandler(this.btnSeacrhCar_Click);
             // 
             // panel2
             // 
@@ -436,14 +388,14 @@
             // 
             this.dgvCoachList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCoachList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCoachList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCoachList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvCoachList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCoachList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -452,14 +404,14 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCoachList.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCoachList.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgvCoachList.Location = new System.Drawing.Point(16, 3);
             this.dgvCoachList.Name = "dgvCoachList";
             this.dgvCoachList.RowHeadersWidth = 51;
@@ -505,14 +457,19 @@
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             // 
-            // cmbType
+            // btnReset
             // 
-            this.cmbType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbType.FormattingEnabled = true;
-            this.cmbType.Location = new System.Drawing.Point(133, 184);
-            this.cmbType.Name = "cmbType";
-            this.cmbType.Size = new System.Drawing.Size(234, 33);
-            this.cmbType.TabIndex = 20;
+            this.btnReset.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnReset.FlatAppearance.BorderSize = 0;
+            this.btnReset.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnReset.Location = new System.Drawing.Point(331, 193);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(144, 42);
+            this.btnReset.TabIndex = 23;
+            this.btnReset.Text = "Xóa lọc";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // frmQuanLyXeKhach
             // 
@@ -549,7 +506,6 @@
         private System.Windows.Forms.Label lbSearch;
         private System.Windows.Forms.ComboBox cmbCoachBrand;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbSeatNumber;
         private System.Windows.Forms.Panel pnDataManager;
         private System.Windows.Forms.TextBox txtVehicleName;
         private System.Windows.Forms.Label lbVehicleName;
@@ -561,14 +517,10 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnCreate;
-        private System.Windows.Forms.ComboBox cmbState;
         private System.Windows.Forms.ComboBox cmbCoachType;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtWarranty;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.PictureBox picCoach;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -578,5 +530,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbType;
+        private System.Windows.Forms.Button btnReset;
     }
 }

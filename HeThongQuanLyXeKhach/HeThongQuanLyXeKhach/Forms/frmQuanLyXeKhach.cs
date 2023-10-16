@@ -36,6 +36,11 @@ namespace HeThongQuanLyXeKhach
             this.cmbType.ValueMember = "TypeId";
         }
 
+        private void FillComboboxBrand(List<Coach> listCoach) 
+        { 
+            
+        }
+
         private void BindGrid(List<Coach> coaches)
         {
             dgvCoachList.Rows.Clear();
@@ -209,6 +214,37 @@ namespace HeThongQuanLyXeKhach
 
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void cmbCoachBrand_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnSeacrhCar_Click(object sender, EventArgs e)
+        {
+            string data1 = cmbCoachBrand.Text.ToLower();
+            string data2 = cmbCoachType.Text.ToLower();
+            foreach (DataGridViewRow row in dgvCoachList.Rows)
+            {
+                DataGridViewCell cellBrand = row.Cells[2];
+                DataGridViewCell cellType = row.Cells[5];
+
+
+                if (cellBrand.Value != null || cellType.Value != null)
+                {
+                    string brand = cellBrand.Value.ToString().ToLower();
+                    string type = cellType.Value.ToString().ToLower();
+                    
+
+                    row.Visible = brand.Contains(data1) && type.Contains(data2);
+                }
+            }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            frmQuanLyXeKhach_Load(sender: this, e);
         }
     }
 }

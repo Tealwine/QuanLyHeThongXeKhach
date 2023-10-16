@@ -431,7 +431,7 @@ namespace HeThongQuanLyXeKhach
                                 InvoiceDate = DateTime.Now,
                                 Total = int.Parse(txtTotalMoney.Text),
                                 Seat = control.Text,
-                                CustomerPhone = int.Parse(txtCusPhoneNumber.Text),
+                                CustomerPhone = txtCusPhoneNumber.Text,
                                 CustomerName = txtCusName.Text,
                                 
                                 TripID = temp,
@@ -454,7 +454,7 @@ namespace HeThongQuanLyXeKhach
                                 InvoiceDate = DateTime.Now,
                                 Total = int.Parse(txtTotalMoney.Text),
                                 Seat = control.Text,
-                                CustomerPhone = int.Parse(txtCusPhoneNumber.Text),
+                                CustomerPhone = txtCusPhoneNumber.Text,
                                 CustomerName = txtCusName.Text,
                                 TripID = temp,
                                 TypeId = int.Parse(cmbCoachType.SelectedValue.ToString())
