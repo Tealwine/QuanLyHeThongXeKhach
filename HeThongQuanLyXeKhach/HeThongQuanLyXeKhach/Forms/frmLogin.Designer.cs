@@ -63,7 +63,7 @@
             // 
             this.btnSignIn.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignIn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSignIn.Location = new System.Drawing.Point(393, 466);
+            this.btnSignIn.Location = new System.Drawing.Point(393, 464);
             this.btnSignIn.Name = "btnSignIn";
             this.btnSignIn.Size = new System.Drawing.Size(174, 50);
             this.btnSignIn.TabIndex = 5;
