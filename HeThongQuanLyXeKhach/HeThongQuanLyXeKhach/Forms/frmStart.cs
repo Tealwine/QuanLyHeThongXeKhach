@@ -40,7 +40,7 @@ namespace HeThongQuanLyXeKhach
 
         private void frmStart_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            Environment.Exit(0);
         }
     }
 }

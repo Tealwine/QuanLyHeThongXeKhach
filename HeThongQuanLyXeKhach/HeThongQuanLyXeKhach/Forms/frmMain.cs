@@ -119,13 +119,21 @@ namespace HeThongQuanLyXeKhach
             {
                 e.Cancel = true;
             }
+            else
+            {
+                Environment.Exit(0);
+            }
             
 
         }
-
+        string Nhan4;
+        public string IDAcc2 { get { return Nhan4; } set { Nhan4 = value; } }
+        
+        
         private void frmMain_Load(object sender, EventArgs e)
         {
             frmSystem frmSystem = new frmSystem();
+            frmSystem.IDAcc = IDAcc2;
             if (ExistForm(frmSystem))
                 return;
             ViewForm(frmSystem);

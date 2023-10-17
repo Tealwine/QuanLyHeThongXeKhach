@@ -146,15 +146,7 @@ namespace HeThongQuanLyXeKhach
                 }
             }
         }
-        private void ShowAllItems()
-        {
-            foreach (Control control in items)
-            {
-                // Thiết lập trạng thái hiển thị cho item
-                control.Visible = true;
 
-            }
-        }
 
 
         private void checktype()
@@ -389,7 +381,7 @@ namespace HeThongQuanLyXeKhach
                             var ticket = new Bill
                             {
                                 InvoiceDate = DateTime.Now,
-                                Total = int.Parse(txtTotalMoney.Text),
+                                Total = int.Parse(txtPrice.Text),
                                 Seat = control.Text,
                                 CustomerPhone = txtCusPhoneNumber.Text,
                                 CustomerName = txtCusName.Text,
@@ -412,7 +404,7 @@ namespace HeThongQuanLyXeKhach
                             var ticket = new Bill
                             {
                                 InvoiceDate = DateTime.Now,
-                                Total = int.Parse(txtTotalMoney.Text),
+                                Total = int.Parse(txtPrice.Text),
                                 Seat = control.Text,
                                 CustomerPhone = txtCusPhoneNumber.Text,
                                 CustomerName = txtCusName.Text,
@@ -428,11 +420,10 @@ namespace HeThongQuanLyXeKhach
                 MessageBox.Show("Đặt vé thành công!!!");
                 frmMyTicket frm = new frmMyTicket();
                 frm.message = txtCusPhoneNumber.Text;
+                frm.vision = this.Visible;
                 frm.Show();
             }
-  
-            
-           
+
         }
 
      

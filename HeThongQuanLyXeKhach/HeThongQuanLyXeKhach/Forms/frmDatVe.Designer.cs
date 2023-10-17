@@ -32,8 +32,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvFindTrip = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnConfirmInfor = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.btnFind = new System.Windows.Forms.Button();
@@ -44,7 +49,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbEndLocation = new System.Windows.Forms.ComboBox();
+            this.btnSwap2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pnPickSeat = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -126,16 +133,12 @@
             this.txtTotalMoney = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSwap2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFindTrip)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnPickSeat.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -143,7 +146,6 @@
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -181,21 +183,51 @@
             this.Column4,
             this.Column2,
             this.Column5});
-            this.dgvFindTrip.Location = new System.Drawing.Point(8, 16);
+            this.dgvFindTrip.Location = new System.Drawing.Point(7, 16);
             this.dgvFindTrip.Name = "dgvFindTrip";
             this.dgvFindTrip.RowHeadersWidth = 5;
             this.dgvFindTrip.RowTemplate.Height = 24;
-            this.dgvFindTrip.Size = new System.Drawing.Size(391, 164);
+            this.dgvFindTrip.Size = new System.Drawing.Size(404, 174);
             this.dgvFindTrip.TabIndex = 20;
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 35F;
+            this.Column1.HeaderText = "";
+            this.Column1.MinimumWidth = 30;
+            this.Column1.Name = "Column1";
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Mã chuyến";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Thời gian đi";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Thời gian đến";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // btnConfirmInfor
             // 
             this.btnConfirmInfor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnConfirmInfor.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmInfor.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnConfirmInfor.Location = new System.Drawing.Point(161, 198);
+            this.btnConfirmInfor.Location = new System.Drawing.Point(138, 196);
             this.btnConfirmInfor.Name = "btnConfirmInfor";
-            this.btnConfirmInfor.Size = new System.Drawing.Size(132, 35);
+            this.btnConfirmInfor.Size = new System.Drawing.Size(132, 40);
             this.btnConfirmInfor.TabIndex = 19;
             this.btnConfirmInfor.Text = "Xác nhận";
             this.btnConfirmInfor.UseVisualStyleBackColor = false;
@@ -204,6 +236,7 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.txtPrice);
             this.panel2.Controls.Add(this.btnFind);
@@ -220,6 +253,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(555, 251);
             this.panel2.TabIndex = 7;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::HeThongQuanLyXeKhach.Properties.Resources._4_removebg_preview;
+            this.pictureBox2.Location = new System.Drawing.Point(392, 28);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(162, 172);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 30;
+            this.pictureBox2.TabStop = false;
             // 
             // label4
             // 
@@ -245,11 +288,12 @@
             this.btnFind.BackColor = System.Drawing.Color.Orange;
             this.btnFind.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFind.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnFind.Location = new System.Drawing.Point(217, 196);
+            this.btnFind.Location = new System.Drawing.Point(228, 196);
             this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(132, 35);
+            this.btnFind.Size = new System.Drawing.Size(132, 40);
             this.btnFind.TabIndex = 24;
             this.btnFind.Text = "Tìm chuyến xe";
+            this.btnFind.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnFind.UseVisualStyleBackColor = false;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
@@ -327,6 +371,18 @@
             this.cmbEndLocation.Size = new System.Drawing.Size(160, 28);
             this.cmbEndLocation.TabIndex = 7;
             // 
+            // btnSwap2
+            // 
+            this.btnSwap2.AutoSize = true;
+            this.btnSwap2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSwap2.BackgroundImage")));
+            this.btnSwap2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSwap2.Location = new System.Drawing.Point(186, 69);
+            this.btnSwap2.Name = "btnSwap2";
+            this.btnSwap2.Size = new System.Drawing.Size(30, 30);
+            this.btnSwap2.TabIndex = 8;
+            this.btnSwap2.UseVisualStyleBackColor = true;
+            this.btnSwap2.Click += new System.EventHandler(this.btnSwap2_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -336,6 +392,17 @@
             this.label6.Size = new System.Drawing.Size(68, 19);
             this.label6.TabIndex = 15;
             this.label6.Text = "Ngày đi";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Enabled = false;
+            this.pictureBox1.Image = global::HeThongQuanLyXeKhach.Properties.Resources.HÂN_HẠNH_ĐƯỢC_PHỤC_VỤ;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(983, 196);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -369,7 +436,7 @@
             this.panel9.Controls.Add(this.label18);
             this.panel9.Controls.Add(this.label17);
             this.panel9.Controls.Add(this.button10);
-            this.panel9.Location = new System.Drawing.Point(155, 6);
+            this.panel9.Location = new System.Drawing.Point(135, 54);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(303, 32);
             this.panel9.TabIndex = 15;
@@ -1457,59 +1524,6 @@
             this.label29.TabIndex = 4;
             this.label29.Text = "Tổng tiền:";
             // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 35F;
-            this.Column1.HeaderText = "";
-            this.Column1.MinimumWidth = 30;
-            this.Column1.Name = "Column1";
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Mã chuyến";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Thời gian đi";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Thời gian đến";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // btnSwap2
-            // 
-            this.btnSwap2.AutoSize = true;
-            this.btnSwap2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSwap2.BackgroundImage")));
-            this.btnSwap2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSwap2.Location = new System.Drawing.Point(186, 69);
-            this.btnSwap2.Name = "btnSwap2";
-            this.btnSwap2.Size = new System.Drawing.Size(30, 30);
-            this.btnSwap2.TabIndex = 8;
-            this.btnSwap2.UseVisualStyleBackColor = true;
-            this.btnSwap2.Click += new System.EventHandler(this.btnSwap2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Enabled = false;
-            this.pictureBox1.Image = global::HeThongQuanLyXeKhach.Properties.Resources.HÂN_HẠNH_ĐƯỢC_PHỤC_VỤ;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(983, 196);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmDatVe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -1532,6 +1546,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvFindTrip)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnPickSeat.ResumeLayout(false);
             this.pnPickSeat.PerformLayout();
             this.panel9.ResumeLayout(false);
@@ -1546,7 +1562,6 @@
             this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1657,5 +1672,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

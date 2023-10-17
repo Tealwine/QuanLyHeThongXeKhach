@@ -28,6 +28,8 @@ namespace HeThongQuanLyXeKhach
         {
             frmStart frmStart = new frmStart();
             frmStart.Show();
+            frmDatVe frmDatVe = new frmDatVe();
+            frmDatVe.Hide();
         }
 
         private bool FindPhone(string phone)
@@ -62,29 +64,23 @@ namespace HeThongQuanLyXeKhach
                 
                     
             }
+            if (cmbSeat.Items != null)
+            {
+                cmbSeat.SelectedItem = 0;
+            }
             if (count == 0)
+            {
                 MessageBox.Show("Không tìm thấy thông tin!!!");
+            }
+               
+            else
+            {
+                cmbSeat.SelectedIndex = 0;
+            }
+                
         }
 
-        private void txtMyCoachType_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtMyStartTime_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void ShowTicket()
         {
@@ -106,19 +102,29 @@ namespace HeThongQuanLyXeKhach
             }
         }
         string Nhan;
-        public string message { get { return Nhan; } set { Nhan = value; } }   
-  
+        bool Nhan2;
+        public string message { get { return Nhan; } set { Nhan = value; } }
+        public bool vision { get { return Nhan2; } set { Nhan2 = value; } }
+
         private void cmbSeat_SelectedValueChanged(object sender, EventArgs e)
         {
             ShowTicket();
         }
-
+    
         private void frmMyTicket_Load(object sender, EventArgs e)
         {
-            txtCusPhoneToFind.Text = Nhan.ToString();
-            btnFindMyTicket.PerformClick();
-            cmbSeat.SelectedIndex = 0;
+        
+          
+            if (vision == true)
+            {
+                txtCusPhoneToFind.Text = Nhan.ToString();
+                btnFindMyTicket.PerformClick();
+              
+            }
+            
             ShowTicket();
         }
+
+       
     }
 }

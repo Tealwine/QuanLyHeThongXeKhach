@@ -19,9 +19,13 @@ namespace HeThongQuanLyXeKhach
         {
             InitializeComponent();
         }
-
+        
+        
         private void btnSignIn_Click(object sender, EventArgs e)
         {
+
+           
+      
             try
             {
               
@@ -36,16 +40,20 @@ namespace HeThongQuanLyXeKhach
                     {
                         test = true;
                         MessageBox.Show("Đăng nhập thành công");
+                        
                         this.Hide();
                         if (log.UserId == "admin")
                         {
+                            
                             frmMain main = new frmMain();
+                            main.IDAcc2 = txtUserId.Text;
                             main.Show();
 
                         }
                         else if (log.UserId == "nhanvien")
                         {
                             frmMain frmMain = new frmMain();
+                            frmMain.IDAcc2 = txtUserId.Text;
                             frmMain.HideButton();
                             frmMain.Show();
                         }

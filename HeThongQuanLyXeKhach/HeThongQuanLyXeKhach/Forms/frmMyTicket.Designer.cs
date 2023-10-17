@@ -424,7 +424,6 @@
             this.txtMyStartTime.ReadOnly = true;
             this.txtMyStartTime.Size = new System.Drawing.Size(300, 27);
             this.txtMyStartTime.TabIndex = 6;
-            this.txtMyStartTime.TextChanged += new System.EventHandler(this.txtMyStartTime_TextChanged);
             // 
             // label5
             // 
@@ -435,7 +434,6 @@
             this.label5.Size = new System.Drawing.Size(59, 21);
             this.label5.TabIndex = 5;
             this.label5.Text = "Giờ đi:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // textBox15
             // 
@@ -462,7 +460,6 @@
             this.txtMyCoachType.ReadOnly = true;
             this.txtMyCoachType.Size = new System.Drawing.Size(300, 27);
             this.txtMyCoachType.TabIndex = 2;
-            this.txtMyCoachType.TextChanged += new System.EventHandler(this.txtMyCoachType_TextChanged);
             // 
             // label6
             // 
@@ -473,7 +470,6 @@
             this.label6.Size = new System.Drawing.Size(68, 21);
             this.label6.TabIndex = 1;
             this.label6.Text = "Loại xe:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtMyStartDate
             // 
@@ -558,6 +554,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyTicket";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMyTicket_FormClosing);
+       
             this.Load += new System.EventHandler(this.frmMyTicket_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

@@ -45,14 +45,25 @@ namespace HeThongQuanLyXeKhach
             lblName.Text = item.Employee.EmployeeName.ToString();
             lblPosition.Text = item.Employee.Position.JobTitle.ToString();
         }
-
+       
+        string Nhan3;
+        public string IDAcc { get { return Nhan3; } set { Nhan3 = value; } }
         private void frm_Load(object sender, EventArgs e)
         {
-            var admin = logInAccountBUS.GetAccountLogged("admin");
-            var nhanvien = logInAccountBUS.GetAccountLogged("nhanvien");
-            BindData(admin);
+    
+          var listacc = logInAccountBUS.GetAll();
+            foreach (var item in listacc)
+                
+            { 
+                if(item.UserId == IDAcc)
+                {
+                    BindData(item);
+                }
+            }
+          
         }
-
+       
+ 
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
