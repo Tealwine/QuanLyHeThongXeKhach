@@ -26,10 +26,12 @@ namespace HeThongQuanLyXeKhach
 
         private void frmMyTicket_FormClosing(object sender, FormClosingEventArgs e)
         {
-            frmStart frmStart = new frmStart();
-            frmStart.Show();
-            frmDatVe frmDatVe = new frmDatVe();
-            frmDatVe.Hide();
+            if (vision == false)
+            {
+                frmStart frmStart = new frmStart();
+                frmStart.Show();
+            }
+           
         }
 
         private bool FindPhone(string phone)
