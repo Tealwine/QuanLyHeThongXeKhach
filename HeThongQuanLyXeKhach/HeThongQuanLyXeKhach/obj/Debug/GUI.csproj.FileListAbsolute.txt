@@ -250,3 +250,4 @@ D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\GUI.
 D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\GUI.csproj.CopyComplete
 D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.exe
 D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.pdb
+C:\Code\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\GUI.csproj.ResolveComReference.cache

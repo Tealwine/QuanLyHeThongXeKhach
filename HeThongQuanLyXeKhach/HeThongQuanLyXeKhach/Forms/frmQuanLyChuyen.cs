@@ -189,5 +189,16 @@ namespace HeThongQuanLyXeKhach
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+          
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                //gọi hàm ToExcel() với tham số là dtgDSHS và filename từ SaveFileDialog
+                frmEmployeeManager.ToExcel(dgvTrip, saveFileDialog1.FileName);
+            }
+        }
     }
 }
