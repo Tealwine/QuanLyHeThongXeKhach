@@ -22,7 +22,7 @@ namespace HeThongQuanLyXeKhach
         private readonly TripBUS tripBUS = new TripBUS();
         private readonly CoachTypeBUS coachTypeBUS = new CoachTypeBUS();
         private readonly TripInfBUS infBUS = new TripInfBUS();
-        private readonly BillBus billBus = new BillBus();
+        private readonly BillBUS billBus = new BillBUS();
 
         List<Button> buttonList = new List<Button>();
 

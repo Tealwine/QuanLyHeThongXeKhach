@@ -13,7 +13,7 @@ namespace DAL.Models
 
         public DateTime InvoiceDate { get; set; }
 
-        public int? Total { get; set; }
+        public int Total { get; set; }
 
         [Required]
         [StringLength(10)]

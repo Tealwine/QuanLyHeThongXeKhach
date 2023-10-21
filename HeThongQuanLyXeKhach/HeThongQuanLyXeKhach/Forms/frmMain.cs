@@ -138,6 +138,14 @@ namespace HeThongQuanLyXeKhach
                 return;
             ViewForm(frmSystem);
         }
+
+        private void menuStatistic_Click(object sender, EventArgs e)
+        {
+            frmThuVaChi frmThuVaChi = new frmThuVaChi();
+            if (ExistForm(frmThuVaChi))
+                return;
+            ViewForm(frmThuVaChi);
+        }
     }
 }
 

@@ -43,6 +43,7 @@
             this.menuSystem = new System.Windows.Forms.ToolStripMenuItem();
             this.submenuMyAccount = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStatistic = new System.Windows.Forms.ToolStripMenuItem();
             this.pnMainFuncion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -199,12 +200,21 @@
             this.menuStrip1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuSystem});
+            this.menuSystem,
+            this.menuStatistic});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1916, 36);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuStatistic
+            // 
+            this.menuStatistic.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStatistic.Name = "menuStatistic";
+            this.menuStatistic.Size = new System.Drawing.Size(120, 32);
+            this.menuStatistic.Text = "Thống kê";
+            this.menuStatistic.Click += new System.EventHandler(this.menuStatistic_Click);
             // 
             // frmMain
             // 
@@ -248,5 +258,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuSystem;
         private System.Windows.Forms.ToolStripMenuItem submenuMyAccount;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem menuStatistic;
     }
 }

@@ -39,18 +39,19 @@ namespace HeThongQuanLyXeKhach
                     int index = dgvTrip.Rows.Add();
                     dgvTrip.Rows[index].Cells[0].Value = item.TripID;
                     dgvTrip.Rows[index].Cells[1].Value = item.CoachType.TypeName;
-                    dgvTrip.Rows[index].Cells[2].Value = $"{item.Trip.StartPlace} - {item.Trip.ArrivePlace}";
-                    dgvTrip.Rows[index].Cells[3].Value = item.Trip.StartTime.ToShortTimeString();
-                    dgvTrip.Rows[index].Cells[4].Value = item.Trip.ArriveTime.ToShortTimeString();
-                    dgvTrip.Rows[index].Cells[5].Value = item.Trip.StartTime.ToShortDateString();
-                    dgvTrip.Rows[index].Cells[6].Value = item.Trip.ArriveTime.ToShortDateString();
-                    dgvTrip.Rows[index].Cells[7].Value = item.Price;
-
+                    //dgvTrip.Rows[index].Cells[2].Value = string.Concat(item.Trip.StartPlace.ToString(),"-",item.Trip.ArrivePlace.ToString());
+                    dgvTrip.Rows[index].Cells[2].Value = item.Trip.StartPlace.ToString();
+                    dgvTrip.Rows[index].Cells[3].Value = item.Trip.ArrivePlace.ToString();
+                    dgvTrip.Rows[index].Cells[4].Value = item.Trip.StartTime.ToShortTimeString();
+                    dgvTrip.Rows[index].Cells[5].Value = item.Trip.ArriveTime.ToShortTimeString();
+                    dgvTrip.Rows[index].Cells[6].Value = item.Trip.StartTime.ToShortDateString();
+                    dgvTrip.Rows[index].Cells[7].Value = item.Trip.ArriveTime.ToShortDateString();
+                    dgvTrip.Rows[index].Cells[8].Value = item.Price;
                 }
             }
             catch 
             {
-
+                 
             }
         }
 
@@ -58,7 +59,6 @@ namespace HeThongQuanLyXeKhach
         {
             try
             {
-                var tripLst = tripBUS.GetAll();
                 var tripInfLst = infBUS.GetAll();
                 var typeLst = coachTypeBUS.GetAll();
                 FillComboboxType(typeLst);
@@ -71,19 +71,27 @@ namespace HeThongQuanLyXeKhach
 
         private void dgvTrip_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int index = e.RowIndex;
-            if (index == -1 || dgvTrip.Rows[index].Cells[0].Value == null) return;
-            txtTripId.Text = dgvTrip.Rows[index].Cells[0].Value.ToString();
-            cmbLoaiXe.Text = dgvTrip.Rows[index].Cells[1].Value.ToString();
-            string di = dgvTrip.Rows[index].Cells[3].Value.ToString() +" "+ dgvTrip.Rows[index].Cells[5].Value.ToString();
-            string den = dgvTrip.Rows[index].Cells[4].Value.ToString() + " " + dgvTrip.Rows[index].Cells[6].Value.ToString();
-            dtStart.Value = DateTime.Parse(di);
-            dtArrive.Value = DateTime.Parse(den);
-            txtPrice.Text = dgvTrip.Rows[index].Cells[7].Value.ToString();
-            string str = dgvTrip.Rows[index].Cells[2].Value.ToString();
-            string[] arr = str.Split('-');
-            txtStart.Text = arr[0];
-            txtArrive.Text = arr[1];
+            try
+            {
+                int index = e.RowIndex;
+                if (index == -1 || dgvTrip.Rows[index].Cells[0].Value == null) return;
+                txtTripId.Text = dgvTrip.Rows[index].Cells[0].Value.ToString();
+                cmbLoaiXe.Text = dgvTrip.Rows[index].Cells[1].Value.ToString();
+                string di = dgvTrip.Rows[index].Cells[4].Value.ToString() + " " + dgvTrip.Rows[index].Cells[6].Value.ToString();
+                string den = dgvTrip.Rows[index].Cells[5].Value.ToString() + " " + dgvTrip.Rows[index].Cells[7].Value.ToString();
+                dtStart.Value = DateTime.Parse(di);
+                dtArrive.Value = DateTime.Parse(den);
+                txtPrice.Text = dgvTrip.Rows[index].Cells[8].Value.ToString();
+                //string str = dgvTrip.Rows[index].Cells[2].Value.ToString();
+                //string[] arr = str.Split('-');
+                //txtStart.Text = arr[0];
+                //txtArrive.Text = arr[1];
+                txtStart.Text = dgvTrip.Rows[index].Cells[2].Value.ToString();
+                txtArrive.Text = dgvTrip.Rows[index].Cells[3].Value.ToString();
+            }
+            catch 
+            {
+            }
         }
 
         private void ClearControl()
@@ -98,6 +106,7 @@ namespace HeThongQuanLyXeKhach
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            frmQuanLyChuyen_Load(sender,e);
             ClearControl();
         }
 
@@ -150,8 +159,9 @@ namespace HeThongQuanLyXeKhach
                         Price = price
                     };
                     infBUS.InsertUpdate(tripInf);
-                    BindGrid(infBUS.GetAll());
                     frmQuanLyChuyen_Load(sender, e);
+                    BindGrid(infBUS.GetAll());
+                    
                     MessageBox.Show("Cập nhật thành công");
                     
                 }
@@ -189,5 +199,7 @@ namespace HeThongQuanLyXeKhach
                 MessageBox.Show(ex.Message);
             }
         }
+
+  
     }
 }

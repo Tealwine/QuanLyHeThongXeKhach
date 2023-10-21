@@ -237,12 +237,10 @@ D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeTh
 D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.frmQuanLyChuyen.resources
 D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.frmQuanLyXeKhach.resources
 D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.frmThuVaChi.resources
-D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.frmChonGhe.resources
 D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.frmDatVe.resources
 D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.frmMain.resources
 D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.frmEmployeeManager.resources
 D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.frmSystem.resources
-D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.frmInfoChuyen.resources
 D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.frmMyTicket.resources
 D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.Properties.Resources.resources
 D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\GUI.csproj.GenerateResource.cache
@@ -250,3 +248,4 @@ D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\GUI.
 D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\GUI.csproj.CopyComplete
 D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.exe
 D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.pdb
+D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\bin\Debug\rptThongke.rdlc

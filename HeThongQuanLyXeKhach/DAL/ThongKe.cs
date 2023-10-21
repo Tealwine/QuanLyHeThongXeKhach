@@ -9,6 +9,6 @@ namespace DAL
     public class ThongKe
     {
         public string month {  get; set; }
-        public int incom { get; set; }  
+        public int income { get; set; }  
     }
 }

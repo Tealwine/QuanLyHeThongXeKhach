@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    public class BillBus
+    public class BillBUS
     {
         XeKhachModel context = new XeKhachModel();
         public List<Bill> GetAll()

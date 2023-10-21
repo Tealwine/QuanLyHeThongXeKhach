@@ -54,7 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BillBus.cs" />
+    <Compile Include="BillBUS.cs" />
     <Compile Include="CoachBUS.cs" />
     <Compile Include="CoachTypeBUS.cs" />
     <Compile Include="EmployeeBUS.cs" />
