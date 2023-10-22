@@ -44,6 +44,8 @@
             this.submenuMyAccount = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStatistic = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuIncome = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuBill = new System.Windows.Forms.ToolStripMenuItem();
             this.pnMainFuncion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -210,11 +212,27 @@
             // 
             // menuStatistic
             // 
+            this.menuStatistic.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuIncome,
+            this.menuBill});
             this.menuStatistic.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStatistic.Name = "menuStatistic";
             this.menuStatistic.Size = new System.Drawing.Size(120, 32);
             this.menuStatistic.Text = "Thống kê";
-            this.menuStatistic.Click += new System.EventHandler(this.menuStatistic_Click);
+            // 
+            // menuIncome
+            // 
+            this.menuIncome.Name = "menuIncome";
+            this.menuIncome.Size = new System.Drawing.Size(303, 32);
+            this.menuIncome.Text = "Thống kê doanh thu";
+            this.menuIncome.Click += new System.EventHandler(this.menuIncome_Click);
+            // 
+            // menuBill
+            // 
+            this.menuBill.Name = "menuBill";
+            this.menuBill.Size = new System.Drawing.Size(303, 32);
+            this.menuBill.Text = "Hóa đơn";
+            this.menuBill.Click += new System.EventHandler(this.menuBill_Click);
             // 
             // frmMain
             // 
@@ -259,5 +277,7 @@
         private System.Windows.Forms.ToolStripMenuItem submenuMyAccount;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuStatistic;
+        private System.Windows.Forms.ToolStripMenuItem menuIncome;
+        private System.Windows.Forms.ToolStripMenuItem menuBill;
     }
 }

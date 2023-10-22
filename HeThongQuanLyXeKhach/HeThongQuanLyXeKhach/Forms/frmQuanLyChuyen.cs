@@ -1,6 +1,7 @@
 ﻿using BUS;
 using DAL.Models;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace HeThongQuanLyXeKhach
 {
@@ -17,19 +19,33 @@ namespace HeThongQuanLyXeKhach
         private readonly TripBUS tripBUS = new TripBUS();
         private readonly TripInfBUS infBUS = new TripInfBUS();
         private readonly CoachTypeBUS coachTypeBUS = new CoachTypeBUS();
+        private readonly CoachBUS coachBUS = new CoachBUS();
         public frmQuanLyChuyen()
         {
             InitializeComponent();
         }
 
-        private void FillComboboxType(List<CoachType>coachTypes)
+        //private void FillComboboxType(List<CoachType>coachTypes)
+        //{
+        //    this.cmbLoaiXe.DataSource = coachTypes;
+        //    this.cmbLoaiXe.DisplayMember = "TypeName";
+        //    this.cmbLoaiXe.ValueMember = "TypeId";
+        //}
+        private void FillComboboxType(List<Coach> coach)
         {
-            this.cmbLoaiXe.DataSource = coachTypes;
-            this.cmbLoaiXe.DisplayMember = "TypeName";
-            this.cmbLoaiXe.ValueMember = "TypeId";
+            cmbLoaiXe.Items.Clear();
+            foreach (var xe in coach)
+            {
+                string itemText = xe.CoachId + " : " + xe.CoachType.TypeName;
+                cmbLoaiXe.Items.Add(itemText);
+            }
+            cmbLoaiXe.SelectedIndex = 0;
         }
 
-        private void BindGrid(List<TripInf> tripInfs)
+
+        
+
+    private void BindGrid(List<TripInf> tripInfs)
         {
             try
             {
@@ -39,14 +55,13 @@ namespace HeThongQuanLyXeKhach
                     int index = dgvTrip.Rows.Add();
                     dgvTrip.Rows[index].Cells[0].Value = item.TripID;
                     dgvTrip.Rows[index].Cells[1].Value = item.Coach.CoachType.TypeName;
-                    //dgvTrip.Rows[index].Cells[2].Value = string.Concat(item.Trip.StartPlace.ToString(),"-",item.Trip.ArrivePlace.ToString());
-                    dgvTrip.Rows[index].Cells[2].Value = item.Trip.StartPlace.ToString();
-                    dgvTrip.Rows[index].Cells[3].Value = item.Trip.ArrivePlace.ToString();
-                    dgvTrip.Rows[index].Cells[4].Value = item.Trip.StartTime.ToShortTimeString();
-                    dgvTrip.Rows[index].Cells[5].Value = item.Trip.ArriveTime.ToShortTimeString();
-                    dgvTrip.Rows[index].Cells[6].Value = item.Trip.StartTime.ToShortDateString();
-                    dgvTrip.Rows[index].Cells[7].Value = item.Trip.ArriveTime.ToShortDateString();
-                    dgvTrip.Rows[index].Cells[8].Value = item.Price;
+                    dgvTrip.Rows[index].Cells[2].Value = string.Concat(item.Trip.StartPlace.ToString(),"-",item.Trip.ArrivePlace.ToString());
+                    
+                    dgvTrip.Rows[index].Cells[3].Value = item.Trip.StartTime.ToShortTimeString();
+                    dgvTrip.Rows[index].Cells[4].Value = item.Trip.ArriveTime.ToShortTimeString();
+                    dgvTrip.Rows[index].Cells[5].Value = item.Trip.StartTime.ToShortDateString();
+                    dgvTrip.Rows[index].Cells[6].Value = item.Trip.ArriveTime.ToShortDateString();
+                    dgvTrip.Rows[index].Cells[7].Value = item.Price;
                 }
             }
             catch 
@@ -60,8 +75,8 @@ namespace HeThongQuanLyXeKhach
             try
             {
                 var tripInfLst = infBUS.GetAll();
-                var typeLst = coachTypeBUS.GetAll();
-                FillComboboxType(typeLst);
+                var coachLst = coachBUS.GetAll();
+                FillComboboxType(coachLst);
                 BindGrid(tripInfLst);
             }
             catch 
@@ -77,17 +92,17 @@ namespace HeThongQuanLyXeKhach
                 if (index == -1 || dgvTrip.Rows[index].Cells[0].Value == null) return;
                 txtTripId.Text = dgvTrip.Rows[index].Cells[0].Value.ToString();
                 cmbLoaiXe.Text = dgvTrip.Rows[index].Cells[1].Value.ToString();
-                string di = dgvTrip.Rows[index].Cells[4].Value.ToString() + " " + dgvTrip.Rows[index].Cells[6].Value.ToString();
-                string den = dgvTrip.Rows[index].Cells[5].Value.ToString() + " " + dgvTrip.Rows[index].Cells[7].Value.ToString();
+                string di = dgvTrip.Rows[index].Cells[3].Value.ToString() + " " + dgvTrip.Rows[index].Cells[5].Value.ToString();
+                string den = dgvTrip.Rows[index].Cells[4].Value.ToString() + " " + dgvTrip.Rows[index].Cells[6].Value.ToString();
                 dtStart.Value = DateTime.Parse(di);
                 dtArrive.Value = DateTime.Parse(den);
-                txtPrice.Text = dgvTrip.Rows[index].Cells[8].Value.ToString();
-                //string str = dgvTrip.Rows[index].Cells[2].Value.ToString();
-                //string[] arr = str.Split('-');
-                //txtStart.Text = arr[0];
-                //txtArrive.Text = arr[1];
-                txtStart.Text = dgvTrip.Rows[index].Cells[2].Value.ToString();
-                txtArrive.Text = dgvTrip.Rows[index].Cells[3].Value.ToString();
+                txtPrice.Text = dgvTrip.Rows[index].Cells[7].Value.ToString();
+                string str = dgvTrip.Rows[index].Cells[2].Value.ToString();
+                string[] arr = str.Split('-');
+                txtStart.Text = arr[0];
+                txtArrive.Text = arr[1];
+                //txtStart.Text = dgvTrip.Rows[index].Cells[2].Value.ToString();
+                //txtArrive.Text = dgvTrip.Rows[index].Cells[3].Value.ToString();
             }
             catch 
             {
@@ -134,7 +149,18 @@ namespace HeThongQuanLyXeKhach
                     var tripLst = tripBUS.GetAll();
                     var infLst = infBUS.GetAll();
                     var loaiLst = coachTypeBUS.GetAll();
-                    var loai = loaiLst.FirstOrDefault(l=>l.TypeName == cmbLoaiXe.Text);
+
+                    string maXe = "";
+                    if (cmbLoaiXe.SelectedIndex != -1)
+                    {
+                        string selectedText = cmbLoaiXe.SelectedItem.ToString();
+                        // Chia chuỗi thành mã xe và tên loại
+                        string[] parts = selectedText.Split(':');
+                        if (parts.Length == 2)
+                        {
+                           maXe = parts[0].Trim(); 
+                        }
+                    }
 
                     string ma = txtTripId.Text;
                     DateTime startTime = dtStart.Value;
@@ -155,7 +181,7 @@ namespace HeThongQuanLyXeKhach
                     var tripInf = new TripInf
                     {
                         TripID = ma,
-                        //TypeId = loai.TypeId,
+                        CoachId = maXe,
                         Price = price
                     };
                     infBUS.InsertUpdate(tripInf);

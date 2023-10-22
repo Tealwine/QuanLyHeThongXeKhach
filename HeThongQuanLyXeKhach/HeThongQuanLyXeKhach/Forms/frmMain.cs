@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HeThongQuanLyXeKhach.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -139,12 +140,22 @@ namespace HeThongQuanLyXeKhach
             ViewForm(frmSystem);
         }
 
-        private void menuStatistic_Click(object sender, EventArgs e)
+       
+
+        private void menuIncome_Click(object sender, EventArgs e)
         {
             frmThuVaChi frmThuVaChi = new frmThuVaChi();
             if (ExistForm(frmThuVaChi))
                 return;
             ViewForm(frmThuVaChi);
+        }
+
+        private void menuBill_Click(object sender, EventArgs e)
+        {
+            frmTicket frmTicket = new frmTicket();
+            if (ExistForm(frmTicket))
+                return;
+            ViewForm(frmTicket);
         }
     }
 }

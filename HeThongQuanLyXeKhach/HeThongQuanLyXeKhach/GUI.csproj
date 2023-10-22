@@ -135,6 +135,12 @@
     <Compile Include="Forms\frmMyTicket.Designer.cs">
       <DependentUpon>frmMyTicket.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTicket.Designer.cs">
+      <DependentUpon>frmTicket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
@@ -168,6 +174,9 @@
     <EmbeddedResource Include="Forms\frmMyTicket.resx">
       <DependentUpon>frmMyTicket.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTicket.resx">
+      <DependentUpon>frmTicket.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -181,9 +190,13 @@
     <EmbeddedResource Include="rptThongKe.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="rptTicket.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\DAL.Models.Bill.datasource" />
     <None Include="Properties\DataSources\DAL.ThongKe.datasource" />
+    <None Include="Properties\DataSources\DAL.Ticket.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -24,5 +24,13 @@ namespace BUS
         {
             return context.Bills.FirstOrDefault(emp => emp.CustomerPhone == CustomerPhone);
         }
+
+        public Bill GetTicketDetail(int maVe)
+        {
+
+            return context.Bills.FirstOrDefault(t => t.BillId == maVe);
+             
+        }
+
     }
 }

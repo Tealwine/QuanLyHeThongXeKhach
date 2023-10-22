@@ -15,6 +15,10 @@ namespace BUS
         {
             return context.Coaches.ToList();
         }
+        public List<Coach> GetAllType()
+        {
+            return context.Coaches.Include("CoachType").ToList();
+        }
         public void InsertUpdate(Coach coach)
         {
             context.Coaches.AddOrUpdate(coach);
