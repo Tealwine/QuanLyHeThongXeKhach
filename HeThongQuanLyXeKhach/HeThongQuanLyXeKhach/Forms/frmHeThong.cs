@@ -64,29 +64,43 @@ namespace HeThongQuanLyXeKhach
         }
        public void changepass()
         {
-            var listacc = logInAccountBUS.GetAll();
-            foreach (var item in listacc)
-
+            if(txtNewPass.Text != "" && txtCheckNewPass.Text != "")
             {
-                if (item.UserId == IDAcc)
-                {
-                   if(txtNewPass.Text == txtCheckNewPass.Text)
-                    {
-                       item.Pass = txtNewPass.Text;
-                       logInAccountBUS.InsertUpdate(item);
-                        MessageBox.Show("Đổi mật khẩu thành công");
-                        txtNewPass.Clear();
-                        txtCheckNewPass.Clear();
-                        BindData(item);
+                var listacc = logInAccountBUS.GetAll();
+                foreach (var item in listacc)
 
-                    }
-                   else
+                {
+                  
+                    if (item.UserId == IDAcc)
                     {
-                        MessageBox.Show("Mật khẩu mới và xác nhận phải trùng khớp");
-                       
-                     }
+                        if(item.Pass == txtNewPass.Text)
+                        {
+                            MessageBox.Show("Mật khẩu mới trùng mật khẩu cũ, yêu cầu nhập lại!");
+                            return;
+                        }
+                        if (txtNewPass.Text == txtCheckNewPass.Text)
+                        {
+                            item.Pass = txtNewPass.Text;
+                            logInAccountBUS.InsertUpdate(item);
+                            MessageBox.Show("Đổi mật khẩu thành công");
+                            txtNewPass.Clear();
+                            txtCheckNewPass.Clear();
+                            BindData(item);
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Mật khẩu mới và xác nhận phải trùng khớp");
+
+                        }
+                    }
                 }
             }
+            else
+            {
+                MessageBox.Show("Bạn chưa nhập mật khẩu mới");
+            }
+           
         }
  
         private void btnClose_Click(object sender, EventArgs e)
