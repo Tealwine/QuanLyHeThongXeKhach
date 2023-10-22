@@ -24,7 +24,7 @@ namespace HeThongQuanLyXeKhach
 
         private void FillComboboxCoachType(List<CoachType> listCoachType)
         {
-            listCoachType.Insert(0, new CoachType());
+            this.cmbCoachType.Items.Insert(0, new CoachType());
             this.cmbCoachType.DataSource = listCoachType;
             this.cmbCoachType.DisplayMember = "TypeName";
             this.cmbCoachType.ValueMember = "TypeId";
@@ -36,6 +36,8 @@ namespace HeThongQuanLyXeKhach
             this.cmbType.DisplayMember = "TypeName";
             this.cmbType.ValueMember = "TypeId";
         }
+
+    
 
         private void BindGrid(List<Coach> coaches)
         {
@@ -64,10 +66,9 @@ namespace HeThongQuanLyXeKhach
                 var coachList = coachBUS.GetAll();
                 var coachTypeList = coachTypeBUS.GetAll();
                 var typeList = coachTypeBUS.GetAll();
-                BindGrid(coachList);
                 FillComboboxCoachType(coachTypeList);
                 FillComboboxType(typeList);
-                
+                BindGrid(coachList);
 
             }
             catch (Exception ex)

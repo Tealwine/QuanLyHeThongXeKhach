@@ -24,6 +24,7 @@ namespace HeThongQuanLyXeKhach
        
         private void frmThuVaChi_Load(object sender, EventArgs e)
         {
+            cmbThongKe.SelectedIndex = 0;
             var list = billBUS.GetAll();
             List<ThongKe> reportData = new List<ThongKe>();
 

@@ -13,7 +13,7 @@ namespace BUS
         XeKhachModel context = new XeKhachModel();
         public List<TripInf> GetAll()
         {
-            return context.TripInfs.ToList();
+            return context.TripInfs.Include("Trip").ToList();
         }
 
         public void InsertUpdate(TripInf tripInf)
