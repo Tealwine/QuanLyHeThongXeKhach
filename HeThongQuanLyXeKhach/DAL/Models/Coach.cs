@@ -9,6 +9,12 @@ namespace DAL.Models
     [Table("Coach")]
     public partial class Coach
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Coach()
+        {
+            TripInfs = new HashSet<TripInf>();
+        }
+
         [StringLength(10)]
         public string CoachId { get; set; }
 
@@ -27,5 +33,8 @@ namespace DAL.Models
         public string CoachImg { get; set; }
 
         public virtual CoachType CoachType { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TripInf> TripInfs { get; set; }
     }
 }

@@ -17,8 +17,8 @@ namespace DAL.Models
 
         [Key]
         [Column(Order = 0)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int TypeId { get; set; }
+        [StringLength(10)]
+        public string CoachId { get; set; }
 
         [Key]
         [Column(Order = 1)]
@@ -30,7 +30,7 @@ namespace DAL.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Bill> Bills { get; set; }
 
-        public virtual CoachType CoachType { get; set; }
+        public virtual Coach Coach { get; set; }
 
         public virtual Trip Trip { get; set; }
     }
