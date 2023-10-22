@@ -31,7 +31,9 @@ namespace DAL.Models
         [StringLength(10)]
         public string TripID { get; set; }
 
-        public int TypeId { get; set; }
+        [Required]
+        [StringLength(10)]
+        public string CoachId { get; set; }
 
         public virtual TripInf TripInf { get; set; }
     }

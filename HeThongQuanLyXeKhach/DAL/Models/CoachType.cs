@@ -13,7 +13,6 @@ namespace DAL.Models
         public CoachType()
         {
             Coaches = new HashSet<Coach>();
-            TripInfs = new HashSet<TripInf>();
         }
 
         [Key]
@@ -28,8 +27,5 @@ namespace DAL.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Coach> Coaches { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TripInf> TripInfs { get; set; }
     }
 }

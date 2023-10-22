@@ -8,7 +8,7 @@ namespace DAL.Models
     public partial class XeKhachModel : DbContext
     {
         public XeKhachModel()
-            : base("name=XeKhachModel")
+            : base("name=XeKhachModel1")
         {
         }
 
@@ -35,6 +35,10 @@ namespace DAL.Models
                 .Property(e => e.TripID)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<Bill>()
+                .Property(e => e.CoachId)
+                .IsUnicode(false);
+
             modelBuilder.Entity<Coach>()
                 .Property(e => e.CoachId)
                 .IsUnicode(false);
@@ -43,13 +47,13 @@ namespace DAL.Models
                 .Property(e => e.CoachPlate)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<CoachType>()
-                .HasMany(e => e.Coaches)
-                .WithRequired(e => e.CoachType)
+            modelBuilder.Entity<Coach>()
+                .HasMany(e => e.TripInfs)
+                .WithRequired(e => e.Coach)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<CoachType>()
-                .HasMany(e => e.TripInfs)
+                .HasMany(e => e.Coaches)
                 .WithRequired(e => e.CoachType)
                 .WillCascadeOnDelete(false);
 
@@ -93,13 +97,17 @@ namespace DAL.Models
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<TripInf>()
+                .Property(e => e.CoachId)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<TripInf>()
                 .Property(e => e.TripID)
                 .IsUnicode(false);
 
             modelBuilder.Entity<TripInf>()
                 .HasMany(e => e.Bills)
                 .WithRequired(e => e.TripInf)
-                .HasForeignKey(e => new { e.TypeId, e.TripID })
+                .HasForeignKey(e => new { e.CoachId, e.TripID })
                 .WillCascadeOnDelete(false);
         }
     }
