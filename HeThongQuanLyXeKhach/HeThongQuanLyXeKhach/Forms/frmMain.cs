@@ -115,15 +115,33 @@ namespace HeThongQuanLyXeKhach
         
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Bạn có muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.No)
+            if(check == true)
             {
-                e.Cancel = true;
+                DialogResult dr = MessageBox.Show("Bạn có muốn đăng xuất?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+                else
+                {
+                    frmStart frmStart = new frmStart();
+                    frmStart.Show();
+                }
+                
             }
             else
             {
-                Environment.Exit(0);
+                DialogResult dr = MessageBox.Show("Bạn có muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+                else
+                {
+                    Environment.Exit(0);
+                }
             }
+          
             
 
         }
@@ -156,6 +174,17 @@ namespace HeThongQuanLyXeKhach
             if (ExistForm(frmTicket))
                 return;
             ViewForm(frmTicket);
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        bool check=false;
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            check = true;
+            this.Close();
         }
     }
 }

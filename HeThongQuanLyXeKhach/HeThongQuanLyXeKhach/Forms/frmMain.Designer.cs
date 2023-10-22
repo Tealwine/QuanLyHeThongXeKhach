@@ -46,6 +46,8 @@
             this.menuStatistic = new System.Windows.Forms.ToolStripMenuItem();
             this.menuIncome = new System.Windows.Forms.ToolStripMenuItem();
             this.menuBill = new System.Windows.Forms.ToolStripMenuItem();
+            this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnMainFuncion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -183,9 +185,12 @@
             // menuSystem
             // 
             this.menuSystem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.submenuMyAccount});
+            this.submenuMyAccount,
+            this.đăngXuấtToolStripMenuItem,
+            this.thoátToolStripMenuItem});
             this.menuSystem.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuSystem.Name = "menuSystem";
+            this.menuSystem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
             this.menuSystem.Size = new System.Drawing.Size(120, 32);
             this.menuSystem.Text = "Hệ thống";
             // 
@@ -234,6 +239,21 @@
             this.menuBill.Text = "Hóa đơn";
             this.menuBill.Click += new System.EventHandler(this.menuBill_Click);
             // 
+            // đăngXuấtToolStripMenuItem
+            // 
+            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(350, 32);
+            this.đăngXuấtToolStripMenuItem.Text = "Đăng Xuất";
+            this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
+            // 
+            // thoátToolStripMenuItem
+            // 
+            this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
+            this.thoátToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(350, 32);
+            this.thoátToolStripMenuItem.Text = "Thoát";
+            this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -279,5 +299,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuStatistic;
         private System.Windows.Forms.ToolStripMenuItem menuIncome;
         private System.Windows.Forms.ToolStripMenuItem menuBill;
+        private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
     }
 }

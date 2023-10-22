@@ -8,7 +8,7 @@ namespace DAL.Models
     public partial class XeKhachModel : DbContext
     {
         public XeKhachModel()
-            : base("name=XeKhachModel3")
+            : base("name=Model1")
         {
         }
 
@@ -18,6 +18,7 @@ namespace DAL.Models
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<LogInAccount> LogInAccounts { get; set; }
         public virtual DbSet<Position> Positions { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Trip> Trips { get; set; }
         public virtual DbSet<TripInf> TripInfs { get; set; }
 
