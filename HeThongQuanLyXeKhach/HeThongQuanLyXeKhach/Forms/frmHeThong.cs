@@ -62,12 +62,41 @@ namespace HeThongQuanLyXeKhach
             }
           
         }
-       
+       public void changepass()
+        {
+            var listacc = logInAccountBUS.GetAll();
+            foreach (var item in listacc)
+
+            {
+                if (item.UserId == IDAcc)
+                {
+                   if(txtNewPass.Text == txtCheckNewPass.Text)
+                    {
+                       item.Pass = txtNewPass.Text;
+                       logInAccountBUS.InsertUpdate(item);
+                        MessageBox.Show("Đổi mật khẩu thành công");
+                        txtNewPass.Clear();
+                        txtCheckNewPass.Clear();
+                        BindData(item);
+
+                    }
+                   else
+                    {
+                        MessageBox.Show("Mật khẩu mới và xác nhận phải trùng khớp");
+                       
+                     }
+                }
+            }
+        }
  
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            changepass();
+        }
     }
 }

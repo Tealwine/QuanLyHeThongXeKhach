@@ -335,3 +335,6 @@ C:\Users\admin\Desktop\Doan\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQua
 C:\Users\admin\Desktop\Doan\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\admin\Desktop\Doan\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\admin\Desktop\Doan\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\GUI.csproj.CopyComplete
+C:\Code\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\bin\Debug\rptThongKe.rdlc
+C:\Code\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\GUI.csproj.ResolveComReference.cache
+C:\Code\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\obj\Debug\HeThongQuanLyXeKhach.Forms.frmTicket.resources
