@@ -46,9 +46,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.chkFemale = new System.Windows.Forms.CheckBox();
             this.chkMale = new System.Windows.Forms.CheckBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCheckNewPass = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNewPass = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
@@ -228,9 +228,9 @@
             this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel1.Controls.Add(this.chkFemale);
             this.panel1.Controls.Add(this.chkMale);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtCheckNewPass);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtNewPass);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnClose);
@@ -280,15 +280,15 @@
             this.chkMale.Text = "Nam";
             this.chkMale.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txtCheckNewPass
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(658, 522);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(323, 33);
-            this.textBox2.TabIndex = 32;
+            this.txtCheckNewPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCheckNewPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCheckNewPass.Location = new System.Drawing.Point(658, 522);
+            this.txtCheckNewPass.Multiline = true;
+            this.txtCheckNewPass.Name = "txtCheckNewPass";
+            this.txtCheckNewPass.Size = new System.Drawing.Size(323, 33);
+            this.txtCheckNewPass.TabIndex = 32;
             // 
             // label10
             // 
@@ -302,15 +302,15 @@
             this.label10.TabIndex = 33;
             this.label10.Text = "NHẬP LẠI MẬT KHẨU MỚI";
             // 
-            // textBox1
+            // txtNewPass
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(658, 439);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(323, 33);
-            this.textBox1.TabIndex = 32;
+            this.txtNewPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNewPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewPass.Location = new System.Drawing.Point(658, 439);
+            this.txtNewPass.Multiline = true;
+            this.txtNewPass.Name = "txtNewPass";
+            this.txtNewPass.Size = new System.Drawing.Size(323, 33);
+            this.txtNewPass.TabIndex = 32;
             // 
             // label1
             // 
@@ -390,6 +390,7 @@
             this.btnUpdate.TabIndex = 24;
             this.btnUpdate.Text = "Đổi mật khẩu";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // panel2
             // 
@@ -480,11 +481,11 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNewPass;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblPosition;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCheckNewPass;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.CheckBox chkMale;
         private System.Windows.Forms.CheckBox chkFemale;
