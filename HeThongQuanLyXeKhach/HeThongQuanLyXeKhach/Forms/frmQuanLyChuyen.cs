@@ -38,7 +38,7 @@ namespace HeThongQuanLyXeKhach
                 {
                     int index = dgvTrip.Rows.Add();
                     dgvTrip.Rows[index].Cells[0].Value = item.TripID;
-                    dgvTrip.Rows[index].Cells[1].Value = item.CoachType.TypeName;
+                    dgvTrip.Rows[index].Cells[1].Value = item.Coach.CoachType.TypeName;
                     //dgvTrip.Rows[index].Cells[2].Value = string.Concat(item.Trip.StartPlace.ToString(),"-",item.Trip.ArrivePlace.ToString());
                     dgvTrip.Rows[index].Cells[2].Value = item.Trip.StartPlace.ToString();
                     dgvTrip.Rows[index].Cells[3].Value = item.Trip.ArrivePlace.ToString();
@@ -155,7 +155,7 @@ namespace HeThongQuanLyXeKhach
                     var tripInf = new TripInf
                     {
                         TripID = ma,
-                        TypeId = loai.TypeId,
+                        //TypeId = loai.TypeId,
                         Price = price
                     };
                     infBUS.InsertUpdate(tripInf);

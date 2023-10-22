@@ -95,7 +95,7 @@ namespace HeThongQuanLyXeKhach
                     txtMyDestination.Text = bill.TripInf.Trip.ArrivePlace;
                     txtMyStartDate.Text = bill.TripInf.Trip.StartTime.ToShortDateString();
                     txtMyStartTime.Text = bill.TripInf.Trip.StartTime.ToShortTimeString();
-                    txtMyCoachType.Text = bill.TripInf.CoachType.TypeName;
+                    txtMyCoachType.Text = bill.TripInf.Coach.CoachType.TypeName;
                     txtMyName.Text = bill.CustomerName;
                     txtMyPhoneNumber.Text = bill.CustomerPhone.ToString();
                     txtMyPay.Text = bill.Total.ToString();

@@ -205,7 +205,7 @@ namespace HeThongQuanLyXeKhach
             var infbus = infBUS.GetAll();
             foreach (var item in infbus)
             {
-                if (cmbCoachType.Text == item.CoachType.TypeName)
+                if (cmbCoachType.Text == item.Coach.CoachType.TypeName)
                 {
                     txtPrice.Text = item.Price.ToString();
                 }
@@ -221,7 +221,7 @@ namespace HeThongQuanLyXeKhach
             // List<TripInf> list = new List<TripInf>();
             foreach (var trip in tripInfLst)
             {
-                if (cmbStartLocation.Text == trip.Trip.StartPlace && cmbEndLocation.Text == trip.Trip.ArrivePlace && cmbCoachType.Text == trip.CoachType.TypeName && dtpStartDate.Text == trip.Trip.StartTime.ToShortDateString())
+                if (cmbStartLocation.Text == trip.Trip.StartPlace && cmbEndLocation.Text == trip.Trip.ArrivePlace && cmbCoachType.Text == trip.Coach.CoachType.TypeName && dtpStartDate.Text == trip.Trip.StartTime.ToShortDateString())
                 {
 
                     int index = dgvFindTrip.Rows.Add();
@@ -263,7 +263,7 @@ namespace HeThongQuanLyXeKhach
             }
         }
 
-        string temp;
+        string temp, tmp;
         private void btnConfirmInfor_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow check in (dgvFindTrip).Rows)
@@ -293,6 +293,7 @@ namespace HeThongQuanLyXeKhach
                             if (item.TripID == check.Cells[1].Value.ToString())
                             {
                                 temp = item.TripID;
+                                tmp = item.CoachId;
                                 foreach (Control control in panel4.Controls)
                                 {
                                     if (control is Button)
@@ -387,7 +388,7 @@ namespace HeThongQuanLyXeKhach
                                 CustomerName = txtCusName.Text,
                                 
                                 TripID = temp,
-                                TypeId = int.Parse(cmbCoachType.SelectedValue.ToString())
+                                CoachId = tmp
                             };
                             billBus.InsertUpdate(ticket);
                         }
@@ -409,7 +410,7 @@ namespace HeThongQuanLyXeKhach
                                 CustomerPhone = txtCusPhoneNumber.Text,
                                 CustomerName = txtCusName.Text,
                                 TripID = temp,
-                                TypeId = int.Parse(cmbCoachType.SelectedValue.ToString())
+                                CoachId = tmp
                             };
                             billBus.InsertUpdate(ticket);
                         }

@@ -16,7 +16,7 @@ namespace HeThongQuanLyXeKhach
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmQuanLyChuyen());
+            Application.Run(new frmDatVe());
 
         }
     }
