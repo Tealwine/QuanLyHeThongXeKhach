@@ -112,5 +112,21 @@ namespace HeThongQuanLyXeKhach
         {
             changepass();
         }
+
+        private void chkFemale_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkFemale.Checked)
+            {
+                chkMale.Checked = false;
+            }
+        }
+
+        private void chkMale_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkMale.Checked)
+            {
+                chkFemale.Checked = false;
+            }
+        }
     }
 }

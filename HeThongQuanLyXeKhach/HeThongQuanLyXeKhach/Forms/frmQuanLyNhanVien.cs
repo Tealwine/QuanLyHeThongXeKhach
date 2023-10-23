@@ -167,7 +167,7 @@ namespace HeThongQuanLyXeKhach
             if (duLieuAnh.Avatar == null) pcbEmployeeImage.Image = null;
             else
             {
-                string imagePath = Path.Combine(@"D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\Resources", duLieuAnh.Avatar);
+                string imagePath = Path.Combine(@"C:\Code\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\Resources", duLieuAnh.Avatar);
                 if (!string.IsNullOrEmpty(imagePath))
                 {
                     Image image = Image.FromFile(imagePath);
@@ -305,6 +305,22 @@ namespace HeThongQuanLyXeKhach
                    
                     row.Visible = ma.Contains(data) || ten.Contains(data) || chucVu.Contains(data);
                 }
+            }
+        }
+
+        private void chkMale_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkFemale.Checked)
+            {
+                chkMale.Checked = false;
+            }
+        }
+
+        private void chkFemale_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkMale.Checked)
+            {
+                chkFemale.Checked = false;
             }
         }
     }

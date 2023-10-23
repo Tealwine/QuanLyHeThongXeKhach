@@ -268,6 +268,7 @@
             this.chkFemale.TabIndex = 34;
             this.chkFemale.Text = "Nữ";
             this.chkFemale.UseVisualStyleBackColor = true;
+            this.chkFemale.CheckedChanged += new System.EventHandler(this.chkFemale_CheckedChanged);
             // 
             // chkMale
             // 
@@ -279,6 +280,7 @@
             this.chkMale.TabIndex = 34;
             this.chkMale.Text = "Nam";
             this.chkMale.UseVisualStyleBackColor = true;
+            this.chkMale.CheckedChanged += new System.EventHandler(this.chkMale_CheckedChanged);
             // 
             // txtCheckNewPass
             // 
