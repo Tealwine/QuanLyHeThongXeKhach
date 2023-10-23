@@ -151,6 +151,18 @@ namespace HeThongQuanLyXeKhach
         
         private void frmMain_Load(object sender, EventArgs e)
         {
+            foreach (Control control in this.Controls)
+            {
+
+                MdiClient client = control as MdiClient;
+                if (!(client == null))
+                {
+                    // #3
+                    client.BackColor = Color.White;
+                    // 4#
+                    break;
+                }
+            }
             frmSystem frmSystem = new frmSystem();
             frmSystem.IDAcc = IDAcc2;
             if (ExistForm(frmSystem))
@@ -185,6 +197,28 @@ namespace HeThongQuanLyXeKhach
         {
             check = true;
             this.Close();
+        }
+
+        DateTime now;
+
+        // Xử lý sự kiện Tick của Timer
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            // Lấy ngày giờ hiện tại từ hệ thống
+            now = DateTime.Now;
+
+            // Hiển thị ngày giờ hiện tại trên Label1 theo định dạng dd/MM/yyyy HH:mm:ss
+            lblTime.Text = now.ToString("HH:mm:ss dd/MM/yyyy");
+        }
+
+        private void lblTime_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuSystem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

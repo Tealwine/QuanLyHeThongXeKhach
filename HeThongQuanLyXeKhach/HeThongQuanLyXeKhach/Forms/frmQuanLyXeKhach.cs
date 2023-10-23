@@ -121,7 +121,7 @@ namespace HeThongQuanLyXeKhach
             if (duLieuAnh.CoachImg == null) picCoach.Image = null;
             else
             {
-                string imagePath = Path.Combine(@"D:\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\Resources", duLieuAnh.CoachImg);
+                string imagePath = Path.Combine(@"C:\Code\QuanLyHeThongXeKhach\HeThongQuanLyXeKhach\HeThongQuanLyXeKhach\Resources", duLieuAnh.CoachImg);
                 if (!string.IsNullOrEmpty(imagePath))
                 {
                     Image image = Image.FromFile(imagePath);

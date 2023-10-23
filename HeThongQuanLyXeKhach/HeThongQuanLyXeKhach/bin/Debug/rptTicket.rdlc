@@ -48,7 +48,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox32</rd:DefaultName>
-            <Top>3.35835in</Top>
+            <Top>3.36389in</Top>
             <Left>0.58in</Left>
             <Height>0.29167in</Height>
             <Width>0.95278in</Width>
@@ -72,6 +72,7 @@
                   <TextRun>
                     <Value>SĐT:</Value>
                     <Style>
+                      <FontSize>14pt</FontSize>
                       <FontWeight>SemiBold</FontWeight>
                     </Style>
                   </TextRun>
@@ -82,14 +83,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox33</rd:DefaultName>
-            <Top>4.10834in</Top>
-            <Left>0.92445in</Left>
-            <Height>0.25in</Height>
-            <Width>0.60833in</Width>
+            <Top>3.85834in</Top>
+            <Left>0.58in</Left>
+            <Height>0.31667in</Height>
+            <Width>0.95278in</Width>
             <ZIndex>2</ZIndex>
-            <Visibility>
-              <Hidden>true</Hidden>
-            </Visibility>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -318,7 +316,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox40</rd:DefaultName>
-            <Top>3.35835in</Top>
+            <Top>3.36389in</Top>
             <Left>1.53278in</Left>
             <Height>0.29167in</Height>
             <Width>3.32222in</Width>
@@ -341,21 +339,21 @@
                 <TextRuns>
                   <TextRun>
                     <Value>=Parameters!pSDT.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox41</rd:DefaultName>
-            <Top>4.10834in</Top>
-            <Left>1.54667in</Left>
-            <Height>0.25in</Height>
-            <Width>1in</Width>
+            <Top>3.85834in</Top>
+            <Left>1.53278in</Left>
+            <Height>0.31667in</Height>
+            <Width>3.32222in</Width>
             <ZIndex>10</ZIndex>
-            <Visibility>
-              <Hidden>true</Hidden>
-            </Visibility>
             <Style>
               <Border>
                 <Style>None</Style>

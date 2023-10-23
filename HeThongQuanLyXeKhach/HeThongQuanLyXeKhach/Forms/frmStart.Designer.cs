@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.Button btnTakeTicket;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStart));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnTakeTicket = new System.Windows.Forms.Button();
             this.btnFindMyTicket = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            btnTakeTicket = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -43,7 +44,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.PapayaWhip;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btnTakeTicket);
+            this.panel1.Controls.Add(btnTakeTicket);
             this.panel1.Controls.Add(this.btnFindMyTicket);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -65,15 +66,17 @@
             // 
             // btnTakeTicket
             // 
-            this.btnTakeTicket.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTakeTicket.ForeColor = System.Drawing.Color.Orange;
-            this.btnTakeTicket.Location = new System.Drawing.Point(304, 465);
-            this.btnTakeTicket.Name = "btnTakeTicket";
-            this.btnTakeTicket.Size = new System.Drawing.Size(182, 61);
-            this.btnTakeTicket.TabIndex = 3;
-            this.btnTakeTicket.Text = "Đặt vé";
-            this.btnTakeTicket.UseVisualStyleBackColor = true;
-            this.btnTakeTicket.Click += new System.EventHandler(this.btnTakeTicket_Click);
+            btnTakeTicket.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnTakeTicket.ForeColor = System.Drawing.Color.Orange;
+            btnTakeTicket.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnTakeTicket.Location = new System.Drawing.Point(304, 465);
+            btnTakeTicket.Name = "btnTakeTicket";
+            btnTakeTicket.Size = new System.Drawing.Size(182, 61);
+            btnTakeTicket.TabIndex = 3;
+            btnTakeTicket.Text = "Đặt vé";
+            btnTakeTicket.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            btnTakeTicket.UseVisualStyleBackColor = true;
+            btnTakeTicket.Click += new System.EventHandler(this.btnTakeTicket_Click);
             // 
             // btnFindMyTicket
             // 
@@ -133,7 +136,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Button btnTakeTicket;
         private System.Windows.Forms.Button btnFindMyTicket;
         private System.Windows.Forms.Label label1;
     }

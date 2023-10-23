@@ -93,9 +93,9 @@
             this.btnHide.BackColor = System.Drawing.Color.Transparent;
             this.btnHide.BackgroundImage = global::HeThongQuanLyXeKhach.Properties.Resources.eye;
             this.btnHide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnHide.Location = new System.Drawing.Point(505, 101);
+            this.btnHide.Location = new System.Drawing.Point(505, 100);
             this.btnHide.Name = "btnHide";
-            this.btnHide.Size = new System.Drawing.Size(30, 30);
+            this.btnHide.Size = new System.Drawing.Size(34, 34);
             this.btnHide.TabIndex = 12;
             this.btnHide.UseVisualStyleBackColor = false;
             this.btnHide.Click += new System.EventHandler(this.btnHide_Click);

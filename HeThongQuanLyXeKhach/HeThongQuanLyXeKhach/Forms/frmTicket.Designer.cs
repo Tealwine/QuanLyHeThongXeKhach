@@ -46,7 +46,7 @@
             // 
             // rptVeXe
             // 
-            this.rptVeXe.Location = new System.Drawing.Point(981, 12);
+            this.rptVeXe.Location = new System.Drawing.Point(1090, 12);
             this.rptVeXe.Name = "rptVeXe";
             this.rptVeXe.ServerReport.BearerToken = null;
             this.rptVeXe.Size = new System.Drawing.Size(800, 730);
@@ -83,7 +83,7 @@
             this.dgvTicket.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTicket.Location = new System.Drawing.Point(12, 12);
             this.dgvTicket.Name = "dgvTicket";
-            this.dgvTicket.RowHeadersWidth = 51;
+            this.dgvTicket.RowHeadersWidth = 5;
             this.dgvTicket.RowTemplate.Height = 24;
             this.dgvTicket.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTicket.Size = new System.Drawing.Size(963, 730);
@@ -95,11 +95,11 @@
             this.Column1.HeaderText = "Mã vé";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
+            this.Column1.Width = 70;
             // 
             // Column8
             // 
-            this.Column8.HeaderText = "Tên KH";
+            this.Column8.HeaderText = "Tên khách hàng";
             this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
             this.Column8.Width = 125;
@@ -113,14 +113,14 @@
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Tuyen";
+            this.Column2.HeaderText = "Tuyến";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Width = 125;
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Gia vé";
+            this.Column3.HeaderText = "Giá vé";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.Width = 125;
@@ -141,14 +141,14 @@
             // 
             // Column6
             // 
-            this.Column6.HeaderText = "Giờ";
+            this.Column6.HeaderText = "Giờ đi";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             this.Column6.Width = 125;
             // 
             // Column7
             // 
-            this.Column7.HeaderText = "Ngày";
+            this.Column7.HeaderText = "Ngày đi";
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
             this.Column7.Width = 125;
