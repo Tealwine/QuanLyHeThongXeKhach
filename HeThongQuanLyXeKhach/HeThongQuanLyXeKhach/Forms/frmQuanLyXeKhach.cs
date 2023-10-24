@@ -21,7 +21,20 @@ namespace HeThongQuanLyXeKhach
         {
             InitializeComponent();
         }
+        private List<string> coachBrandList = new List<string>();
 
+        private void FillCmbBrand(List<Coach> coach)
+        {
+            foreach (Coach item in coach)
+            {
+                if (!coachBrandList.Contains(item.CoachBrand))
+                {
+                    coachBrandList.Add(item.CoachBrand); // Thêm vào danh sách dữ liệu
+                }
+            }
+
+            cmbCoachBrand.DataSource = coachBrandList; // Gán danh sách dữ liệu làm nguồn dữ liệu của ComboBox
+        }
         private void FillComboboxCoachType(List<CoachType> listCoachType)
         {
             this.cmbCoachType.Items.Insert(0, new CoachType());
@@ -68,13 +81,14 @@ namespace HeThongQuanLyXeKhach
                 var typeList = coachTypeBUS.GetAll();
                 FillComboboxCoachType(coachTypeList);
                 FillComboboxType(typeList);
+                FillCmbBrand(coachList);
                 BindGrid(coachList);
 
             }
-            catch (Exception ex)
+            catch
             {
 
-                MessageBox.Show(ex.Message);
+
             }
         }
 
@@ -114,7 +128,7 @@ namespace HeThongQuanLyXeKhach
             txtLicensePlate.Text = row.Cells[1].Value.ToString();
             txtVehicleName.Text = row.Cells[2].Value.ToString();
             txtWarranty.Text = row.Cells[4].Value.ToString();
-            cmbCoachType.Text = row.Cells[5].Value.ToString();
+            cmbType.Text = row.Cells[5].Value.ToString();
 
             var listCoach = coachBUS.GetAll();
             var duLieuAnh = listCoach.Where(emp => emp.CoachId.ToString() == txtID.Text.ToString()).FirstOrDefault();
@@ -242,7 +256,17 @@ namespace HeThongQuanLyXeKhach
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            frmQuanLyXeKhach_Load(sender: this, e);
+            try
+            {
+
+                var lstCoach = coachBUS.GetAll();
+                BindGrid(lstCoach);
+
+                frmQuanLyXeKhach_Load(sender, e);
+            }
+            catch
+            {
+            }
         }
     }
 }

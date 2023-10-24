@@ -21,24 +21,19 @@ namespace HeThongQuanLyXeKhach
             InitializeComponent();
         }
 
-       
+
         private void frmThuVaChi_Load(object sender, EventArgs e)
         {
             cmbThongKe.SelectedIndex = 0;
             var list = billBUS.GetAll();
-            List<ThongKe> reportData = new List<ThongKe>();
 
-
-            var tam = list.GroupBy(d => d.InvoiceDate).ToList();
-
-            foreach (var item in tam)
-            {
-                reportData.Add(new ThongKe
+            var reportData = list.GroupBy(d => new { d.InvoiceDate.Date, d.InvoiceDate.Month, d.InvoiceDate.Year })
+                .Select(item => new ThongKe
                 {
-                    month = item.Key.ToShortDateString(),
-                    income = item.Sum(t => t.Total)
-                });
-            }
+                    //month = item.Key.Date.ToString() + "/" + item.Key.Month.ToString() + "/" + item.Key.Year.ToString(),
+                    month = item.Key.Date.ToString("dd/MM/yyyy"),
+                    income = item.Sum(d => d.Total)
+                }).ToList();
 
 
             rptThongKeNgay.LocalReport.ReportPath = "rptThongKe.rdlc";

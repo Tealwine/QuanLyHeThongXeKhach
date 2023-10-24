@@ -40,6 +40,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
+            // btnTakeTicket
+            // 
+            btnTakeTicket.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnTakeTicket.ForeColor = System.Drawing.Color.Orange;
+            btnTakeTicket.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnTakeTicket.Location = new System.Drawing.Point(304, 465);
+            btnTakeTicket.Name = "btnTakeTicket";
+            btnTakeTicket.Size = new System.Drawing.Size(182, 61);
+            btnTakeTicket.TabIndex = 3;
+            btnTakeTicket.Text = "Đặt vé";
+            btnTakeTicket.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            btnTakeTicket.UseVisualStyleBackColor = true;
+            btnTakeTicket.Click += new System.EventHandler(this.btnTakeTicket_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PapayaWhip;
@@ -63,20 +77,6 @@
             this.label1.Size = new System.Drawing.Size(186, 40);
             this.label1.TabIndex = 4;
             this.label1.Text = "XIN CHÀO";
-            // 
-            // btnTakeTicket
-            // 
-            btnTakeTicket.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            btnTakeTicket.ForeColor = System.Drawing.Color.Orange;
-            btnTakeTicket.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnTakeTicket.Location = new System.Drawing.Point(304, 465);
-            btnTakeTicket.Name = "btnTakeTicket";
-            btnTakeTicket.Size = new System.Drawing.Size(182, 61);
-            btnTakeTicket.TabIndex = 3;
-            btnTakeTicket.Text = "Đặt vé";
-            btnTakeTicket.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            btnTakeTicket.UseVisualStyleBackColor = true;
-            btnTakeTicket.Click += new System.EventHandler(this.btnTakeTicket_Click);
             // 
             // btnFindMyTicket
             // 
@@ -120,6 +120,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1044, 575);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmStart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";

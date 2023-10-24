@@ -609,6 +609,7 @@
             this.btnExport.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.btnExport, "btnExport");
             this.btnExport.Name = "btnExport";
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // toolStripSeparator1
             // 

@@ -55,8 +55,7 @@ namespace HeThongQuanLyXeKhach
                     int index = dgvTrip.Rows.Add();
                     dgvTrip.Rows[index].Cells[0].Value = item.TripID;
                     dgvTrip.Rows[index].Cells[1].Value = item.Coach.CoachType.TypeName;
-                    dgvTrip.Rows[index].Cells[2].Value = string.Concat(item.Trip.StartPlace.ToString(),"-",item.Trip.ArrivePlace.ToString());
-                    
+                    dgvTrip.Rows[index].Cells[2].Value = string.Concat(item.Trip.StartPlace.ToString(),"-",item.Trip.ArrivePlace.ToString());               
                     dgvTrip.Rows[index].Cells[3].Value = item.Trip.StartTime.ToShortTimeString();
                     dgvTrip.Rows[index].Cells[4].Value = item.Trip.ArriveTime.ToShortTimeString();
                     dgvTrip.Rows[index].Cells[5].Value = item.Trip.StartTime.ToShortDateString();

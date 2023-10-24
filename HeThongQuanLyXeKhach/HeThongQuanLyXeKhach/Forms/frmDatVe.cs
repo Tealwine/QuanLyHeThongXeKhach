@@ -230,9 +230,14 @@ namespace HeThongQuanLyXeKhach
                     dgvFindTrip.Rows[index].Cells[3].Value = trip.Trip.ArriveTime.ToShortTimeString();
 
                 }
+               
+            }
+            if (dgvFindTrip.Rows.Count == 0)
+            {
+                MessageBox.Show("Không tìm thấy chuyến theo yêu cầu của bạn. Vui lòng chọn loại xe khác!");
             }
             if (cmbStartLocation.Text == cmbEndLocation.Text)
-                MessageBox.Show("Trung dia diem ! Khong the tim thay chuyen!");
+                MessageBox.Show("Trùng địa điểm! Không thể tìm thấy chuyến!");
         }
         private void countSeat()
         {
@@ -385,8 +390,7 @@ namespace HeThongQuanLyXeKhach
                                 Total = int.Parse(txtPrice.Text),
                                 Seat = control.Text,
                                 CustomerPhone = txtCusPhoneNumber.Text,
-                                CustomerName = txtCusName.Text,
-                                
+                                CustomerName = txtCusName.Text,                      
                                 TripID = temp,
                                 CoachId = tmp
                             };
