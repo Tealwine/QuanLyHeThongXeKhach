@@ -78,7 +78,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnSua = new System.Windows.Forms.Button();
-            this.btnIn = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -478,7 +477,6 @@
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.btnSua);
-            this.panel3.Controls.Add(this.btnIn);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.txtId);
             this.panel3.Controls.Add(this.label11);
@@ -500,13 +498,6 @@
             this.btnSua.Name = "btnSua";
             this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnIn
-            // 
-            this.btnIn.BackColor = System.Drawing.Color.LightBlue;
-            resources.ApplyResources(this.btnIn, "btnIn");
-            this.btnIn.Name = "btnIn";
-            this.btnIn.UseVisualStyleBackColor = false;
             // 
             // label10
             // 
@@ -582,6 +573,7 @@
             // 
             resources.ApplyResources(this.toolStripButton1, "toolStripButton1");
             this.toolStripButton1.Name = "toolStripButton1";
+  
             // 
             // toolStripSeparator4
             // 
@@ -705,7 +697,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnIn;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label11;
