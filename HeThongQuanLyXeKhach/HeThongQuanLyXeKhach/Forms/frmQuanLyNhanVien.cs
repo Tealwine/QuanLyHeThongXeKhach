@@ -322,15 +322,13 @@ namespace HeThongQuanLyXeKhach
             {
                 SaveFileDialog saveFileDialog1 = new SaveFileDialog();
                 if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-                {
-                    //gọi hàm ToExcel() với tham số là dtgDSHS và filename từ SaveFileDialog
+                {            
                     ToExcel(dgvTinhLuong, saveFileDialog1.FileName);
                 }
             }
         }
         public static void ToExcel(DataGridView dataGridView1, string fileName)
         {
-            //khai báo thư viện hỗ trợ Microsoft.Office.Interop.Excel
             Microsoft.Office.Interop.Excel.Application excel;
             Microsoft.Office.Interop.Excel.Workbook workbook;
             Microsoft.Office.Interop.Excel.Worksheet worksheet;

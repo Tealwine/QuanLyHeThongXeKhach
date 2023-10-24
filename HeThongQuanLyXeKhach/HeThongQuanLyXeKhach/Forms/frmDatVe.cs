@@ -235,9 +235,14 @@ namespace HeThongQuanLyXeKhach
             if (dgvFindTrip.Rows.Count == 0)
             {
                 MessageBox.Show("Không tìm thấy chuyến theo yêu cầu của bạn. Vui lòng chọn loại xe khác!");
+                return;
             }
             if (cmbStartLocation.Text == cmbEndLocation.Text)
+            {
                 MessageBox.Show("Trùng địa điểm! Không thể tìm thấy chuyến!");
+                return;
+            }
+                
         }
         private void countSeat()
         {
